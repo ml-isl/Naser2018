@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head x-import="head.html">
+</head>
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar"></nav>
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row">
+            <div class="row" ng-controller="item_transaction">
+                <div x-import="item_transaction/delete_modal.html"></div>
+                <div x-import="item_transaction/view_modal.html"></div>
+                <div x-import="item_transaction/search_all_modal.html"></div>
+                <div class="row">
+                    <h1 class="white bold text-center">##word.item_transaction##</h1>
+                </div>
+                <div class="top-actions">
+                    <i-button type="search" label="##word.search_all##" x-permission="owner" onclick="site.showModal('#itemTransactionSearchModal')"></i-button>
+
+                   
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                    <h3 class="white bold"> ##word.item_transaction_count## : {{count}}</h3>
+
+                </div>
+                <form>
+                    <table class="table loaded text-center" id="t1">
+                        <tr>
+
+                            <th>##word.item_transaction_date##</th>
+                            <th>##word.item_transaction_store##</th>
+                            <th>##word.item_transaction_name##</th>
+                            <th>##word.item_transaction_size##</th>
+                            <th>##word.item_transaction_in##</th>
+                            <th>##word.item_transaction_out##</th>
+                            <th>##word.item_transaction_current_count##</th>
+                            <th>##word.item_transaction_last_count##</th>
+                            <th>##word.item_transaction_price##</th>
+                            <th>##word.item_transaction_last_price##</th>
+
+
+                          
+                        </tr>
+                        <tr ng-repeat="c in list">
+
+                            <td> <p class=" text-center"> {{c.date | date:'yyyy - MM - dd'}} </p> </td>
+                            <td> <p class=" blue text-center"> {{c.store.name}} </p> </td>
+                            <td>
+                                <p class="text-center"> {{c.name}} </p>
+                                <p class="bold brown text-center"> ( {{c.code}} ) </p>
+                            </td>
+                            <td> <p class="bold blue text-center"> {{c.size}} </p> </td>
+                            <td class="bold">
+                                <p class="green text-center" ng-show="c.transaction_type == 'in'"> {{c.count}} </p>
+                            </td>
+                            <td class="bold">
+
+                                <p class="red text-center" ng-show="c.transaction_type == 'out'"> {{c.count}} </p>
+
+                            </td>
+                            <td class="green text-center">{{c.current_count}}</td>
+                            <td class="red text-center">{{c.last_count}}</td>
+                            <td class="blue bold text-center">{{c.price}}</td>
+                            <td class="red text-center">{{c.last_price}}</td>
+
+
+                           
+                        </tr>
+
+                    </table>
+                </form>
+
+                <i-button type="print" label="##word.print##" onclick="site.print('#t1')"></i-button>
+                
+            </div>
+
+
+        </div>
+    </div>
+
+    <div x-import="scripts.html"></div>
+    <script x-import="item_transaction/index.js"></script>
+
+</body>
+
+</html>

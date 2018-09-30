@@ -1,0 +1,33 @@
+
+
+<div id="SearchByCodeModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_search_by_code##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <form>
+                <div class="control">
+                    <label>##word.ticket_code##</label>
+                   <input type="text" ng-model="code">
+                </div>
+                  
+            </form>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-click="searchByCode()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>  ##word.ticket_search_by_code##</a>
+
+            <a class="btn bg-blue" onclick="site.hideModal('#SearchByCodeModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+</div>

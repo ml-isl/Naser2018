@@ -1,0 +1,97 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="updateSubledgersModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.subledgers_edit## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div ng-hide="busy" class="row">
+                <div class="col7">
+
+                    <form class="form">
+
+                        <div class="control">
+                            <label>##word.subledgers_code##</label>
+                            <input ng-model="subledgers.code" type="text">
+                        </div>
+
+                        <div class="control">
+                            <label>##word.subledgers_name##</label>
+                            <input ng-model="subledgers.name" type="text">
+                        </div>
+
+                        <div class="row10 ">
+
+                            <div class="col3">
+                                <div class="control">
+                                    <label>
+                                        <span>##word.subledgers_source## </span>
+                                        <select ng-model="subledgers.source">
+                                            <option  value="1" ng-selected="subledgers.source==1">##word.subledgers_source_list##</option>
+                                            <option  value="2" ng-selected="subledgers.source==2">##word.subledgers_source_collection##</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="control">
+                                <label>##word.subledgers_collection##</label>
+                                <input ng-model="subledgers.collection" type="text">
+                            </div>
+                            <div class="control">
+                                <label>##word.subledgers_display##</label>
+                                <input ng-model="subledgers.display" type="text">
+                            </div>
+                            <div class="control">
+                                <label>##word.subledgers_value##</label>
+                                <input ng-model="subledgers.value" type="text">
+                            </div>
+                    </form>
+
+                </div>
+                <div class="col3 center">
+
+                    <form class="form">
+                        <label>##word.subledgers_img##</label>
+                        <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                        <br>
+                        <img class="img " ng-src="{{subledgers.image_url}}" />
+                        <br>
+                        <p>{{uploadStatus}}</p>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-hide="busy" id="update_subledgers_btn" ng-click="update(subledgers)">
+                <i class="fa fa-save" aria-hidden="true"></i> ##word.update##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#updatesubledgersModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

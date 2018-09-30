@@ -1,0 +1,21 @@
+{
+  "name": "naser-2018",
+  "version": "1.0.0",
+  "description": "CRM For Machine Fixed Company",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "naser"
+  ],
+  "author": "Amr Barakat",
+  "license": "ISC",
+  "dependencies": {
+    "isite": "*",
+    "mssql": "^4.1.0"
+  },
+  "devDependencies": {
+    "excel-as-json": "^2.0.2"
+  }
+}

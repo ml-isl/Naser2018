@@ -1,0 +1,48 @@
+<div  class="row">
+        <div class="col9">
+            <br>
+            <table class="table">
+                <tr>
+                    <td class="title">##word.amounts_out_value##</td>
+                    <td>{{amount_out.value}}</td>
+                </tr>
+               
+                <tr>
+                        <td class="title">##word.amounts_out_date##</td>
+                        <td>{{amount_out.date  | date : 'dd - MM - yyyy'}}</td>
+                    </tr>
+
+                <tr>
+                    <td class="title">##word.amounts_out_source##</td>
+                    <td>{{amount_out.source.name}}</td>
+                </tr>
+
+
+                <tr>
+                        <td class="title">##word.amounts_out_Company_name##</td>
+                        <td>{{amount_out.company.name}}</td>
+                    </tr>
+
+                
+                <tr>
+                        <td class="title">##word.amounts_out_customers##</td>
+                        <td>{{amount_out.customer.name}}</td>
+                    </tr>
+        
+                    <tr>
+                        <td class="title">##word.amounts_out_employees##</td>
+                        <td>{{amount_out.eng.name}}</td>
+                    </tr>
+                       
+
+                <tr>
+                        <td class="title">##word.amounts_out_description##</td>
+                        <td>{{amount_out.description}}</td>
+                        
+                    </tr>
+
+            </table>
+        </div>
+        <i-image class="col3 center" view label="##word.amounts_out_img##" ng-model="amount_out.image_url"></i-image>
+        
+    </div>

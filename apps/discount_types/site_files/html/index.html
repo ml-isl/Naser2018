@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+   
+
+<div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row10 center">
+            <div class="col10" ng-controller="discount_types">
+                <div x-import="discount_types/add_modal.html"></div>
+                <div x-import="discount_types/update_modal.html"></div>
+                <div x-import="discount_types/delete_modal.html"></div>
+                <div x-import="discount_types/view_modal.html"></div>
+                <div class="top-actions">
+                    <i-button type="add" label="##word.discount_types_new##" x-permission="owner" ng-click="newDiscount_Type()"></i-button>
+                    
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <table class="table loaded" id="t1">
+                    <tr>
+                        <th>##word.discount_types_logo##</th>
+                        <th>##word.discount_types_name##</th>
+                        <th>##word.discount_types_value##</th>
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+                        <td>
+                            <img class="logo" ng-src="{{c.image_url}}">
+                        </td>
+                        <td>{{c.name}}</td>
+                        <td ng-show="c.type === '%'">{{c.value}} % </td>
+                        <td ng-show="c.type !== '%'">{{c.value}} جنيه</td>
+                       
+                        <td x-permission="owner" class="center">
+                                <i-button type="details" label="##word.details##" x-permission="owner" ng-click="details(c)"></i-button>
+                                <i-button type="update" label="##word.update##" x-permission="owner" ng-click="edit(c)"></i-button>
+                                <i-button type="delete" label="##word.delete##" ng-click="remove(c)"></i-button>
+
+            
+                        </td>
+                    </tr>
+
+                </table>
+                <i-button type="export" label="##word.export_to_excel##" onclick="export_to_xlsx('t1' , 'discount_types.xlsx')"></i-button>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+    <div x-import="scripts.html"></div>
+    <script x-import="discount_types/index.js"></script>
+   
+</body>
+
+</html>

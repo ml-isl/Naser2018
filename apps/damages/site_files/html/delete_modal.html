@@ -1,0 +1,25 @@
+<div id="deleteDamageModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.damages_delete## <i class="fa fa-trash"></i>
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <div x-import="damages/view.html"></div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="delete" ng-click="delete(damage)" label="##word.delete##"></i-button>
+            <i-button type="close" onclick="site.hideModal('#deleteDamageModal')" label="##word.close##"></i-button>
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,24 @@
+[
+    {"name" : "trees_accounting_add" , "en" : "Add" , "ar" : "اضافة"},
+    {"name" : "trees_accounting_edit" , "en" : "Edit" , "ar" : "تعديل"},
+    {"name" : "trees_accounting_delete" , "en" : "Delete" , "ar" : "حذف"},
+    {"name" : "trees_accounting_details" , "en" : "Details" , "ar" : "تفاصيل"},
+    {"name" : "trees_accounting_parent" , "en" : "Parent" , "ar" : "الاب"},
+    {"name" : "trees_accounting_child" , "en" : "Child" , "ar" : "الفرع"},
+    {"name" : "trees_accounting_debit" , "en" : "Debit" , "ar" : "مدين"},
+    {"name" : "trees_accounting_credit" , "en" : "Credit" , "ar" : "دائن"},
+    {"name" : "trees_accounting_new" , "en" : "New" , "ar" : "بند جديد"},
+    {"name" : "trees_accounting_logo" , "en" : "Logo" , "ar" : "صورة البند"},
+    {"name" : "trees_accounting_debit_yes" , "en" : "Debit" , "ar" : "مدين"},
+    {"name" : "trees_accounting_credit_yes" , "en" : "Credit" , "ar" : "دائن"},
+    {"name" : "trees_accounting_code" , "en" : "Code" , "ar" : "الكود"},
+    {"name" : "trees_accounting_nature" , "en" : "Nature" , "ar" : "طبيعة الحساب"},
+    {"name" : "trees_accounting_lastnode" , "en" : "Can make accounting" , "ar" : "يمكن عمل قيد له"},
+    {"name" : "trees_accounting_description" , "en" : "Description" , "ar" : "الوصف"},
+    {"name" : "trees_accounting_lastnode_yes" , "en" : "Yes" , "ar" : "نعم"},
+    {"name" : "trees_accounting_lastnode_no" , "en" : "No" , "ar" : "لا"},
+    {"name" : "trees_accounting_img" , "en" : "Trees Accounting Image" , "ar" : "ملفات شجرة الحسابات"}
+    
+    
+
+]

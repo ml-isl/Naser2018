@@ -1,0 +1,13 @@
+[
+    {"name" : "departments_add" , "en" : "Add Department" , "ar" : "اضافة قسم"},
+    {"name" : "departments_search" , "en" : "Search Department" , "ar" : "بحث قسم"},
+    {"name" : "departments_new" , "en" : "New Department" , "ar" : "قسم جديد"},
+    {"name" : "departments_details" , "en" : "Department Details" , "ar" : "تفاصيل قسم"},
+    {"name" : "departments_edit" , "en" : "Edit Department" , "ar" : "تعديل بيانات  قسم"},
+    {"name" : "departments_delete" , "en" : "Delete Department" , "ar" : "حذف قسم"},
+    {"name" : "departments_name" , "en" : "Department Name" , "ar" : "اسم القسم"},   
+    {"name" : "departments_logo" , "en" : "Department Logo" , "ar" : "شعار قسم"},
+
+    {"name" : "departments_img" , "en" : "Departments Image" , "ar" : "صورة القسم"}
+
+]

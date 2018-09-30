@@ -1,0 +1,60 @@
+<div ng-hide="busy" class="row" id="v1">
+    <div class="col7">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.categories_items_code##</td>
+                <td>{{category_item.code}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.categories_items_name##</td>
+                <td>{{category_item.name}}</td>
+            </tr>
+
+          
+
+          
+          
+            <tr>
+                <td class="title">##word.categories_items_Company_name##</td>
+                <td>{{category_item.company.name}}</td>
+            </tr>      
+
+
+            <tr>
+                <td class="title">##word.categories_items_sizes##</td>
+                <td>
+                    <table class="table">
+                        <tr>
+                            <th>##word.categories_items_sizes##</th>
+                            <th>##word.categories_items_cost##</th>
+                            <th>##word.categories_items_price##</th>
+                            <th>##word.categories_items_balance##</th>
+                        </tr>
+                        <tr ng-repeat="it in category_item.sizes">
+                            <td>{{it.size}}</td>
+                            <td>{{it.cost}}</td>
+                            <td>{{it.price}}</td>
+                            <td>{{it.current_count}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+
+        <br>
+        
+    </div>
+
+    <div class="col3 center not-print">label>##word.categories_items_logo##</label>
+        <br>
+        <i-image view ng-model="category_item.image_url"></i-image>
+        <br>
+        
+        <i-files  view ng-model="category_item.files"></i-files>
+
+ 
+    </div>
+</div>

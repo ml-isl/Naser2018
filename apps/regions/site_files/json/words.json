@@ -1,0 +1,20 @@
+[
+    {"name" : "regions_add" , "en" : "Add Region" , "ar" : "اضافة منطقة"},
+    {"name" : "regions_name" , "en" : "Region Name" , "ar" : " اسم منطقة"},
+
+    {"name" : "regions_new" , "en" : "New Region" , "ar" : "منطقة جديدة"},
+    {"name" : "regions_details" , "en" : "Region Details" , "ar" : "تفاصيل منطقة"},
+    {"name" : "regions_search" , "en" : "Region Search" , "ar" : "بحث منطقة"},
+    {"name" : "regions_edit" , "en" : "Edit Details" , "ar" : "تعديل منطقة"},
+    {"name" : "regions_delete" , "en" : "Delete Region" , "ar" : "حذف منطقة"},
+    {"name" : "regions_gov" , "en" : "Gov" , "ar" : "المحافظة"},
+    {"name" : "regions_city" , "en" : "City" , "ar" : "المدينة"},
+    {"name" : "regions_town" , "en" : "Town" , "ar" : "القرية"},
+    {"name" : "regions_name" , "en" : "Region Name" , "ar" : "المنطقة"},
+    {"name" : "regions_img" , "en" : "Region Image" , "ar" : "صورةالمنطقة"},
+    {"name" : "regions_logo" , "en" : "Region Logo" , "ar" : "شعار المنطقة"},
+ 
+
+    {"name" : "regions_region_delete" , "en" : "Delete Region" , "ar" : "حذف منطقة"}    
+
+]

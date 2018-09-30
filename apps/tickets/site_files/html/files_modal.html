@@ -1,0 +1,28 @@
+<div id="ticketFilesModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_files##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <br>
+            <br>
+      
+                <div x-import="tickets/files.html"></div>
+           <br>
+           <br>
+         
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="save" label=" ##word.save##" ng-click="updateFiles()"></i-button>
+            <i-button type="close" label=" ##word.close##" onclick="site.hideModal('#ticketFilesModal')"></i-button>
+        </div>
+    </div>
+</div>

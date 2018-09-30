@@ -1,0 +1,33 @@
+[
+    {
+        "name": "eng",
+        "ar": "فنى",
+        "en": "Eng",
+        "permissions": [
+            "eng",
+            "close_eng"
+        ]
+    },
+    {
+        "name": "account",
+        "ar": "محاسب",
+        "en": "Account",
+        "permissions": [
+            "finance",
+            "print"
+        ]
+    },
+    {
+        "name": "review",
+        "ar": "مراجع",
+        "en": "Reviwer",
+        "permissions": [
+            "review",
+            "close1",
+            "close2",
+            "customers",
+            "tickets",
+            "print"
+        ]
+    }
+]

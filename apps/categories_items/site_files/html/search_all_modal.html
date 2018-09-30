@@ -1,0 +1,44 @@
+<div id="Category_ItemSearchModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-search"></i> ##word.categories_search_all##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <form class="form">
+                    <div class="row">
+                        <i-control class="col2" ng-model="search.code" label="##word.categories_items_code##" type="text"></i-control>
+                        <i-control class="col2" ng-model="search.name" label="##word.categories_items_name##" type="text"></i-control>
+                    </div>
+
+                    <div class="row">
+                        <i-list class="col2" ng-model="search.company"  items="companies" label="##word.categories_items_Company_name##" ></i-list>
+                        <i-control class="col2" ng-model="search.size" label="##word.categories_items_sizes##" type="text"></i-control>
+                    </div>
+
+                    <div class="row">
+                        <i-control class="col2" ng-model="search.cost" label="##word.categories_items_cost##" type="text"></i-control>
+                        <i-control class="col2" ng-model="search.price" label="##word.categories_items_price##" type="text"></i-control>
+                        <i-control class="col2" ng-model="search.current_count"  label="##word.categories_items_balance##" type="text"></i-control>
+                        <i-control class="col2" ng-model="search.current_countGt"  label="##word.categories_items_balance_Gt##" type="text"></i-control>
+                        <i-control class="col2" ng-model="search.current_countLt"  label="##word.categories_items_balance_Lt##" type="text"></i-control>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="search" ng-click="searchAll()" label="##word.categories_search##"></i-button>
+            <i-button type="clear" ng-click="search = {}" label="##word.categories_empty_search##"></i-button>
+            <i-button type="close"   onclick="site.hideModal('#Category_ItemSearchModal')"  label="##word.close##"></i-button>
+
+
+        </div>
+    </div>
+</div>

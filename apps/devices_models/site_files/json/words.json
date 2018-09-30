@@ -1,0 +1,14 @@
+[
+    {"name" : "devices_models_add" , "en" : "Add Model" , "ar" : "اضافة موديل"},
+    {"name" : "devices_models_new" , "en" : "New Model" , "ar" : "موديل جديد"},
+    {"name" : "devices_models_details" , "en" : "Model Details" , "ar" : "تفاصيل موديل"},
+    {"name" : "devices_models_edit" , "en" : "Edit Details" , "ar" : "تعديل بيانات موديل"},
+    {"name" : "devices_models_delete" , "en" : "Delete Model" , "ar" : "حذف موديل"},
+    {"name" : "devices_models_category" , "en" : "Category" , "ar" : "الفئة"},
+    {"name" : "devices_models_sub_category" , "en" : "Sub Category" , "ar" : "الفئة الفرعية"},
+    {"name" : "devices_models_name" , "en" : "Model" , "ar" : "الموديل"},
+    {"name" : "devices_models_device_name" , "en" : "Device Name" , "ar" : "اسم الجهاز"},
+    {"name" : "devices_models_model_equal" , "en" : "Model Equal" , "ar" : "الموديل المكافئ"},
+    {"name" : "devices_models_logo" , "en" : "Model Logo" , "ar" : "شعار موديل"},
+    {"name" : "devices_models_img" , "en" : "Model Images" , "ar" : "ملفات الموديل"}
+]

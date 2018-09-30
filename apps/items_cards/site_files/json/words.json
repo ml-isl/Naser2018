@@ -1,0 +1,10 @@
+[
+    {"name" : "items_cards_view" , "en" : "Items Cards View" , "ar" : "جرد صنف"},
+    {"name" : "items_cards_store" , "en" : "Store" , "ar" : "الصنف"},
+    {"name" : "items_cards_period" , "en" : "Pediod" , "ar" : "الفترة"},
+    {"name" : "items_cards_from_date" , "en" : "From Date" , "ar" : "من تاريخ"},
+    {"name" : "items_cards_to_date" , "en" : "To Date" , "ar" : "الي تاريخ"},
+    
+    
+    {"name" : "load_all_items_cards" , "en" : "Load Stores Inventory" , "ar" : "عرض أحدث التنبيهات"}
+]

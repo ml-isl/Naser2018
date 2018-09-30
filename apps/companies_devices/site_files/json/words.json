@@ -1,0 +1,21 @@
+[
+    {"name" : "companies_devices_model_add" , "en" : "Add Device" , "ar" : "اضافة موديل جهاز"},
+    {"name" : "companies_devices_search" , "en" : "Search Device" , "ar" : "بحث جهاز"},
+
+    {"name" : "companies_devices_model_new" , "en" : "New Device Model" , "ar" : "موديل جهاز جديد"},
+    {"name" : "companies_devices_details" , "en" : "Device Details" , "ar" : "تفاصيل جهاز"},
+    {"name" : "companies_devices_edit" , "en" : "Edit Device" , "ar" : "تعديل بيانات جهاز"},
+    {"name" : "companies_devices_delete" , "en" : "Delete Device" , "ar" : "حذف جهاز"},
+    {"name" : "companies_devices_device" , "en" : "Device" , "ar" : "الجهاز"},
+    {"name" : "companies_devices_model" , "en" : "Model" , "ar" : "الموديل"},
+    {"name" : "companies_devices_model_equal" , "en" : "Equal Model" , "ar" : "الموديل المكافئ"},
+    {"name" : "companies_devices_add_model" , "en" : "Add Model" , "ar" : "اضف موديل"},
+    {"name" : "companies_devices_add_model_equal" , "en" : "Add Equal Model" , "ar" : "اضف موديل مكافئ"},
+    {"name" : "companies_devices_company" , "en" : "Company" , "ar" : "الشركة"},
+    {"name" : "companies_devices_category" , "en" : "Category" , "ar" : "الفئة"},
+    {"name" : "companies_devices_sub_category" , "en" : "Sub Category" , "ar" : "الفئة الفرعية"},
+    {"name" : "companies_devices_logo" , "en" : "Logo" , "ar" : "صورة الجهاز"},
+    {"name" : "companies_devices_models_errors" , "en" : "Error   Add Companies Devices Model" , "ar" : "خطأ  اضافة موديل الجهاز"},
+    {"name" : "companies_devices_img" , "en" : "Device Image" , "ar" : "ملفات الجهاز"}
+
+]

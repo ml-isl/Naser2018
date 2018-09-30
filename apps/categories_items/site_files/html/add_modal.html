@@ -1,0 +1,22 @@
+<div id="addCategory_ItemModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.categories_items_add##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div x-import="categories_items/content.html"></div>
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button id="add_category_item_btn" ng-click="add()" type="add" label="##word.add##"></i-button>
+            <i-button  onclick="site.hideModal('#addCategory_ItemModal')" type="close"   label="##word.close##"></i-button>
+        </div>
+    </div>
+
+
+</div>

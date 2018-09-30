@@ -1,0 +1,18 @@
+<div class="col7">
+
+    <form class="form">
+
+        <i-list ng-search="gov_search" v="r" class="col3" items="goves" ng-model="city.gov" label="##word.cities_gov##"></i-list>
+
+        <i-control v="r" ng-model="city.name" class="col4" label="##word.cities_city##" type="text"></i-control>
+
+
+    </form>
+
+</div>
+<div class="col3 center">
+
+    <i-image category="cities" ng-model="city.image_url"></i-image>
+    <i-files ng-model="city.files"></i-files>
+
+</div>

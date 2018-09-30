@@ -1,0 +1,44 @@
+<div id="deleteTicketModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.ticket_details## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div ng-hide="busy" class="row">
+                <div class="col7">
+                    <br>
+                    <table class="table">
+                        <tr>
+                            <td class="title">##word.name##</td>
+                            <td>{{ticket.name}}</td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+                <div class="col3 center">
+
+                    <img class="img " ng-src="{{ticket.image_url}}" />
+
+                </div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="delete" label="##word.delete##" id="delete_ticket_btn" ng-click="delete(ticket)" ></i-button>
+            <i-button type="close" label="##word.close##" onclick="site.hideModal('#deleteTicketModal')" ></i-button>
+        </div>
+    </div>
+
+
+</div>

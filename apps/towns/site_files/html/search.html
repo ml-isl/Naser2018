@@ -1,0 +1,37 @@
+<div id="SearchModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                 ##word.towns_search## <i class="fa fa-search"></i>
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+
+                <form class="form">
+
+                    <div class="row">
+
+                        <i-list ng-search="gov_search" class="col3" ng-change="loadCities(search.gov)" items="goves"
+                            ng-model="search.gov" label="##word.towns_gov##"></i-list>
+                        <i-list ng-search="city_search" class="col3" items="cities" ng-model="search.city" label="##word.towns_city##"></i-list>
+                        <i-control class="col4" ng-model="search.town" label="##word.towns_name##" type="text"></i-control>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="search" ng-click="searchAll()" label="##word.search##"></i-button>
+            <i-button type="clear" ng-click="search = {}" label="##word.clear##"></i-button>
+
+            <i-button type="close" onclick="site.hideModal('#SearchModal')" label="##word.close##"></i-button>
+
+        </div>
+    </div>
+</div>

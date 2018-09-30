@@ -1,0 +1,24 @@
+<div id="ticketNotesModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_notes##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        
+        <div class="modal-body">
+
+           <div x-import="tickets/notes.html"></div>
+
+        </div>
+
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="save" label="##word.save##"  ng-click="updateNotes()"> </i-button>
+            <i-button type="close" label="##word.close##"  onclick="site.hideModal('#ticketNotesModal')"> </i-button>
+ 
+        </div>
+    </div>
+</div>

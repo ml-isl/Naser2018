@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row ">
+            <div class="row " ng-controller="notifications">
+                <div x-permission="login" x-import="notifications/display_modal.html"></div>
+                <div x-permission="login" x-import="tickets/view_modal.html"></div>
+                <div x-permission="login" x-import="notifications/search.html"></div>
+                <span ng-show="busy">
+                    <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                    <span class="sr-only">Loading...</span>
+                </span>
+                <div class="top-actions">
+                    <i-button type="search" onclick="site.showModal('#SearchModal')" label="##word.search_all##"></i-button>
+
+                </div>
+
+                <table class="table hover loaded" id="t1">
+                    <tr>
+                        <th>##word.notification_name##</th>
+                        <th>##word.notification_message##</th>
+                        <th>##word.notification_value##</th>
+                        <th>##word.notification_time##</th>
+                        <th>##word.notification_user##</th>
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr class="" ng-repeat="n in list">
+                        <td class="center">
+                            <label>
+                                <img class="logo" ng-src="{{n.icon}}">
+                                <br>
+                                <span x-lang="en">{{n.source.name}}</span>
+                                <span x-lang="ar">{{n.source.ar}}</span>
+                            </label>
+                        </td>
+                        <td class="center">
+                            <b x-lang="en">{{n.message.name}}</b>
+                            <b x-lang="ar">{{n.message.ar}}</b>
+                        </td>
+                        <td class="center">
+                            <span x-lang="en">{{n.value.name}}</span>
+                            <span x-lang="ar">{{n.value.ar}}</span>
+                        </td>
+                        <td class="center">
+                            <span class="blue">{{n.date | date : 'yyyy - MM - dd'}}</span>
+                            <br>
+                            <span class="green">{{n.date | date : ' hh:mm'}}</span>
+                        </td>
+                        <td class="center">
+                            <a href="mailto:{{n.user.email}}">{{n.user.email}}</a>
+                            <br>
+                            <b>{{n.user.name}}</b>
+                            <br> {{n.user.ip}}
+                        </td>
+                        <td class="center">
+                            <a ng-show="n.action == 'add'" class="btn bg-green white" x-permission="owner" ng-click="showAdd(n)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> ##word.notification_show_add##</a>
+                            <a ng-show="n.action == 'update'" class="btn bg-yellow black" x-permission="owner" ng-click="showUpdate(n)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> ##word.notification_show_update##</a>
+                            <a ng-show="n.action == 'delete'" class="btn bg-red white" x-permission="owner" ng-click="showDelete(n)">
+                                <i class="fa fa-eye" aria-hidden="true"></i> ##word.notification_show_delete##</a>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div x-import="scripts.html"></div>
+    <script x-import="notifications/index.js"></script>
+
+</body>
+
+</html>

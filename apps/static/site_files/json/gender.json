@@ -1,0 +1,4 @@
+[
+    {"id" : 1 , "name" : "male" , "en" : "Male" , "ar" :"ذكر"},
+    {"id" : 2 , "name" : "female" , "en" : "Female" , "ar" :"أنثى"}
+]

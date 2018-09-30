@@ -1,0 +1,49 @@
+<div class="row" ng-show="ticket.customer">
+
+    <h2 class="red text-center  bg-white" ng-show="ticket.customer.black_list === true"> ##word.customers_black_listed## </h2>
+   
+    <table class="table">
+        <tr>
+            <td class="bold">##word.customers_name##</td>
+            <td colspan="3">{{ticket.customer.name}}  
+                <i-button type="edit" ng-click="editCustomer()" label="##word.ticket_edit_customer##"></i-button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">##word.customers_phones##</td>
+            <td>
+                <a class=" margin" ng-repeat="p in ticket.customer.phones" href="tel:{{p}}"> {{p}} </a>
+            </td>
+
+            <td class="bold">##word.customers_mobiles##</td>
+            <td>
+                <a class=" margin" ng-repeat="m in ticket.customer.mobiles" href="tel:{{m}}"> {{m}} </a>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="bold">##word.customers_address##</td>
+            <td colspan="3">{{ticket.customer.town.gov.name + ' - ' + ticket.customer.town.city.name + ' - '  + ticket.customer.town.name + ' - ' + ticket.customer.town.region.name + ' - '
+                + ticket.customer.address}}</td>
+        </tr>
+
+    </table>
+
+
+
+
+
+    <div class="row text-right">
+        <p ng-repeat="d in ticket.customer.devices">
+            {{d.company.name}} {{d.category.name}} {{d.sub_category.name}} {{d.device.name}} {{d.model.name}} <span class="yellow"> {{d.model.alt}} </span> 
+           <i-button type="add" label="##word.ticket_select_device##" ng-click="setDevice(d)"></i-button>
+           <i-button type="save" label="##word.ticket_device_history##" ng-click="deviceHistory(d)"></i-button>
+
+
+        </p>
+    </div>
+
+
+</div>

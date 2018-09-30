@@ -1,0 +1,38 @@
+[
+    {"name" : "companies_add" , "en" : "Add Company" , "ar" : "اضافة شركة"},
+    {"name" : "companies_search" , "en" : "Search Company" , "ar" : "بحث شركات"},
+    {"name" : "companies_for_search" , "en" : "Search Company" , "ar" : "بحث عن شركات"},
+
+    {"name" : "companies_new" , "en" : "New Company" , "ar" : "شركة جديدة"},
+    {"name" : "companies_name" , "en" : "Company Name" , "ar" : "اسم الشركة"},
+    {"name" : "companies_balance" , "en" : "Company Balance" , "ar" : "الرصيد"},
+    {"name" : "companies_delete" , "en" : "Delete Company" , "ar" : "حذف شركة"},
+    {"name" : "companies_edit" , "en" : "Company Edit" , "ar" : "تعديل بيانات شركة"},
+    {"name" : "companies_details" , "en" : "Company Details" , "ar" : "تفاصيل شركة"},
+
+    {"name" : "companies_phones" , "en" : "Phones" , "ar" : "تليفونات الشركة"},
+    {"name" : "companies_add_phone" , "en" : "Add Phone" , "ar" : "اضافة تليفون"},
+
+    {"name" : "companies_mobiles" , "en" : "Mobiles" , "ar" : "موبايلات الشركة"},
+    {"name" : "companies_add_mobile" , "en" : "Add Mobile" , "ar" : "اضافة محمول"},
+
+    {"name" : "companies_hotlines" , "en" : "HotLines" , "ar" : "الخطوط الساخنة"},
+    {"name" : "companies_add_hotline" , "en" : "Add Hotine" , "ar" : "اضافة خط ساخن"},
+
+    {"name" : "companies_gov" , "en" : "Gov" , "ar" : "المحافظة"},
+    {"name" : "companies_address" , "en" : "Address" , "ar" : "العنوان"},
+    {"name" : "companies_notes" , "en" : "Notes" , "ar" : "ملاحظات"},
+
+    {"name" : "companies_status" , "en" : "Company Status" , "ar" : "حالة الشركة"},
+
+    {"name" : "companies_active_yes" , "en" : "Active" , "ar" : "فعال"},
+    {"name" : "companies_active_no" , "en" : "Not Active" , "ar" : "غير فعال"},
+    
+    {"name" : "companies_logo" , "en" : "Logo" , "ar" : "شعار الشركة"},
+    {"name" : "companies_file_name" , "en" : "File Name" , "ar" : "اسم الملف"},
+
+    
+    {"name" : "companies_img" , "en" : "Company Images" , "ar" : "ملفات الشركة"}  
+    
+    
+]

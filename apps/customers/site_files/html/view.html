@@ -1,0 +1,71 @@
+<div ng-hide="busy" class="row">
+    <div class="col9">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.customers_name##</td>
+                <td>{{customer.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_gov##</td>
+                <td>{{customer.gov.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_city##</td>
+                <td>{{customer.city.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_town##</td>
+                <td>{{customer.town.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_region##</td>
+                <td>{{customer.region.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_address##</td>
+                <td>{{customer.address}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_phones##</td>
+                <td>
+                    <a ng-repeat="p in customer.phones" href="tel:{{p}}"> {{p}}
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_mobiles##</td>
+                <td>
+                    <a ng-repeat="m in customer.mobiles" href="tel:{{m}}"> {{m}}
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_email##</td>
+                <td>
+                    <a ng-show="customer.email" target="_blank" href="tel:{{customer.email}}"> {{customer.email}}
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.customers_notes##</td>
+                <td>{{customer.notes}}</td>
+            </tr>
+
+        </table>
+
+    </div>
+        <i-image view class="col3" ng-model="customer.image_url"></i-image>
+</div>

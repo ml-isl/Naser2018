@@ -1,0 +1,34 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="updateStore_InModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.stores_in_edit##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div x-import="stores_in/content.html"></div>
+
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-hide="busy" id="update_store_in_btn" ng-click="update(store_in)">
+                <i class="fa fa-save" aria-hidden="true"></i> ##word.update##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#updateStore_InModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+</div>

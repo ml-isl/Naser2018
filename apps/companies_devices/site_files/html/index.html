@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row">
+            <div class="col" ng-controller="companies_devices">
+                <div x-import="companies_devices/add_modal.html"></div>
+                <div x-import="companies_devices/update_modal.html"></div>
+                <div x-import="companies_devices/delete_modal.html"></div>
+                <div x-import="companies_devices/view_modal.html"></div>
+                <div x-import="companies_devices/search.html"></div>
+
+                <div class="top-actions">
+                    <i-button type="add" x-permission="owner" ng-click="newCompany_Device()" label="##word.companies_devices_model_new##"></i-button>
+
+                    <i-button type="search" x-permission="owner" onclick="site.showModal('#SearchModal')" label="##word.search_all##"></i-button>
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <table class="table loaded" id="t1">
+                    <tr>
+                        <th>##word.companies_devices_logo##</th>
+                        <th>##word.companies_devices_company##</th>
+                        <th>##word.companies_devices_category##</th>
+                        <th>##word.companies_devices_sub_category##</th>
+                        <th>##word.companies_devices_device##</th>
+                        <th>##word.companies_devices_model## - ##word.companies_devices_model_equal##</th>
+
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+                        <td class="center bold">
+                                <i-image view class="logo" category="companies_devices" ng-model="c.image_url"></i-image>
+                            </td>
+                        <td class="center bold indigo">{{c.company.name}}</td>
+                        <td class="center bold indigo">{{c.category.name}}</td>
+                        <td class="center bold indigo">{{c.sub_category.name}}</td>
+                        <td class="center bold blue">{{c.device.name}}</td>
+                        <td class="center blue">
+                            <p ng-repeat="m in c.models"> <b class="bold blue"> {{m.name}} </b> - <span class="green">
+                                    {{m.alt}} </span></p>
+                        </td>
+
+                        <td x-permission="owner" class="center">
+                            <i-button type="details" x-permission="owner" ng-click="details(c)" label="##word.details##"></i-button>
+                            <i-button type="update" x-permission="owner" ng-click="edit(c)" label="##word.update##"></i-button>
+                            <i-button type="delete" ng-click="remove(c)" label="##word.delete##"></i-button>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <i-button type="export" onclick="export_to_xlsx('t1' , 'companies_devices.xlsx')" label="##word.export_to_excel##"></i-button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div x-import="scripts.html"></div>
+
+    <script x-import="companies_devices/index.js"></script>
+
+</body>
+
+</html>

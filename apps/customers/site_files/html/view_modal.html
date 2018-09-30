@@ -1,0 +1,39 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+
+    .table .title {
+        font-weight: bold;
+        color: #607d8b;
+    }
+</style>
+
+
+<div id="viewCustomerModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-file"></i> <i ng-hide="busy"  class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i> ##word.customers_details## </h2>
+        </div>
+        <div class="modal-body">
+          
+            <div x-import="customers/view.html"></div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+
+            <i-button  type="close" label="##word.close##" onclick="site.hideModal('#viewCustomerModal')"></i-button>
+
+        </div>
+    </div>
+
+
+</div>

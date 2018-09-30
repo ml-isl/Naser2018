@@ -1,0 +1,67 @@
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+       
+       <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2> ##word.ticket_show_order## </h2>
+        </div>
+        
+        <div class="modal-body">
+              <form >
+                <i-list ng-model="region" label="##word.ticket_region_name##" items="regions"></i-list>
+                <i-list ng-model="eng" label="##word.ticket_eng##" items="engList"></i-list>
+                <i-button label=" ##word.ticket_show_tickets##" ng-click="filterOrders()"></i-button>
+               
+                   
+              </form>
+
+              <div id="orderDiv" class="padding margin">
+               
+                  <br>
+                  <div class="row">
+                      <div class="col5"> 
+                          <label>##word.ticket_region_name## </label>
+                          <b> {{region.name}} </b>
+                      </div>
+                    
+                      <div class="col7 text-left">
+                          <label>
+                                ##word.ticket_eng##
+                          </label>
+                          <b> {{eng.name}} </b>
+                      </div>
+                  </div>
+                <table class="table">
+                    <tr>
+                        <th> م </th>
+                        <th> رقم البلاغ </th>
+                        <th> ت الاستلام </th>
+                        <th> الجهاز </th>
+                        <th> القرية </th>
+                        <th> الشركة </th>
+                        <th> المحصل </th>
+                        <th> ملاحظات </th>
+                    </tr>
+                    <tr ng-repeat="o in order_list">
+                        <td> {{o.index}} </td>
+                        <td> {{o.code}} </td>
+                        <td> {{o.date | dateX}} </td>
+                        <td> {{o.device_info.device.name}} </td>
+                        <td> {{o.customer.town.name}} </td>
+                        <td> {{o.device_info.company.name}} </td>
+                        <td>  </td>
+                        <td>  </td>
+                    </tr>
+                </table>
+              </div>
+        </div>
+
+        <div class="modal-footer center">
+            <i-button type="close" onclick="site.hideModal('#orderModal')" label="##word.close##"></i-button>
+            <i-button type="print" onclick="site.printHTML({select : '#orderDiv' , ignores : ['.btn'], preappends : ['#naser_logo']})" label=" ##word.print##">
+                  
+            </i-button>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div id="viewCompany_DeviceModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.companies_devices_details## <i class="fa fa-file"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div x-import="companies_devices/view.html"></div>
+
+            <h2>{{error}}</h2>
+            <div class="modal-footer center">
+                <i-button type="close" onclick="site.hideModal('#viewCompany_DeviceModal')" label="##word.close##"></i-button>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

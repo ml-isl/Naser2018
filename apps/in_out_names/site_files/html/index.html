@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row">
+            <div class="row" ng-controller="in_out_names">
+                <div x-import="in_out_names/add_modal.html"></div>
+                <div x-import="in_out_names/update_modal.html"></div>
+                <div x-import="in_out_names/delete_modal.html"></div>
+                <div x-import="in_out_names/view_modal.html"></div>
+                <div class="top-actions">
+                   
+                        <i-button x-permission="owner" type="add" label="##word.in_out_name_new##" ng-click="newIn_Out_Name()" ></i-button>
+
+
+                        <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <table class="table loaded" id="t1">
+                    <tr>
+                        <th>##word.in_out_name_logo##</th>
+                        <th>##word.in_out_name_name##</th>
+                        <th>##word.in_out_name_in##</th>
+                        <th>##word.in_out_name_out##</th>
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+                        <td>
+                                <i-image view class="logo" ng-model="c.image_url"></i-image>
+                         
+                        </td>
+                        <td>{{c.name}}</td>
+                        <td>
+                            <p ng-show="c.in == true"> نعم </p>
+                        </td>
+                        <td>
+                            <p ng-show="c.out == true"> نعم </p>
+                        </td>
+                        <td x-permission="owner" class="center">
+                            
+                                <i-button  x-permission="owner" type="details" label="##word.details##" ng-click="details(c)"></i-button>
+                                <i-button  x-permission="owner" type="update" label="##word.update##" ng-click="edit(c)"></i-button>
+                                <i-button type="delete" label="##word.delete##" ng-click="remove(c)"></i-button>
+                                
+                                
+                        </td>
+                    </tr>
+
+                </table>
+                
+                    <i-button  type="export" label="##word.export_to_excel##" onclick="export_to_xlsx('t1' , 'in_out_names.xlsx')"></i-button>
+            </div>
+        </div>
+    </div>
+
+
+    <div x-import="scripts.html"></div>
+
+    <script x-import="in_out_names/index.js"></script>
+
+
+</body>
+
+</html>

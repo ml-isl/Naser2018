@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+    <div x-import="menu/index.html"></div>
+
+    <div id="main-layout" class="container">
+        <div class="row ">
+            <div class="row" ng-controller="stores_in">
+                <div x-import="stores_in/add_modal.html"></div>
+                <div x-import="stores_in/delete_modal.html"></div>
+                <div x-import="stores_in/view_modal.html"></div>
+                <div x-import="stores_in/search_all_modal.html"></div>
+                <div class="row">
+                    <h1 class="white bold text-center"> ##word.stores_in## </h1>
+                </div>
+                <div class="top-actions">
+                    
+                    <i-button x-permission="owner" type="add" label="##word.stores_in_new##" ng-click="newStore_In()"></i-button>
+                    <i-button x-permission="owner" type="search" label="##word.search_all##" onclick="site.showModal('#StoresInSearchModal')"></i-button>
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                    <h3 class="white bold"> ##word.stores_in_result_count## : {{count}}</h3>
+                </div>
+
+                <table id="t1" class="table loaded center hover" >
+                    <tr>
+                        <th>##word.stores_in_date##</th>
+                        <th>##word.stores_in_id##</th>
+                        <th>##word.stores_in_Company_name##</th>
+                        <th>##word.stores_in_total_value##</th>
+                        <th>##word.stores_in_net_value##</th>
+
+                        <th x-permission="owner" class="not-print">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+
+                        <td>
+                            <p class="text-center"> <br> {{c.date | date : 'yyyy - MM - dd'}} </p>
+                        </td>
+                        <td>
+                            <p class="bold brown text-center"> <br>  {{c.number}} </p>
+                        </td>
+                        <td>
+                            <p class="text-center blue"> <br>  {{c.company.name}} </p>
+                        </td>
+                        <td>
+                            <p class="bold text-center"> <br>  {{c.total_value}} </p>
+                        </td>
+                        <td>
+                            <p class="bold text-center green"> <br>  {{c.net_value}} </p>
+                        </td>
+                        <td x-permission="owner" class="center not-print">
+                            <i-button x-permission="owner" type="details" label="##word.details##" ng-click="details(c)"></i-button>
+                            <i-button x-permission="developer" type="delete" label="##word.delete##" ng-click="remove(c)"></i-button>
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <i-button type="print" label="##word.print##" onclick="site.print('#t1')"></i-button>
+
+              
+            </div>
+        </div>
+    </div>
+
+    <div x-import="scripts.html"></div>
+    <script x-import="stores_in/index.js"></script>
+
+</body>
+
+</html>

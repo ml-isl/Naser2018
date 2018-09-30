@@ -1,0 +1,13 @@
+[
+   
+    {"name" : "eng" , "en" : "Tecnical Engineer" , "ar" : "صلاحيات فنى" },
+    {"name" : "tickets" , "en" : "Add Tickets" , "ar" : "استلام بلاغ" },
+    {"name" : "review" , "en" : "Review Ticket" , "ar" : "مراجعة بلاغ" },
+    {"name" : "finance" , "en" : "Manage Finance" , "ar" : "ادارة العمليات الحسابية" },
+    {"name" : "stores" , "en" : "'Manage Stores'" , "ar" : "ادارة المخازن" },
+    {"name" : "customers" , "en" : "Manage Customers" , "ar" : "ادارة العملاء" },
+    {"name" : "close_eng" , "en" : "Close Eng" , "ar" : "عمل تقفيل فنى" },
+    {"name" : "close1" , "en" : "Close 1" , "ar" : "عمل تقفيل مبدائى" },
+    {"name" : "close2" , "en" : "Close 2" , "ar" : "عمل تقفيل نهائى" }
+   
+]

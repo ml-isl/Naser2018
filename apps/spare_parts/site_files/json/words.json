@@ -1,0 +1,16 @@
+[
+    {"name" : "spare_parts_add" , "en" : "Add Spare Part" , "ar" : "اضافة قطعة غيار"},
+    {"name" : "spare_parts_new" , "en" : "New Spare Part" , "ar" : "قطعة غيار جديدة"},
+    {"name" : "spare_parts_details" , "en" : "Spare Part Details" , "ar" : "تفاصيل قطعة غيار"},
+    {"name" : "spare_parts_edit" , "en" : "Edit Spare Part" , "ar" : "تعديل قطعة غيار"},
+    {"name" : "spare_parts_delete" , "en" : "Delete Spare Part" , "ar" : "حذف قطعة غيار"},
+    {"name" : "spare_parts_logo" , "en" : "Logo" , "ar" : "الشعار"},
+    {"name" : "spare_parts_code" , "en" : "Code" , "ar" : "رقم القطعة"},
+    {"name" : "spare_parts_company" , "en" : "Spare Part Name in Compoany" , "ar" : "اسم القطعة في الشركة"},
+    {"name" : "spare_parts_store" , "en" : "Spare Part Name In Store" , "ar" : "اسم القطعة في المخزن"},
+
+    {"name" : "spare_parts_img" , "en" : "Image" , "ar" : "صورة الشعار"}
+    
+    
+
+]

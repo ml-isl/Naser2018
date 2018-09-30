@@ -1,0 +1,65 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+
+    .thumb {
+        width: 32px;
+        height: 32px;
+    }
+</style>
+
+
+<div id="SearchByCustomerModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_search_by_customer##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <form>
+                <div class="control">
+                    <label>##word.ticket_customer_name##</label>
+                    <input type="text" ng-model="customer.name">
+                </div>
+
+                <div class="control">
+                    <label>##word.ticket_customer_phone##</label>
+                    <input type="text" ng-model="customer.phone">
+                </div>
+
+                <div class="control">
+                    <label>##word.ticket_customer_mobile##</label>
+                    <input type="text" ng-model="customer.mobile">
+                </div>
+
+            </form>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-click="searchByCustomerName()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i> ##word.ticket_search_by_customer_name##</a>
+
+            <a class="btn bg-green" ng-click="searchByCustomerPhone()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i> ##word.ticket_search_by_customer_phone##</a>
+
+
+            <a class="btn bg-green" ng-click="searchByCustomerMobile()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i> ##word.ticket_search_by_customer_mobile##</a>
+
+
+            <a class="btn bg-blue" onclick="site.hideModal('#SearchByCustomerModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+</div>

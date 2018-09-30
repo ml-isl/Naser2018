@@ -1,0 +1,20 @@
+<div class="row">
+
+
+    <div class="col9">
+
+        <i-list v="r" ng-search="gov_search" ng-change="loadCities(town.gov)" class="col3" items="goves" ng-model="town.gov"
+            label="##word.towns_gov##"></i-list>
+        <i-list v="r" ng-search="city_search" class="col3" items="cities" ng-model="town.city" label="##word.towns_city##"></i-list>
+        <i-list ng-search="regions_search" class="col3" items="regions" ng-model="town.region" label="##word.towns_region##"></i-list>
+        <i-control v="r" class="col4" type="text" ng-model="town.name" label="##word.towns_name##"></i-control>
+
+    </div>
+
+    <div class="col3 ">
+
+        <i-image category="town_img" ng-model="town.image_url"></i-image>
+        <i-files ng-model="town.files"></i-files>
+
+    </div>
+</div>

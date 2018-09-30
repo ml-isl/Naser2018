@@ -1,0 +1,28 @@
+<div ng-hide="busy" class="row10" id="v1">
+    <div class="col7">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.safes_name##</td>
+                <td class="bold blue">{{safe.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.safes_employee##</td>
+                <td class="bold blue">{{safe.employee.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.safes_balance##</td>
+                <td class="green bold">{{safe.balance}}</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+    
+        <i-image view class="col3" label="##word.safes_logo##" ng-model="safe.image_url"></i-image>
+    
+</div>

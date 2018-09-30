@@ -1,0 +1,25 @@
+[
+    {"name" : "unemployees_add" , "en" : "Add UnEmployee" , "ar" : "اضافة غير موظف"},
+    {"name" : "unemployees_new" , "en" : "New UnEmployee" , "ar" : "غير موظف جديد"},
+    {"name" : "unemployees_details" , "en" : "UnEmployee Details" , "ar" : "تفاصيل غير موظف"},
+    {"name" : "unemployees_edit" , "en" : "Edit UnEmployee" , "ar" : "تعديل غير موظف"},
+    {"name" : "unemployees_delete" , "en" : "Delete UnEmployee" , "ar" : "حذف غير موظف"},
+    {"name" : "unemployees_name" , "en" : "UnEmployee Name" , "ar" : "الاسم"},
+    {"name" : "unemployees_address" , "en" : "UnEmployee Address" , "ar" : "العنوان"},
+    {"name" : "unemployees_gov" , "en" : "Gov" , "ar" : "المحافظة"},
+    {"name" : "unemployees_city" , "en" : "City" , "ar" : "المدينة"},
+    {"name" : "unemployees_town" , "en" : "Town" , "ar" : "القرية"},
+    {"name" : "unemployees_region" , "en" : "Region" , "ar" : "المنطقة"},
+    {"name" : "unemployees_address" , "en" : "Address" , "ar" : "العنوان"},
+    {"name" : "unemployees_phones" , "en" : "UnEmployee Phones" , "ar" : "تليفونات"},
+    {"name" : "unemployees_mobiles" , "en" : "UnEmployee Mobiles" , "ar" : "موبايلات"},
+    {"name" : "unemployees_add_phone" , "en" : "New UnEmployee" , "ar" : "اضافة تليفون"},
+    {"name" : "unemployees_add_mobile" , "en" : "New UnEmployee" , "ar" : "اضافة محمول"},
+    {"name" : "unemployees_email" , "en" : "UnEmployee Email" , "ar" : "الايميل"},
+    {"name" : "unemployees_nid" , "en" : "National ID" , "ar" : "الرقم القومي"},
+    {"name" : "unemployees_notes" , "en" : "Notes" , "ar" : "ملاحظات"},
+    {"name" : "unemployees_logo" , "en" : "UnEmployee Logo" , "ar" : "شعار غير موظف"},
+    {"name" : "unemployees_file_name" , "en" : "File Name" , "ar" : "ملفات غير الموظف"},
+        
+    {"name" : "unemployees_img" , "en" : "Unemployee Image" , "ar" : "ملفات غير الموظف"}
+]

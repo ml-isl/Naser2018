@@ -1,0 +1,18 @@
+[
+    {"name" : "cities_add" , "en" : "Add City" , "ar" : "اضافة مدينة"},
+    {"name" : "cities_new" , "en" : "New City" , "ar" : "مدينة جديدة"},
+    {"name" : "cities_name" , "en" : "Name City" , "ar" : "اسم مدينة "},
+    {"name" : "cities_search" , "en" : "Search City" , "ar" : "بحث مدينة "},
+
+    {"name" : "cities_delete" , "en" : "Delete City" , "ar" : "حذف مدينة"},
+    {"name" : "cities_edit" , "en" : "Edit City" , "ar" : "تعديل بيانات مدينة"},
+    {"name" : "cities_details" , "en" : "City Details" , "ar" : "تفاصيل مدينة"},
+    {"name" : "cities_gov" , "en" : "Gov" , "ar" : "المحافظة"},
+    {"name" : "cities_city" , "en" : "City" , "ar" : "المدينة"},
+    {"name" : "cities_logo" , "en" : "City Logo" , "ar" : "شعار المدينة"},
+  
+    {"name" : "cities_img" , "en" : "cities Image" , "ar" : "ملفات المدينة"}
+    
+    
+
+]

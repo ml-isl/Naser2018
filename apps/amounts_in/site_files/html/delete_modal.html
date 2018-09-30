@@ -1,0 +1,39 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="deleteAmount_InModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.amounts_in_delete## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div x-import="amounts_in/view.html"></div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+          
+                <i-button type="delete" label="##word.delete##" ng-click="delete(amount_in)"></i-button>
+                <i-button type="close" label="##word.close##" onclick="site.hideModal('#deleteAmount_InModal')"></i-button>
+
+
+        </div>
+    </div>
+
+
+</div>

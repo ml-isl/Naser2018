@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col7">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.tax_types_name##</td>
+                <td>{{tax_type.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.tax_types_value##</td>
+                <td>{{tax_type.value}} %</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col3 center">
+        <i-image view label="##word.tax_types_img##" ng-model="tax_type.image_url"></i-image>
+        <br>
+        <i-files view ng-model="tax_type.files"></i-files>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,144 @@
+<div class="row">
+    <div class="col9">
+
+        <form class="form">
+
+            <div class="row border text-center">
+
+                <i-control v="r ll2" ng-model="employee.name" class="row border text-center" type="text" label="##word.employees_any_details##"></i-control>
+
+                <div>
+                    <i-list ng-search="gov_search" v="r" class="col4" items="goves" ng-model="employee.gov" ng-change="loadCities(employee.gov)"
+                        label="##word.employees_gov##"></i-list>
+
+                    <i-list ng-search="city_search" class="col4" items="cities" ng-model="employee.city" ng-change="loadTowns(employee.city)"
+                        label="##word.employees_city##"></i-list>
+                    <i-list ng-search="city_search" class="col4" items="towns" ng-model="employee.town" label="##word.employees_town##"></i-list>
+
+                </div>
+
+                <div class="row">
+                    <i-control ng-model="employee.address" type="text" class="control" label="##word.employees_address##"></i-control>
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row border padding">
+
+                <i-list ng-search="security_role" v="r" class="col4" items="roles" ng-model="employee.role" label="##word.security_role##"></i-list>
+                <i-control class="text-left col4" ng-model="employee.email" type="text" label="##word.security_user_email##"></i-control>
+                <i-control class="text-center col4" ng-model="employee.password" type="password" label="##word.security_user_password##"></i-control>
+
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col5 padding">
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="phoneEditor = !phoneEditor">##word.employees_phones##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="phoneEditor">
+                            <td colspan="2">
+                                <form>
+                                    <div class="control">
+                                        <i-control type="number" ng-model="phone" label="##word.employees_phones##"></i-control>
+                                        <a class="btn" ng-click="addPhone()">##word.employees_add_phone##</a>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="phone in employee.phones">
+                            <td>{{phone}}</td>
+                            <td ng-show="phoneEditor">
+                                <a class="btn bg-red" ng-click="deletePhone(phone)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class="col5 padding">
+
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="mobileEditor = !mobileEditor">##word.employees_mobiles##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="mobileEditor">
+                            <td colspan="2">
+                                <form>
+                                    <div class="control">
+                                        <i-control type="number" ng-model="mobile" label="##word.employees_mobiles##"></i-control>
+                                        <a class="btn" ng-click="addMobile()">##word.employees_add_mobile##</a>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="mobile in employee.mobiles">
+                            <td>{{mobile}}</td>
+                            <td ng-show="mobileEditor">
+                                <a class="btn bg-red" ng-click="deleteMobile(mobile)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="row10 text-center">
+                <i-control ng-model="employee.nid" type="text" class="col5" label="##word.employees_nid##"></i-control>
+                <i-control ng-model="employee.insurance_number" type="text" class="col5" label="##word.employees_insurance_number##"></i-control>
+
+
+
+            </div>
+
+            <div class="row border">
+
+                <i-list ng-search="employees_department" v="r" class="col2" items="departments" ng-model="employee.department"
+                    label="##word.employees_department##"></i-list>
+                <i-list ng-search="employees_job" v="r" class="col2" items="jobs" ng-model="employee.job" label="##word.employees_job##"></i-list>
+                <i-list ng-search="employees_degree" class="col2" items="employees_degrees" ng-model="employee.degree"
+                    label="##word.employees_degree##"></i-list>
+                <i-list ng-search="employees_marital_status" class="col2" items="maritals_status" ng-model="employee.marital_status"
+                    label="##word.employees_marital_status##"></i-list>
+                <i-list ng-search="employees_military_status" class="col2" items="militaries_status" ng-model="employee.military_status"
+                    label="##word.employees_military_status##"></i-list>
+
+            </div>
+
+            <div class="row">
+                <i-control class="col2" ng-model="employee.birth_date" type="date" label="##word.employees_birth_date##"></i-control>
+                <i-control class="col2" ng-model="employee.contract_date" type="date" label="##word.employees_contract_date##"></i-control>
+                <i-control class="col2" ng-model="employee.extra_salary" type="text" label="##word.employees_extra_salary##"></i-control>
+                <i-control class="col2" ng-model="employee.extra_ticket" type="text" label="##word.employees_extra_ticket##"></i-control>
+
+            </div>
+
+            <i-textarea ng-model="employee.notes" label="##word.employees_notes##"></i-textarea>
+
+        </form>
+    </div>
+
+    <div class="col3 ">
+
+        <i-image category="employees_logo" ng-model="employee.image_url"></i-image>
+
+        <i-files ng-model="employee.files"></i-files>
+
+
+    </div>
+
+</div>

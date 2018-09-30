@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col9">
+
+        <form class="form">
+            <i-list ng-search="category_search" v="r" class="col3" items="categories" ng-model="sub_category.category" label="##word.sub_categories_category##"></i-list>
+            <i-control v="r" class="col4" ng-model="sub_category.name" type="text" label="##word.sub_categories_sub_category##"></i-control>
+         
+        </form>
+    </div>
+
+    <div class="col3 ">
+            <i-image category="sub_category" ng-model="sub_category.image_url"></i-image>
+
+            <i-files  ng-model="sub_category.files"></i-files>
+
+    </div>
+</div>

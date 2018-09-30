@@ -1,0 +1,22 @@
+<span ng-show="busy">
+    <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</span>
+<div ng-hide="busy" class="row">
+    <div class="col7">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.military_status_name##</td>
+                <td class="center bold blue">{{military_state.name}}</td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="col3 center">
+
+        <i-image view category="militaries_status" ng-model="military_state.image_url"></i-image>
+        <i-files view ng-model="military_state.files"></i-files>
+
+    </div>
+</div>

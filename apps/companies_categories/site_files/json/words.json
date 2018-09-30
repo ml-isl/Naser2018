@@ -1,0 +1,16 @@
+[
+    {"name" : "companies_categories_add" , "en" : "Add Category" , "ar" :"اضافة فئة" },
+    {"name" : "companies_categories_search" , "en" : "Search Company Category" , "ar" :" بحث فئة الشركة" },
+    {"name" : "companies_categories_new" , "en" : "New Company Category" , "ar" :"فئة  شركة جديدة" },
+    {"name" : "companies_categories" , "en" : " Company Category" , "ar" :"فئة  شركة " },
+
+    {"name" : "companies_categories_details" , "en" : "Category Details" , "ar" :"تفاصيل فئة" },
+    {"name" : "companies_categories_edit" , "en" : "Edit Category" , "ar" :"تعديل بيانات فئة" },
+    {"name" : "companies_categories_delete" , "en" : "Delete Category" , "ar" :"حذف فئة" },
+    {"name" : "companies_categories_company" , "en" : "Company" , "ar" :"الشركة" },
+    {"name" : "companies_categories_name" , "en" : "Category" , "ar" :"الفئة" },    
+    {"name" : "companies_categories_logo" , "en" : "Category Logo" , "ar" :"صورة الفئة" },
+   
+    {"name" : "companies_categories_img" , "en" : "Category Image" , "ar" : "ملفات الفئة"}
+
+]

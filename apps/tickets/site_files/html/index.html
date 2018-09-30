@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body class="##session.lang##">
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+    <style>
+        .table td {
+            vertical-align: top;
+        }
+
+        .ticket-code {
+            font-size: 18px;
+            color: #673ab7;
+        }
+
+        .w1 {
+            width: 200px;
+        }
+
+        .w2 {
+            width: 400px;
+        }
+
+        .w3 {
+            width: 100px;
+        }
+
+        .f18 {
+            font-size: 18px !important;
+            padding: 15px !important;
+        }
+
+        .naser-logo {
+            padding: 5px !important;
+            border: 2px solid;
+        }
+        .naser-logo img{
+            height: 45px;
+        }
+    </style>
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div x-permissions="tickets || eng" id="main-layout" class="container">
+        <div class="row">
+            <div class="row" ng-controller="tickets">
+                <div x-import="tickets/ticket_reccet_modal.html"></div>
+                <div x-import="tickets/add_modal.html"></div>
+                <div x-import="tickets/update_modal.html"></div>
+                <div x-import="tickets/delete_modal.html"></div>
+                <div x-import="tickets/view_modal.html"></div>
+                <div x-import="tickets/eng_select_modal.html"></div>
+                <div x-import="tickets/eng_select_all_modal.html"></div>
+                <div x-import="tickets/close_eng_modal.html"></div>
+                <div x-import="tickets/close1_modal.html"></div>
+                <div x-import="tickets/close2_modal.html"></div>
+                <div x-import="tickets/search_modal.html"></div>
+                <div x-import="tickets/search_by_code_modal.html"></div>
+                <div x-import="tickets/search_by_customer_modal.html"></div>
+                <div x-import="tickets/search_by_company_code_modal.html"></div>
+                <div x-import="tickets/search_by_address_modal.html"></div>
+                <div x-import="tickets/search_by_eng_modal.html"></div>
+                <div x-import="tickets/search_by_device_modal.html"></div>
+                <div x-import="tickets/notes_modal.html"></div>
+                <div x-import="tickets/files_modal.html"></div>
+                <div x-import="tickets/review_modal.html"></div>
+                <div x-import="tickets/customer_confirm_modal.html"></div>
+                <div x-import="tickets/ticket_open_confirm_modal.html"></div>
+                <div x-import="tickets/tickets_history_modal.html"></div>
+                <div x-import="tickets/order_modal.html"></div>
+                <div x-import="tickets/naser_logo.html" class="hidden"></div>
+                <div class="top-actions">
+
+                <i-button x-permission="review" type="add" ng-click="newTicket()" label="##word.new_ticket##"></i-button>
+                <i-button x-permission="eng" type="search" ng-click="loadMyTickets()"  label="##word.ticket_my_tickets##"></i-button>
+                <i-button x-permission="review" type="search" onclick="site.showModal('#SearchModal')"  label="##word.ticket_search_all##"></i-button>
+                <i-button x-permission="review"  ng-click="loadFollowTickets()"  label="##word.ticket_view_follow##"></i-button>
+                <i-button x-permission="review"  onclick="site.showModal('#engSelectAllModal')"  label="##word.ticket_assign_all##"></i-button>
+                <i-button x-permission="review"  ng-click="showOrder()"  label="##word.ticket_show_order##"></i-button>
+
+                   
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+
+                </div>
+                <div class="loaded">
+                    <h2 class="white text-center">##word.ticket_count## :
+                        <span class="bold ">{{count}}</span>
+                    </h2>
+
+                    <br>
+                    <br>
+
+                    <div id="all">
+                        <div id="t_{{t.id}}" ng-repeat="t in list" class=" " ng-class="{'print-break' : (($index + 1) % 10 === 0)}">
+                            <div x-import="tickets/ticket_template.html"></div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <a x-permission="print" class="btn bg-yellow black" onclick="site.printHTML({select : '.ticket-content' , ignores : ['.btn']})">
+                    <i class="fa fa-print" aria-hidden="true"></i> ##word.print##</a>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div x-import="scripts.html"></div>
+
+    <script x-permissions="tickets || eng" x-import="tickets/index.js"></script>
+    <script x-permission="tickets" x-import="customers/index.js"></script>
+
+    <div ng-controller="customers" ng-init="parent = 'tickets'" x-permission="tickets">
+        <div x-import="customers/add_modal.html"></div>
+        <div x-import="customers/update_modal.html"></div>
+    </div>
+
+    <div x-permission="tickets" ng-controller="customersManagementController"></div>
+    <script x-permission="tickets">
+        app.controller('customersManagementController', function ($rootScope) {
+            $rootScope.$emit("loadAllAddress", {});
+        })
+    </script>
+</body>
+
+</html>

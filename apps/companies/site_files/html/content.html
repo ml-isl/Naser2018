@@ -1,0 +1,134 @@
+<div class="row ">
+    <div class="col9">
+        <form class="form">
+
+            <div class="row">
+
+                <i-control v="r" class="col6" ng-model="company.name" type="text" label="##word.companies_name##"></i-control>
+                <i-control ng-model="company.balance" class="col6" type="number" class="text-center" label="##word.companies_balance##"></i-control>
+            </div>
+
+            <div class="row ">
+                <i-list ng-search="gov" v="r" class="col3" items="goves" ng-model="company.gov" label="##word.companies_gov##"></i-list>
+
+                <i-control ng-model="company.address" type="text" class="col9" label="##word.companies_address##"></i-control>
+
+            </div>
+
+            <div class="row ">
+
+                <div class="col4 padding">
+                    <!-- phones -->
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="phoneEditor = !phoneEditor">##word.companies_phones##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="phoneEditor">
+                            <td colspan="2">
+                                <form>
+                                    <div class="control">
+                                        <i-control type="text" ng-model="phone" label="##word.companies_phones##"></i-control>
+                                        <a class="btn" ng-click="addPhone()">##word.companies_add_phone##</a>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="phone in company.phones">
+                            <td>{{phone}}</td>
+                            <td ng-show="phoneEditor">
+                                <a class="btn bg-red" ng-click="deletePhone(phone)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- END -->
+                </div>
+
+                <div class="col4 padding">
+                    <!-- mobiles -->
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="mobileEditor = !mobileEditor">##word.companies_mobiles##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="mobileEditor">
+                            <td colspan="2">
+                                <form>
+                                    <div class="control">
+                                        <i-control type="text" ng-model="mobile" label="##word.companies_mobiles##"></i-control>
+                                        <a class="btn" ng-click="addMobile()">##word.companies_add_mobile##</a>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="mobile in company.mobiles">
+                            <td>{{mobile}}</td>
+                            <td ng-show="mobileEditor">
+                                <a class="btn bg-red" ng-click="deleteMobile(mobile)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- END -->
+                </div>
+
+                <div class="col4 padding">
+                    <!-- HOTLINE -->
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="hotlineEditor = !hotlineEditor">##word.companies_hotlines##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="hotlineEditor">
+                            <td colspan="2">
+                                <form>
+                                    <div class="control">
+                                        <i-control type="text" ng-model="hotline" label="##word.companies_hotlines##"></i-control>
+                                        <a class="btn" ng-click="addHotline()">##word.companies_add_hotline##</a>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="hotline in company.hotlines">
+                            <td>{{hotline}}</td>
+                            <td ng-show="hotlineEditor">
+                                <a class="btn bg-red" ng-click="deleteHotline(hotline)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- END -->
+                </div>
+
+            </div>
+
+            <i-textarea ng-model="company.notes" label="##word.companies_notes##"></i-textarea>
+
+
+            <div class="control hidden">
+                <label>
+                    <span>##word.companies_status## </span>
+                    <input ng-model="company.active" type="checkbox">
+                </label>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- FILES -->
+    <div class="col3 ">
+        <i-image category="company" ng-model="company.image_url"></i-image>
+        <i-files ng-model="company.files"></i-files>
+        <!-- -end-->
+    </div>
+</div>

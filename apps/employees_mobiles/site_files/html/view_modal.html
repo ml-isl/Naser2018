@@ -1,0 +1,85 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+
+    .table .title {
+        font-weight: bold;
+        color: #607d8b;
+    }
+</style>
+
+
+<div id="viewEmployee_MobileModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-file"></i> ##word.employees_mobiles_details## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div ng-hide="busy" class="row">
+                <div class="col7">
+                    <br>
+                    <table class="table">
+                        <tr>
+                            <td class="title">##word.employees_mobiles_employee##</td>
+                            <td>{{employee_mobile.employee.name}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.employees_mobiles_number##</td>
+                            <td>{{employee_mobile.number.number}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.employees_mobiles_slide_name##</td>
+                            <td>{{employee_mobile.number.slide_name}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.employees_mobiles_value##</td>
+                            <td>{{employee_mobile.number.value + ' جنيه '}}</td>  
+                        </tr>
+                        
+                        <tr>
+                            <td class="title">##word.employees_mobiles_discount##</td>
+                            <td>{{employee_mobile.discount + ' جنيه '}}</td>  
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.employees_mobiles_notes##</td>
+                            <td>{{employee_mobile.notes}}</td>
+                        </tr>
+                    </table>
+
+
+                </div>
+
+                <div class="col3 center">
+
+                    <img class="img " ng-src="{{employee_mobile.image_url}}" />
+
+                </div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+
+            <a class="btn bg-blue" onclick="site.hideModal('#viewEmployee_MobileModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+
+
+</div>

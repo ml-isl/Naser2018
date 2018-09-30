@@ -1,0 +1,52 @@
+<div ng-hide="busy" class="row">
+    <div class="col9">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.amounts_in_value##</td>
+                <td>{{amount_in.value}}</td>
+            </tr>
+
+
+            <tr>
+                <td class="title">##word.amounts_in_customers##</td>
+                <td>{{amount_in.customer.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.amounts_in_employees##</td>
+                <td>{{amount_in.eng.name}}</td>
+            </tr>
+
+            <tr>
+                    <td class="title">##word.amounts_in_Company_name##</td>
+                    <td>{{amount_in.company.name}}</td>
+                </tr>
+
+
+            <tr>
+                <td class="title">##word.amounts_in_date##</td>
+                <td>{{amount_in.date | date : 'dd - MM - yyyy'}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.amounts_in_source##</td>
+                <td>{{amount_in.source.name}}</td><br>
+             
+            </tr>
+
+            <tr>
+                    <td class="title">##word.amounts_in_description##</td>
+                    <td>{{amount_in.description}}</td>
+                </tr>
+
+               
+        </table>
+    </div>
+
+    
+        <i-image view class="col3" ng-model="amount_in.image_url"></i-image>
+       
+
+    </div>
+</div>

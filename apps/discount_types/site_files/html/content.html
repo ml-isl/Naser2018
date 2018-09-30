@@ -1,0 +1,30 @@
+<div class="row">
+        <div class="col9">
+
+                <form class="form">
+                    <i-control  ng-model="discount_type.name" type="text" label="##word.discount_types_name##"></i-control>
+                    <i-control  ng-model="discount_type.value"  label="##word.discount_types_value##" type="number"></i-control>
+
+
+
+
+                    <div class="row">
+                        <i-radio class="col3"  ng-model="discount_type.type"  label="##word.discount_types_number##" value="0"  type="radio" ></i-radio>
+                        <i-radio class="col3"  ng-model="discount_type.type"  label="##word.discount_types_percent##" value="%" type="radio" ></i-radio>
+
+                
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="col3 center">
+
+                <form class="form">
+                    <i-image label="##word.discount_types_img##" ng-model="discount_type.image_url" ></i-image>
+                   <br>
+                   <i-files ng-model="discount_type.files"></i-files>
+
+                </form>
+            </div>
+</div>

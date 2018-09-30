@@ -1,0 +1,18 @@
+<div class="row padding border">
+
+    <form class="form text-right">
+        <i-textarea label="##word.notes##" ng-model="note"></i-textarea>
+        <i-button type="add" label="##word.add_to_notes##" ng-click="addToNotes()"></i-button>
+    </form>
+
+    <div class="row bg-white" ng-repeat="n in ticket.notes">
+        <div class="col8 ">
+            <p class="black">{{n}}</p>
+        </div>
+        <div x-permission="owner" class="col2">
+            <i-button type="delete" label="##word.add_to_notes##" ng-click="deleteNote(n)"></i-button>
+        </div>
+    </div>
+
+
+</div>

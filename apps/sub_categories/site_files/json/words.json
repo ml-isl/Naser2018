@@ -1,0 +1,20 @@
+[
+    {"name" : "sub_categories_add" , "en" : "Add Sub Category" , "ar" : "اضافة فئة فرعية"},
+    {"name" : "sub_categories_search" , "en" : "Search Sub Category" , "ar" : "بحث فئة فرعية"},
+
+    {"name" : "sub_categories_new" , "en" : "New Sub Category" , "ar" : "فئة فرعية جديدة"},
+    {"name" : "sub_categories_details" , "en" : "Sub Category Details" , "ar" : "تفاصيل فئة فرعية"},
+    {"name" : "sub_categories_edit" , "en" : "Edit Sub Category" , "ar" : "تعديل بيانات  فئة فرعية"},
+    {"name" : "sub_categories_delete" , "en" : "Delete Sub Category" , "ar" : "حذف فئة فرعية"},
+    {"name" : "sub_categories_logo" , "en" : "Sub Category Logo" , "ar" : "شعار الفئة الفرعية"},
+    {"name" : "sub_categories_category" , "en" : "Category" , "ar" : "الفئة"},
+     {"name" : "sub_categories_sub_category" , "en" : "Sub Category" , "ar" : "الفئة الفرعية"},    
+        
+    {"name" : "sub_categories_img" , "en" : "Sub Category Image" , "ar" : "ملفات الفئة الفرعية"}
+
+  
+    
+    
+    
+
+]

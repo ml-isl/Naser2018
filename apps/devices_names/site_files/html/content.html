@@ -1,0 +1,20 @@
+<div class="row">
+        <div class="col9">
+
+            <i-list v="r" ng-search="devices_names_category_search" class="col3" items="categories" ng-change="loadSub_Categories(device_name.category)"
+                ng-model="device_name.category" label="##word.devices_names_category##"></i-list>
+
+            <i-list v="r" ng-search="devices_names_sub_category_search" class="col3" items="sub_categories"
+                ng-model="device_name.sub_category" label="##word.devices_names_sub_category##"></i-list>
+
+            <i-control v="r" class="col4" ng-model="device_name.name" type="text" label="##word.devices_names_device_name##"></i-control>
+
+
+        </div>
+
+        <div class="col3 center">
+            <i-image category="devices_name" ng-model="device_name.image_url"></i-image>
+            <i-files ng-model="devices_name.files"></i-files>
+
+        </div>
+    </div>

@@ -1,0 +1,27 @@
+<div id="deleteTicket_SlideModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.tickets_slides_delete## <i class="fa fa-trash"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div x-import="tickets_slides/view.html"></div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="delete" ng-click="delete(ticket_slide)" label="##word.delete##"></i-button>
+            <i-button type="close" onclick="site.hideModal('#deleteTicket_SlideModal')" label="##word.close##"></i-button>
+            
+        </div>
+    </div>
+
+
+</div>

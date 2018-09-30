@@ -1,0 +1,69 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="deleteDevice_ModelModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.devices_models_delete## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div ng-hide="busy" class="row">
+                <div class="col7">
+                    <br>
+                    <table class="table">
+
+                        <tr>
+                            <td class="title">##word.devices_models_category##</td>
+                            <td>{{device_model.category.name}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.devices_models_sub_category##</td>
+                            <td>{{device_model.sub_category.name}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.devices_models_device_name##</td>
+                            <td>{{device_model.name}}</td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+                <div class="col3 center">
+
+                    <img class="img " ng-src="{{device_model.image_url}}" />
+
+                </div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <a ng-hide="busy" id="delete_device_model_btn" ng-click="delete(device_model)" class="btn btn-danger">
+                <i class="fa fa-trash" aria-hidden="true"></i> ##word.delete##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#deleteDevice_ModelModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+        </div>
+    </div>
+
+
+</div>

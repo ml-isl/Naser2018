@@ -1,0 +1,27 @@
+[
+    {"name" : "customers_add" , "en" : "Add Customer" , "ar" : "اضافة عميل"},
+    {"name" : "customers_new" , "en" : "New Customer" , "ar" : "عميل جديد"},
+    {"name" : "customers_details" , "en" : "Customer Details" , "ar" : "تفاصيل عميل"},
+    {"name" : "customers_edit" , "en" : "Edit Customer" , "ar" : "تعديل بيانات عميل"},
+    {"name" : "customers_delete" , "en" : "Delete Customer" , "ar" : "حذف عميل"},
+    {"name" : "customers_name" , "en" : "Customer Name" , "ar" : "اسم العميل"},
+    {"name" : "customers_address" , "en" : "Customer Address" , "ar" : "عنوان العميل"},
+    {"name" : "customers_gov" , "en" : "Gov" , "ar" : "المحافظة"},
+    {"name" : "customers_city" , "en" : "City" , "ar" : "المدينة"},
+    {"name" : "customers_town" , "en" : "Town" , "ar" : "القرية"},
+    {"name" : "customers_region" , "en" : "Region" , "ar" : "المنطقة"},
+    {"name" : "customers_phones" , "en" : "Phones" , "ar" : "تليفونات العميل"},
+    {"name" : "customers_add_phone" , "en" : "Add Phone" , "ar" : "اضافة تليفون"},
+    {"name" : "customers_mobiles" , "en" : "Mobiles" , "ar" : "موبايلات  العميل"},
+    {"name" : "customers_add_mobile" , "en" : "Add Mobile" , "ar" : "اضافة محمول"},   
+    {"name" : "customers_email" , "en" : "Email" , "ar" : "البريد الالكتروني"},
+    {"name" : "customers_notes" , "en" : "Notes" , "ar" : "ملاحظات"},
+    {"name" : "customers_logo" , "en" : "Customer Logo" , "ar" : "صورة العميل"},
+    {"name" : "customers_black_list" , "en" : "is Black List" , "ar" : "حظر"},
+    {"name" : "customers_black_listed" , "en" : "is Black Listed" , "ar" : "هذا العميل تم حظره"},
+    {"name" : "customers_count" , "en" : "Customers Count" , "ar" : "عدد العملاء"},
+    {"name" : "customers_search" , "en" : "Customers Search" , "ar" : "البحث "},
+    {"name" : "customers_search_full" , "en" : "Customers Full Search" , "ar" : "البحث الشامل "},
+
+    {"name" : "customers_img" , "en" : "Customer Image" , "ar" : "ملفات العميل"}
+]

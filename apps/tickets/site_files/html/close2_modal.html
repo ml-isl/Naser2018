@@ -1,0 +1,53 @@
+<div id="close2Modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_close2##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <form>    
+                <div class="row border margin padding">
+                    <i-list class="col2" ng-search="search_ticket_company" label="##word.ticket_company##" ng-model="ticket.device_info.company" ng-change="loadCategories(ticket.device_info.company)" items="company_list"> </i-list>
+                    <i-list class="col2" ng-search="search_ticket_category" label="##word.ticket_category##" ng-model="ticket.device_info.category" ng-change="loadSubCategories(ticket.device_info.category)" items="category_list"> </i-list>
+                    <i-list class="col2" ng-search="search_ticket_sub_category" label="##word.ticket_sub_category##" ng-model="ticket.device_info.category" ng-change="loadDevices(ticket.device_info.sub_category);loadDamages(ticket.device_info.sub_category)" items="sub_category_list"> </i-list>
+                    <i-list class="col2" ng-search="search_ticket_device" label="##word.ticket_device##" ng-model="ticket.device_info.device" ng-change="loadModels(ticket.device_info.device)" items="device_list"> </i-list>
+                    <i-list class="col2" ng-search="search_ticket_model" label="##word.ticket_model##" ng-model="ticket.device_info.model"  primary="name" display2="alt"> </i-list>
+                </div>
+
+                <div class="row">
+                    <i-control class="col4" label="##word.ticket_device_serial##"  ng-model="ticket.device_info.serial"></i-control>
+                    <i-control class="col3" label=" ##word.ticket_device_product_date##"  ng-model="ticket.device_info.product_date"></i-control>
+                        <div class="col3">
+                            <div class="control">
+                                <label> ##word.ticket_device_status##</label>
+                                <div class="row">
+                                <i-radio class="col5" label="##word.ticket_device_status0##" ng-model="ticket.device_info.status" value="0"></i-radio>
+                                <i-radio class="col5" label="##word.ticket_device_status1##" ng-model="ticket.device_info.status" value="1"></i-radio>
+                                </div>
+                            </div>   
+                        </div>       
+                </div>
+
+                            
+
+                     
+                    <div class="row" x-import="tickets/ticket_status.html"></div>
+                    <div class="row" x-import="tickets/company_code.html"></div>
+
+                    <div class="row">
+                        <i-checkbox label="##word.ticket_close2_approve##" ng-model="ticket.done"></i-checkbox>
+                           
+                    </div>
+            </form>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="save" label="##word.save##" ng-click="updateClose2()"></i-button>
+            <i-button type="close" label="##word.close##" onclick="site.hideModal('#close2Modal')"></i-button>
+        </div>
+    </div>
+</div>

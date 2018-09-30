@@ -1,0 +1,36 @@
+<span ng-show="busy">
+    <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</span>
+<div ng-hide="busy" class="row">
+    <div class="col7">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.towns_gov##</td>
+                <td class="center bold blue">{{town.gov.name}}</td>
+            </tr>
+            <tr>
+                <td class="title">##word.towns_city##</td>
+                <td class="center bold blue">{{town.city.name}}</td>
+            </tr>
+            <tr>
+                <td class="title">##word.towns_region##</td>
+                <td class="center bold blue">{{town.region.name}}</td>
+            </tr>
+            <tr>
+                <td class="title">##word.towns_name##</td>
+                <td class="center bold blue">{{town.name}}</td>
+            </tr>
+
+        </table>
+    </div>
+    
+    <div class="col3">
+
+        <i-image view category="towns" ng-model="town.image_url"></i-image>
+        <i-files view ng-model="town.files"></i-files>
+
+    </div>
+
+</div>

@@ -1,0 +1,23 @@
+[
+  
+    {"name" : "mobiles_slides_add" , "en" : "Add Mobile Slide" , "ar" : "اضافة شريحة محمول"},
+    {"name" : "mobiles_slides_new" , "en" : "New Mobile Slide" , "ar" : "شريحة محمول جديدة"},
+    {"name" : "mobiles_slides_delete" , "en" : "Delete Mobile Slide" , "ar" : "حذف شريحة محمول"},
+    {"name" : "mobiles_slides_edit" , "en" : "Edit Mobile Slide" , "ar" : "تعديل بيانات شريحة محمول"},
+    {"name" : "mobiles_slides_details" , "en" : "Mobile Slide Details" , "ar" : "تفاصيل شريحة محمول"},
+
+    {"name" : "mobiles_slides_name" , "en" : "Slide Name" , "ar" : "اسم النظام"},
+    {"name" : "mobiles_slides_number" , "en" : "Slide Number" , "ar" : "رقم الشريحة"},
+    {"name" : "mobiles_slides_value" , "en" : "Slide Value" , "ar" : "الاشتراك الشهري"},
+    {"name" : "mobiles_slides_tax" , "en" : "Tax" , "ar" : "الضريبة"},
+    {"name" : "mobiles_slides_vat" , "en" : "VAT" , "ar" : "الضريبة المضافة"},
+    {"name" : "mobiles_slides_minutes_in" , "en" : "Inside Minutes" , "ar" : "الدقائق الداخلية"},
+    {"name" : "mobiles_slides_minutes_out" , "en" : "Outside Minutes" , "ar" : "الدقائق الخارجية"},
+    {"name" : "mobiles_slides_sms_in" , "en" : "Inside Sms" , "ar" : "الرسائل الداخلية"},
+    {"name" : "mobiles_slides_sms_out" , "en" : "Outside Sms" , "ar" : "الرسائل الخارجية"},
+    {"name" : "mobiles_slides_mobile_data" , "en" : "Mobile Data" , "ar" : "باقة الانترنت"},
+    {"name" : "mobiles_slides_logo" , "en" : "Logo" , "ar" : "الشعار"},
+    
+    
+    {"name" : "mobiles_slides_img" , "en" : "Mobiles Slides Image" , "ar" : "ملفات شرائح المحمول"}
+]

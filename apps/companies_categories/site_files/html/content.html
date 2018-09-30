@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col9">
+
+        <i-list ng-search="company_search" v="r" class="col5" items="companies" ng-model="company_category.company" label="##word.companies_categories_company##"></i-list>
+        <i-list ng-search="category_search" v="r" class="col5" items="categories" ng-model="company_category.category" label="##word.companies_categories_name##"></i-list>
+
+    </div>
+
+    <div class="col3 ">
+            <i-image category="companies_categories" ng-model="company_category.image_url"></i-image>
+            <i-files  ng-model="companies_categories.files"></i-files>
+    </div>
+</div>

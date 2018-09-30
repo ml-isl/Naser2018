@@ -1,0 +1,8 @@
+[
+    {"id" : 1 ,   "ar" : "الجهاز قيد التسليم" , "en" : "Proccing"} ,
+    {"id" : 2 ,   "ar" : "مؤجل قطع غيار" , "en" : "Need Items"} ,
+    {"id" : 3 ,   "ar" : "مغلق" , "en" : "Closed"} ,
+    {"id" : 4 ,   "ar" : " العميل رفض الاصلاح" , "en" : "Customer Reject"} ,
+    {"id" : 5 ,   "ar" : "ارسال الجهاز للشركة" , "en" : "Send To Company"},
+    {"id" : 6 ,   "ar" : "مفتوح" , "en" : "Open"}
+]

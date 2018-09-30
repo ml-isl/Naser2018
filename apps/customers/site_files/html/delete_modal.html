@@ -1,0 +1,36 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="deleteCustomerModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i>                 <i ng-hide="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                ##word.customers_delete## </h2>
+        </div>
+        <div class="modal-body">
+
+            <div x-import="customers/view.html"></div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+           
+            <i-button type="delete" label="##word.delete##" ng-click="delete(customer)"></i-button>
+            <i-button type="close" label="##word.close##" onclick="site.hideModal('#deleteCustomerModal')"></i-button>
+               
+        </div>
+    </div>
+
+
+</div>

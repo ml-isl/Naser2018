@@ -1,0 +1,107 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+
+    .thumb {
+        width: 32px;
+        height: 32px;
+    }
+</style>
+
+
+<div id="SearchByDeviceModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_search_by_device##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <form>
+
+                <div class="row10 border margin padding">
+                    <div class="col2">
+                        <div class="control">
+                            <label>##word.ticket_company##</label>
+                            <select ng-model="company" ng-change="loadCategories(company)">
+                                <option ng-selected="company.id == co.id" ng-repeat="co in company_list" value="{{co}}">{{co.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col2">
+                        <div class="control">
+                            <label>##word.ticket_category##</label>
+                            <select ng-model="category" ng-change="loadSubCategories(category)">
+                                <option ng-selected="category.id == cat.id" ng-repeat="cat in category_list" value="{{cat}}">{{cat.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col2">
+                        <div class="control">
+                            <label>##word.ticket_sub_category##</label>
+                            <select ng-model="sub_category" ng-change="loadDevices(sub_category);loadDamages(sub_category)">
+                                <option  ng-selected="sub_category.id == sc.id" ng-repeat="sc in sub_category_list" value="{{sc}}">{{sc.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col2">
+                        <div class="control">
+                            <label>##word.ticket_device##</label>
+                            <select ng-model="device" ng-change="loadModels(device)">
+                                <option ng-selected="device.id == de.id" ng-repeat="de in device_list" value="{{de}}">{{de.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col2">
+                        <div class="control">
+                            <label>##word.ticket_model##</label>
+                            <select ng-model="model" ng-change="">
+                                <option ng-selected="model.name == model.name" ng-repeat="model in models" value="{{model}}">{{model.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </form>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+
+            <a class="btn bg-green" ng-click="searchByCompany()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>  ##word.ticket_search_by_company##</a>
+
+            <a class="btn bg-green" ng-click="searchByCategory()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>  ##word.ticket_search_by_category##</a>
+
+            <a class="btn bg-green" ng-click="searchBySubCategory()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>   ##word.ticket_search_by_sub_category##</a>
+
+            <a class="btn bg-green" ng-click="searchByDevice()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>  ##word.ticket_search_by_device##</a>
+
+                 <a class="btn bg-green" ng-click="searchByModel()" ng-hide="busy">
+                    <i class="fa fa-search" aria-hidden="true"></i>   ##word.ticket_search_by_model##</a>
+
+
+            <a class="btn bg-blue" onclick="site.hideModal('#SearchByDeviceModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+</div>

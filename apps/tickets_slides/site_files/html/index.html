@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row center">
+            <div class="col" ng-controller="tickets_slides">
+                <div x-import="tickets_slides/add_modal.html"></div>
+                <div x-import="tickets_slides/update_modal.html"></div>
+                <div x-import="tickets_slides/delete_modal.html"></div>
+                <div x-import="tickets_slides/view_modal.html"></div>
+                <div class="top-actions">
+                    <i-button type="add" x-permission="owner" ng-click="newTicket_Slide()" label="##word.tickets_slides_new##"></i-button>
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <table class="table loaded center bold" id="t1">
+                    <tr>
+                        <th>##word.tickets_slides_logo##</th>
+                        <th>##word.tickets_slides_name##</th>
+                        <th>##word.tickets_slides_from##</th>
+                        <th>##word.tickets_slides_to##</th>
+                        <th>##word.tickets_slides_value##</th>
+                        <th>##word.tickets_slides_salary_calculate##</th>
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+                        <td>
+                            <i-image view class="logo" category="ticket_slide_logo" ng-model="c.image_url"></i-image>
+                        </td>
+                        <td>{{c.name}}</td>
+                        <td>{{c.from}}</td>
+                        <td>{{c.to}}</td>
+                        <td>{{c.value}}</td>
+                        <td>
+                            <p class="green" ng-show="c.salary_calculate == true"> ##word.tickets_slides_salary_yes##</p>
+                            <p class="red" ng-show="c.salary_calculate == false"> ##word.tickets_slides_salary_no##</p>
+                        </td>
+
+                        <td x-permission="owner" class="center">
+                            <i-button type="details" x-permission="owner" ng-click="details(c)" label="##word.details##"></i-button>
+                            <i-button type="edit" x-permission="owner" ng-click="edit(c)" label="##word.edit##"></i-button>
+                            <i-button type="delete" ng-click="remove(c)" label="##word.delete##"></i-button>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <i-button type="export" onclick="export_to_xlsx('t1' , 'tickets_slides.xlsx')" label="##word.export_to_excel##"></i-button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div x-import="scripts.html"></div>
+
+    <script x-import="tickets_slides/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+[
+    {"name" : "unemployee_mobiles_add" , "en" : "Add Unemployee Mobiles" , "ar" : "اضافة محمول لغير موظف"},    
+    {"name" : "unemployee_mobiles_new" , "en" : "New Unemployee Mobiles" , "ar" : "محمول لغير موظف جديد"},    
+    {"name" : "unemployee_mobiles_details" , "en" : "Unemployee Mobiles Details" , "ar" : "تفاصيل محمول غير موظف"},    
+    {"name" : "unemployee_mobiles_edit" , "en" : "Edit Unemployee Mobiles" , "ar" : "تفاصيل محمول غير موظف"},    
+    {"name" : "unemployee_mobiles_delete" , "en" : "Delete Unemployee Mobiles" , "ar" : "حذف محمول غير موظف"},  
+    {"name" : "unemployee_mobiles_name" , "en" : "Name" , "ar" : "الاسم"},  
+    {"name" : "unemployee_mobiles_address" , "en" : "Address" , "ar" : "العنوان"},    
+    {"name" : "unemployee_mobiles_gov" , "en" : "Gov" , "ar" : "المحافظة"},    
+    {"name" : "unemployee_mobiles_city" , "en" : "City" , "ar" : "المدينة"},    
+    {"name" : "unemployee_mobiles_town" , "en" : "Town" , "ar" : "القرية"},    
+    {"name" : "unemployee_mobiles_email" , "en" : "Email" , "ar" : "الايميل"},    
+    {"name" : "unemployee_mobiles_nid" , "en" : "National ID" , "ar" : "الرقم القومي"},    
+    {"name" : "unemployee_mobiles_number" , "en" : "Number" , "ar" : "رقم المحمول"},    
+    {"name" : "unemployee_mobiles_notes" , "en" : "Notes" , "ar" : "ملاحظات"},    
+    {"name" : "unemployee_mobiles_discount" , "en" : "Discount" , "ar" : "نسبة تحمل الشركة"},    
+    {"name" : "unemployee_mobiles_logo" , "en" : "Logo" , "ar" : "الشعار"},    
+    {"name" : "unemployee_mobiles_phones" , "en" : "Phones" , "ar" : "تليفونات غير الموظف"}, 
+    {"name" : "unemployee_mobiles_add_phone" , "en" : "Add Phone" , "ar" : "اضافة تليفون"}, 
+    {"name" : "unemployee_mobiles_mobiles" , "en" : "Mobiles" , "ar" : "موبايلات غير الموظف"}, 
+    {"name" : "unemployee_mobiles_add_mobile" , "en" : "Add Mobile" , "ar" : "اضافة محمول"}, 
+    {"name" : "unemployee_mobiles_slide_name" , "en" : "Slide" , "ar" : "النظام"}, 
+    {"name" : "unemployee_mobiles_value" , "en" : "Value" , "ar" : "الاشتراك الشهري"}, 
+    {"name" : "unemployee_mobiles_file_name" , "en" : "File Name" , "ar" : "اسم الملف"}, 
+    {"name" : "unemployees_mobiles_logo" , "en" : "Logo" , "ar" : "شعار محمول لغير موظف"}, 
+
+    {"name" : "unemployee_mobiles_img" , "en" : "Unemployees Mobile Image" , "ar" : "ملفات محمول غير الموظفين"}
+]

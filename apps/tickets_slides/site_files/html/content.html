@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col9">
+
+        <form class="form">
+            <i-control v="r" type="text" ng-model="ticket_slide.name" label="##word.tickets_slides_name##"></i-control>
+
+            <i-control v="r" type="text" ng-model="ticket_slide.from" label="##word.tickets_slides_from##"></i-control>
+
+            <i-control v="r" type="text" ng-model="ticket_slide.to" label="##word.tickets_slides_to##"></i-control>
+
+            <i-control v="r" type="text" ng-model="ticket_slide.value" label="##word.tickets_slides_value##"></i-control>
+
+
+            <div class="control">
+                <label> <span> ##word.tickets_slides_salary_calculate## </span>
+                    <input ng-model="ticket_slide.salary_calculate" type="checkbox">
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <div class="col3 center">
+
+        <form class="form">
+            <i-image category="ticket_slide_logo" ng-model="ticket_slide.image_url"></i-image>
+            <br>
+            <i-files onchange="angular.element(this).scope().uploadImage(this.files)"></i-files>
+
+            <p>{{uploadStatus}}</p>
+
+        </form>
+    </div>
+</div>

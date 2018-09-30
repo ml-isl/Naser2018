@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col9">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.in_out_name_name##</td>
+                <td>{{in_out_name.name}}</td>
+            </tr>
+
+
+            <tr>
+                <td class="title">##word.in_out_name_in##</td>
+                <td>
+                    <p ng-show="in_out_name.in == true"> نعم </p>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="title">##word.in_out_name_out##</td>
+                <td>  <p ng-show="in_out_name.out == true"> نعم </p></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <i-image view label="##word.in_out_name_img##" ng-model="in_out_name.image_url"> </i-image>
+</div>

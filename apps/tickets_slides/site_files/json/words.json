@@ -1,0 +1,23 @@
+[
+    {"name" : "tickets_slides_add" , "en" : "Add Ticket Slide" , "ar" : "اضافة شريحة بلاغات"},
+    {"name" : "tickets_slides_name" , "en" : "Slide Name" , "ar" : "اسم الشريحة"},
+    {"name" : "tickets_slides_from" , "en" : "Slide From" , "ar" : "بداية الشريحة"},
+    {"name" : "tickets_slides_to" , "en" : "Slide To" , "ar" : "نهاية الشريحة"},
+    {"name" : "tickets_slides_value" , "en" : "Ticket Value" , "ar" : "قيمة البلاغ"},
+    {"name" : "tickets_slides_salary_calculate" , "en" : "Salary Calculate" , "ar" : "يضاف للراتب"},
+    {"name" : "tickets_slides_new" , "en" : "New Slide" , "ar" : "شريحة جديدة"},
+    {"name" : "tickets_slides_logo" , "en" : "Slides Logo" , "ar" : "صورة الشريحة"},
+
+    {"name" : "tickets_slides_edit" , "en" : "Edit Slide" , "ar" : "تعديل بيانات شريحة"},
+    {"name" : "tickets_slides_details" , "en" : "Slide Details" , "ar" : "تفاصيل شريحة"},
+    {"name" : "tickets_slides_delete" , "en" : "Delete Slide" , "ar" : "حذف شريحة"},
+    {"name" : "tickets_slides_salary_yes" , "en" : "Yes" , "ar" : "نعم"},
+    {"name" : "tickets_slides_salary_no" , "en" : "No" , "ar" : "لا"},
+
+
+
+    {"name" : "tickets_slides_img" , "en" : "Tickets Slides Image" , "ar" : "ملفات شريحة البلاغات"}  
+   
+    
+
+]

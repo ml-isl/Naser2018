@@ -1,0 +1,41 @@
+<div id="close1Modal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_close1##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <form class="form">
+
+                    <div class="row border margin padding">
+                            <i-list ng-search="search_device_info" class="col2" label="##word.ticket_status##"  ng-model="ticket.device_info.company"  items="company_list" label="##word.ticket_company##" ng-change="loadCategories(ticket.device_info.company)"> </i-list> 
+                            <i-list ng-search="search_ticket_category" class="col2" label="##word.ticket_category##"  ng-model="ticket.device_info.category" items="category_list"  ng-change="loadSubCategories(ticket.device_info.category)"></i-list>
+                            <i-list ng-search="search_ticket_sub_category" class="col2" label="##word.ticket_sub_category##"  ng-model="ticket.device_info.sub_category" items="sub_category_list"  ng-change="loadDevices(ticket.device_info.sub_category);loadDamages(ticket.device_info.sub_category)"></i-list>
+                            <i-list ng-search="search_ticket_device" class="col2" label="##word.ticket_device##"  ng-model="ticket.device_info.device" items="device_list"  ng-change="loadModels(ticket.device_info.device)"></i-list>
+                            <i-list ng-search="search_ticket_model" class="col2" label="##word.ticket_model##"  ng-model="ticket.device_info.model" items="models" display2="alt" primary="name"></i-list>
+                        </div>
+                        <div x-import="tickets/close_eng_list_report.html"></div>
+                        <div x-import="tickets/close1.html"></div>
+                    <div class="row">
+                        <i-checkbox label="##word.ticket_close1_approve##"  ng-model="ticket.close1_done"></i-checkbox>
+                   
+                    </div>
+
+            </form>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="save" ng-click="updateClose1()" label="##word.save##"></i-button>
+            <i-button type="save" ng-click="backToCloseEng()" label="##word.ticket_back_to_close_eng##"></i-button>
+            <i-button type="close" onclick="site.hideModal('#close1Modal')" label="##word.close##"></i-button>
+
+           
+        </div>
+    </div>
+</div>

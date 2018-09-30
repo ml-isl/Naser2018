@@ -1,0 +1,77 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="addSpare_PartModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.spare_parts_add## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div ng-hide="busy" class="row">
+                <div class="col7">
+
+                    <form class="form">
+
+                        <div class="control">
+                            <label>##word.spare_parts_code##</label>
+                            <input ng-model="spare_part.code" type="text">
+                        </div>
+
+                        <div class="control">
+                            <label>##word.spare_parts_company##</label>
+                            <input ng-model="spare_part.name" type="text">
+                        </div>
+
+                        <div class="control">
+                            <label>##word.spare_parts_store##</label>
+                            <input ng-model="spare_part.alt" type="text">
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col3 center">
+
+                    <form class="form">
+                        <label>##word.spare_parts_img##</label>
+                        <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                        <br>
+                        <img class="img " ng-src="{{spare_part.image_url}}" />
+                        <br>
+                        <p>{{uploadStatus}}</p>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-click="add()" ng-hide="busy" id="add_spare_part_btn">
+                <i class="fa fa-plus" aria-hidden="true"></i> ##word.add##</a>
+
+            <a class="btn bg-blue" onclick="site.hideModal('#addSpare_PartModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

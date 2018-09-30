@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+
+    <div x-import="menu/index.html"></div>
+  
+
+
+    <div id="main-layout" class="container">
+        <div class="row center">
+            <div class="row" ng-controller="amounts_report">
+                    <div x-import="amounts_report/search_modal.html"></div>
+                <div class="top-actions">
+                   
+                        <i-button x-permission="owner" type="search" label="##word.search_all##" ng-click="showSearch();search = {}" ></i-button>
+
+                        <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <div class="row">
+                    <table class="table">
+                        <tr>
+                            <td class="bold"> اجمالى الوارد </td>
+                            <td >
+                                <p class="bold green">{{total_in}} جنيه </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bold"> اجمالى المنصرف </td>
+                            <td >
+                                <p class="bold red">{{total_out}} جنيه</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bold"> اجمالى الدخل </td>
+                            <td>
+                                <p class="bold bg-green" ng-show="total_in > total_out"> {{total_in - total_out}} جنيه </p>
+                                <p class="bold bg-red" ng-hide="total_in > total_out"> {{total_in - total_out}} جنيه </p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="row">
+                    <div class="col6 padding">
+                        <h2 class="center bold"> ##word.amounts_in## </h2>
+                        <table class="table loaded" id="t1">
+                            <tr>
+                                <th class="pointer" ng-click="sortBy1('value')">##word.amounts_in_value##</th>
+                                <th class="pointer" ng-click="sortBy1('date')">##word.amounts_in_date##</th>
+                                <th class="pointer" ng-click="sortBy1('source.name')">##word.amounts_in_source##</th>
+                            </tr>
+                            <tr ng-repeat="c in amountsInList | orderBy:propertyName1:reverse1">
+                                <td>
+                                    <p class="center bold blue"> {{c.value + ' جنيه '}} </p>
+                                </td>
+                                <td>
+                                    <p class="center"> {{c.date | date : 'dd - MM - yyyy'}} </p>
+                                </td>
+                                <td>
+                                    <p class="center"> {{c.source.name}} </p>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="col6 padding">
+                        <h2 class="center bold"> ##word.amounts_out## </h2>
+                        <table class="table loaded" id="t1">
+                            <tr>
+                                <th class="pointer" ng-click="sortBy2('value')">##word.amounts_out_value##</th>
+                                <th class="pointer" ng-click="sortBy2('date')">##word.amounts_out_date##</th>
+                                <th class="pointer" ng-click="sortBy2('source.name')">##word.amounts_out_source##</th>
+                            </tr>
+                            <tr ng-repeat="c2 in amountsOutList | orderBy:propertyName2:reverse2 | orderBy : '-date'">
+
+                                <td>
+                                    <p class="center bold blue"> {{c2.value}} جنيه </p>
+                                </td>
+                                <td>
+                                    <p class="center"> {{c2.date | date : 'dd - MM - yyyy'}} </p>
+                                </td>
+                                <td>
+                                    <p class="center"> {{c2.source.name}} </p>
+                                </td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div x-import="scripts.html"></div>
+
+    <script x-import="amounts_report/index.js"></script>
+
+
+</body>
+
+</html>

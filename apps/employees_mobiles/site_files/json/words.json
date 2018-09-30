@@ -1,0 +1,16 @@
+[
+    {"name" : "employees_mobiles_add" , "en" : "Add Employee Mobile" , "ar" : "اضافة شريحة محمول لموظف"},  
+    {"name" : "employees_mobiles_new" , "en" : "New Employee Mobile" , "ar" : "شريحة محمول لموظف جديد"},  
+    {"name" : "employees_mobiles_edit" , "en" : "Edit Employee Mobile" , "ar" : "تعديل شريحة محمول لموظف"},  
+    {"name" : "employees_mobiles_details" , "en" : "Employee Mobile Details" , "ar" : "تفاصيل شريحة محمول لموظف"},  
+    {"name" : "employees_mobiles_delete" , "en" : "Delete Employee Mobile" , "ar" : "حذف شريحة محمول لموظف"},  
+    {"name" : "employees_mobiles_employee" , "en" : "Employee  Name" , "ar" : "اسم الموظف"},  
+    {"name" : "employees_mobiles_number" , "en" : "Mobie Number" , "ar" : "رقم المحمول"},    
+    {"name" : "employees_mobiles_discount" , "en" : "Discount" , "ar" : "نسبة تحمل الشركة"},  
+    {"name" : "employees_mobiles_notes" , "en" : "Notes" , "ar" : "ملاحظات"}, 
+    {"name" : "employees_mobiles_logo" , "en" : "Employee  Mobile Logo" , "ar" : "صورة شريحة المحمول"},  
+    {"name" : "employees_mobiles_slide_name" , "en" : "Mobile  Slide Name" , "ar" : "النظام"},  
+    {"name" : "employees_mobiles_value" , "en" : "Value" , "ar" : "الاشتراك الشهري"},  
+
+    {"name" : "employees_mobiles_img" , "en" : "Employee Mobiles Image" , "ar" : "ملفات الموظف"}
+]

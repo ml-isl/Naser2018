@@ -1,0 +1,101 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+
+    .table .title {
+        font-weight: bold;
+        color: #607d8b;
+    }
+</style>
+
+
+<div id="viewMobile_SlideModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-file"></i> ##word.mobiles_slides_details## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div ng-hide="busy" class="row">
+                <div class="col7">
+                    <br>
+                    <table class="table">
+                        <tr>
+                            <td class="title">##word.mobiles_slides_name##</td>
+                            <td>{{mobile_slide.slide_name}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_number##</td>
+                            <td>{{mobile_slide.number}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_value##</td>
+                            <td>{{mobile_slide.value}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_tax##</td>
+                            <td>{{mobile_slide.tax}}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_vat##</td>
+                            <td>{{mobile_slide.vat}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_minutes_in##</td>
+                            <td>{{mobile_slide.minutes_in}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_minutes_out##</td>
+                            <td>{{mobile_slide.minutes_out}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_sms_in##</td>
+                            <td>{{mobile_slide.sms_in}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_sms_out##</td>
+                            <td>{{mobile_slide.sms_out}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">##word.mobiles_slides_mobile_data##</td>
+                            <td>{{mobile_slide.mobile_data}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col3 center">
+
+                    <img class="img " ng-src="{{mobile_slide.image_url}}" />
+
+                </div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+
+            <a class="btn bg-blue" onclick="site.hideModal('#viewMobile_SlideModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+</div>

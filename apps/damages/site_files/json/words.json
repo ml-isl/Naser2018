@@ -1,0 +1,20 @@
+[
+    {"name" : "damages_add" , "en" : "Add Damage" , "ar" : "اضافة عطل"},
+    {"name" : "damages_type" , "en" : "Type Damage" , "ar" : "نوع عطل"},
+    {"name" : "damages_search" , "en" : "Search Damage" , "ar" : "بحث عطل"},
+    {"name" : "damages_new" , "en" : "New Damage" , "ar" : "عطل جديد"},
+    {"name" : "damages_details" , "en" : "Damage Details" , "ar" : "تفاصيل عطل"},
+    {"name" : "damages_edit" , "en" : "Edit Damage" , "ar" : "تعديل بيانات عطل"},
+    {"name" : "damages_delete" , "en" : "Delete Damage" , "ar" : "حذف عطل"},
+    {"name" : "damages_category" , "en" : "Category" , "ar" : "الفئة"},
+    {"name" : "damages_sub_category" , "en" : "Sub Category" , "ar" : "الفئة الفرعية"},
+    {"name" : "damages_name" , "en" : "name" , "ar" : "العطل"},
+    {"name" : "damages_logo" , "en" : "Damage Logo" , "ar" : "صورة عطل"},
+    {"name" : "damages_ticket_count" , "en" : "Tickets Count" , "ar" : "عدد البلاغات"},
+    {"name" : "damages_company" , "en" : "Company" , "ar" : "الشركة"},
+    {"name" : "damages_cash" , "en" : "Cash" , "ar" : "نقدي"},
+
+    
+    {"name" : "damages_img" , "en" : "Damage Images" , "ar" : "صورة العطل"}
+
+]

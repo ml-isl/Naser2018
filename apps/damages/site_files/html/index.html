@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row">
+            <div class="col" ng-controller="damages">
+                <div x-import="damages/add_modal.html"></div>
+                <div x-import="damages/update_modal.html"></div>
+                <div x-import="damages/delete_modal.html"></div>
+                <div x-import="damages/view_modal.html"></div>
+                <div x-import="damages/search.html"></div>
+
+                <div class="top-actions">
+                    <i-button type="add" x-permission="owner" ng-click="newDamage()" label="##word.damages_new##"></i-button>
+                    <i-button type="search" onclick="site.showModal('#SearchModal')" label="##word.search_all##"></i-button>
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <table class="table loaded" id="t1">
+                    <tr>
+                        <th>##word.damages_logo##</th>
+                        <th>##word.damages_category##</th>
+                        <th>##word.damages_sub_category##</th>
+                        <th>##word.damages_name##</th>
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+                        <td class="center">
+                            <i-image view class="logo" category="damages" ng-model="c.image_url"></i-image>
+                        </td>
+                        <td class="center bold indigo">{{c.category.name}}</td>
+                        <td class="center bold indigo">{{c.sub_category.name}}</td>
+                        <td class="center bold indigo">{{c.name}}</td>
+                        <td x-permission="owner" class="center">
+                            <i-button type="details" x-permission="owner" ng-click="details(c)" label="##word.details##"></i-button>
+                            <i-button type="update" x-permission="owner" ng-click="edit(c)" label="##word.update##"></i-button>
+                            <i-button type="delete" ng-click="remove(c)" label="##word.delete##"></i-button>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <i-button type="export" onclick="export_to_xlsx('t1' , 'damages.xlsx')" label="##word.export_to_excel##"></i-button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div x-import="scripts.html"></div>
+
+    <script x-import="damages/index.js"></script>
+
+</body>
+
+</html>

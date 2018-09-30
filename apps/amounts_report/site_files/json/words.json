@@ -1,0 +1,13 @@
+[
+    { "name": "amounts_report_customers","en": "customers", "ar": "العملاء"},
+    { "name": "amounts_report_employees","en": "ُEmployees", "ar": "الموظفين"},
+    { "name": "amounts_report_companies","en": "companies", "ar": "الشركات"},
+    { "name": "amounts_report_sources","en": "sources", "ar": "الوارد"},
+    { "name": "amounts_report_date_from","en": "Date From", "ar": "من تاريخ"},
+    { "name": "amounts_report_date_to","en": "Date To", "ar": "الى تاريخ"},
+    { "name": "amounts_report_value","en": "value", "ar": "القيمة"},
+   
+    { "name": "amounts_report_date","en": "date", "ar": "التاريخ"}
+   
+
+]

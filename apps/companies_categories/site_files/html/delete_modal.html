@@ -1,0 +1,22 @@
+<div id="deleteCompany_CategoryModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.companies_categories_delete## <i class="fa fa-trash"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div x-import="companies_categories/view.html"></div>
+
+            <h2>{{error}}</h2>
+            <div class="modal-footer center">
+                <i-button type="delete" ng-click="delete(company_category)" label="##word.delete##"></i-button>
+                <i-button type="close" onclick="site.hideModal('#deleteCompany_CategoryModal')" label="##word.close##"></i-button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

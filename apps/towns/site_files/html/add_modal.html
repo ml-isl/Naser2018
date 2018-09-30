@@ -1,0 +1,25 @@
+<div id="addTownModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                    ##word.towns_add## <i class="fa fa-plus"></i> 
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <div x-import="towns/content.html"></div>
+
+            <h2 class="error center red">{{error}}</h2>
+            <div class="modal-footer center">
+                    <i-button type="add" ng-click="add()" label="##word.add##"></i-button>
+                    <i-button type="close" onclick="site.hideModal('#addTownModal')" label="##word.close##"></i-button>
+               
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col9">
+
+        <form class="form">
+
+            <i-control label="##word.customers_name##" v="r" type="text" ng-model="customer.name"></i-control>
+
+            <div class="row ">
+                <i-list ng-search="gov_search" class="col3" display="name" label="##word.customers_gov##" ng-model="customer.gov" ng-change="loadCities(customer.gov)" items="goves"></i-list>
+                <i-list ng-search="city_search" class="col3" display="name" label="##word.customers_city##" ng-model="customer.city" ng-change="loadTowns(customer.city)" items="cities"></i-list>
+                <i-list ng-search="town_search" class="col3" display="name" label="##word.customers_town##" ng-model="customer.town" ng-change="townChanged()" items="towns"></i-list>
+                <i-list ng-search="region_search" class="col3" display="name" label="##word.customers_region##" ng-model="customer.region" items="regions"></i-list>
+            </div>
+
+            <div class="control">
+                
+                <i-control  ng-model="customer.address" type="text" label="##word.customers_address##"></i-control>
+            </div>
+
+            <div class="row10 ">
+                <div class="col5 padding">
+                    <!-- phones -->
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="phoneEditor = !phoneEditor">##word.customers_phones##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="phoneEditor">
+                            <td colspan="2">
+                                <form>
+                                        
+                                    <div class="control">
+                                        <i-control label="##word.customers_phones##"  ng-model="phone"></i-control>
+                                        
+                                        <i-button ng-click="addPhone()" type="add" label="##word.customers_add_phone##"></i-button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="phone in customer.phones">
+                            <td>{{phone}}</td>
+                            <td ng-show="phoneEditor">
+                                
+                                    <i-button ng-click="deletePhone(phone)" type="delete"></i-button>
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- END -->
+                </div>
+
+                <div class="col5 padding">
+                    <!-- mobile -->
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="mobileEditor = !mobileEditor">##word.customers_mobiles##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="mobileEditor">
+                            <td colspan="2">
+                                <form>
+                                    
+                                    <div class="control">
+                                        <i-control label="##word.customers_mobiles##" ng-model="mobile"></i-control>
+                                        
+                                        <i-button type="add" ng-click="addMobile()" label="##word.customers_add_mobile##"></i-button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="mobile in customer.mobiles">
+                            <td>{{mobile}}</td>
+                            <td ng-show="mobileEditor">
+                              
+                                    <i-button type="delete" ng-click="deleteMobile(mobile)"></i-button>
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- END -->
+                </div>
+            </div>
+            <i-control ng-model="customer.email" type="email" label="##word.customers_email##"></i-control>
+
+            <div class="control">
+                
+                <i-textarea label="##word.customers_notes##" ng-model="customer.notes"></i-textarea>
+            </div>
+        </form>
+    </div>
+
+    <div class="col3">
+        <i-checkbox label="##word.customers_black_list##" ng-model="customer.black_list"></i-checkbox>
+        <i-image ng-model="customer.image_url">  </i-image>
+        <i-files  ng-model="customer.files"></i-files>
+    </div>
+</div>

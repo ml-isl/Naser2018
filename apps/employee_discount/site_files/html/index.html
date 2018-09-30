@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+
+<div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row">
+            <div class="row" ng-controller="employee_discount">
+                <div x-import="employee_discount/add_modal.html"></div>
+                <div x-import="employee_discount/update_modal.html"></div>
+                <div x-import="employee_discount/delete_modal.html"></div>
+                <div x-import="employee_discount/view_modal.html"></div>
+                <div x-import="employee_discount/search_all_modal.html"></div>
+              
+                
+                <div class="top-actions">
+                 
+                        <i-button x-permission="owner" type="add" label="##word.employee_discount_new##" ng-click="newemployee_discount()" ></i-button>
+                        <i-button x-permission="owner" type="search" label="##word.search_all##" onclick="site.showModal('#Employee_Discount_SearchModal')" ></i-button>
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <table class="table loaded" id="t1 ">
+                    <tr>
+                        <th>##word.employee_discount_logo##</th>
+                        <th>##word.employee_discount_value##</th>
+                        <th>##word.employee_discount_date##</th>
+                        <th>##word.employee_discount_employees##</th>
+                        <th>##word.employee_discount_safe##</th>
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+                        <td>
+                                <i-image view class="logo" ng-model="c.image_url"></i-image>
+                           
+                        </td>
+                        <td> <p class="center bold green"> {{c.value + ' جنيه '}} </p> </td>
+                        <td> <p class="center"> {{c.date | date : 'dd - MM - yyyy'}} </p> </td>
+                        <td> 
+                     
+                        
+                        <p class="center bold green"> {{c.eng.name}} </p>  
+                        
+                        </td>
+
+                        <td class="center bold red"> 
+                                {{c.safe.name}}
+                        </td>
+                        
+                        <td x-permission="owner" class="center">
+                            <i-button  x-permission="owner" type="details" label="##word.details##" ng-click="details(c)"></i-button>
+                            <i-button type="delete" label="##word.delete##" ng-click="remove(c)"></i-button>
+                                
+                        </td>
+                    </tr>
+
+                </table>
+              
+            </div>
+        </div>
+    </div>
+
+
+  
+
+    <div x-import="scripts.html"></div>
+    
+    <script x-import="employee_discount/index.js"></script>
+  
+
+</body>
+
+</html>

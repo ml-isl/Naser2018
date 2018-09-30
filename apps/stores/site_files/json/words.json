@@ -1,0 +1,14 @@
+[
+    {"name" : "stores_add" , "en" : "Add Store" , "ar" : "اضافة مخزن"},
+    {"name" : "stores_new" , "en" : "New Store" , "ar" : "مخزن جديد"},
+    {"name" : "stores_details" , "en" : "Store Details" , "ar" : "تفاصيل مخزن"},
+    {"name" : "stores_edit" , "en" : "Edit Store" , "ar" : "تعديل بيانات مخزن"},
+    {"name" : "stores_delete" , "en" : "Delete Store" , "ar" : "حذف مخزن"},
+    {"name" : "stores_name" , "en" : "Store Name" , "ar" : "اسم المخزن"},
+    {"name" : "stores" , "en" : "Stores" , "ar" : "المخازن"},
+
+    {"name" : "stores_logo" , "en" : "Logo" , "ar" : "الشعار"},
+    {"name" : "stores_file_name" , "en" : "FIle Name" , "ar" : "اسم الملف"},    
+    {"name" : "stores_img" , "en" : "Image" , "ar" : "الملفات"}    
+
+]

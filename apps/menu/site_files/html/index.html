@@ -1,0 +1,543 @@
+
+
+<div class="main-menu">
+
+    <a x-permission="owner" class="item" href="/notifications">
+        <img src="images/pic_monotoring.png">
+        <h2>##word.monitoring_menus##</h2>
+        <p>##word.monitoring##</p>
+    </a>
+
+    <a x-permission="tickets" class="item" href="/tickets">
+        <img src="images/pic_tickets.png">
+        <h2>##word.tickets_menus##</h2>
+        <p>##word.tickets_mgmt##</p>
+        
+    </a>
+
+    <a x-permission="customers" class="item"  href="/customers">
+        <img src="images/customers.png">
+        <h2>##word.customers_menus##</h2>
+        <p>##word.customers_mgmt##</p>
+    </a>
+
+    <a x-permission="stores" class="item" href="#" onclick="site.showModal('#storesModal')">
+        <img src="images/stores.png">
+        <h2>##word.stores_menus##</h2>
+        <p>##word.stores_mgmt##</p>
+    </a>
+
+    <a x-permission="finance" class="item" href="#" onclick="site.showModal('#accountsModal')">
+        <img src="images/pic_account.png">
+        <h2>##word.accounts_menus##</h2>
+        <p>##word.accounts_mgmt##</p>
+    </a>
+
+    <a x-permission="menus" class="item" href="#" onclick="site.showModal('#menusModal')">
+        <img src="images/pic_general.png">
+        <h2>##word.system_menus##</h2>
+        <p>##word.system_menus##</p>
+    </a>
+
+    <div id="addressModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.system_address_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <div class="main-menu">
+                    <a class="item" href="/goves">
+                        <img src="images/gov.png">
+                        <h2>##word.system_governorate_menus##</h2>
+                        <p>##word.system_governorate## </p>
+                    </a>
+
+                    <a class="item" href="/cities">
+                        <img src="images/city.png">
+                        <h2>##word.system_city_menus##</h2>
+                        <p> ##word.system_city##</p>
+                    </a>
+
+                    <a class="item" href="/towns">
+                        <img src="images/town.png">
+                        <h2>##word.system_village_menus##</h2>
+                        <p>##word.system_village## </p>
+                    </a>
+
+                    <a class="item" href="/regions">
+                        <img src="images/region.png">
+                        <h2>##word.system_regions_menus##</h2>
+                        <p> ##word.system_regions##</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="companiesModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.system_companies_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <a class="item" href="/companies">
+                    <img src="images/companies.png">
+                    <h2>##word.system_companies_menus##</h2>
+                    <p> ##word.system_companies_contracted##</p>
+                </a>
+
+                <a class="item" href="/companies_employees">
+                    <img src="images/employee.jpg">
+                    <h2>##word.system_company_employee_menus##</h2>
+                    <p>##word.system_company_employee##</p>
+                </a>
+
+                <a class="item" href="/companies_categories">
+                    <img src="images/pic_catagories.png">
+                    <h2>##word.system_companies_catagories_menus##</h2>
+                    <p>##word.system_companies_catagories##</p>
+                </a>
+
+                <a class="item" href="/companies_devices">
+                    <img src="images/pic_devices.png">
+                    <h2>##word.system_companies_devices_menus##</h2>
+                    <p>##word.system_companies_devices##</p>
+                </a>
+
+                <a class="item" href="/damages">
+                    <img src="images/damage.png">
+                    <h2>##word.system_companies_damages_menus##</h2>
+                    <p>##word.system_companies_damages##</p>
+                </a>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="ticketsModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.tickets_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <div class="main-menu">
+
+                    <a class="item" href="/tickets">
+                        <img src="images/pic_tickets.png">
+                        <h2>##word.system_tickets_add_menus##</h2>
+                        <p>##word.system_tickets_customers_companies##</p>
+                    </a>
+
+                    <a class="item" href="/tickets_slides">
+                        <img src="images/ticket_slide.png">
+                        <h2>##word.system_tickets_slides_menus##</h2>
+                        <p>##word.system_tickets_slides_count##</p>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="customersModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.customers_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <div class="main-menu">
+
+                    <a class="item" href="/customers">
+                        <img src="images/customer.png">
+                        <h2>##word.system_add_customer_menus##</h2>
+                        <p>##word.system_customer_register##</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="storesModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.system_stores_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <div class="main-menu">
+
+                    <a class="item" href="/stores">
+                        <img src="images/pic_store2.png">
+                        <h2>##word.system_stores_menus##</h2>
+                        <p>##word.system_stores##</p>
+                    </a>
+
+
+                    <a class="item" href="/categories_items">
+                        <img src="images/pic_catagories.png">
+                        <h2>##word.system_catagories_items_menus##</h2>
+                        <p>##word.system_add_catagories_items##</p>
+                    </a>
+
+                    <a class="item" href="/stores_in">
+                        <img src="images/pic_money_in.png">
+                        <h2>##word.system_stores_in_menus##</h2>
+                        <p>##word.system_register_stores_in##</p>
+                    </a>
+
+
+                    <a class="item" href="/stores_out">
+                        <img src="images/store_out.png">
+                        <h2>##word.system_stores_out_menus##</h2>
+                        <p>##word.system_register_stores_out##</p>
+                    </a>
+
+                    <a class="item" href="/eng_item_list">
+                        <img src="images/exchange.png">
+                        <h2> ##word.system_eng_item_list_menus## </h2>
+                        <p> ##word.system_exchange_receipt## </p>
+                    </a>
+                    
+                    
+                    <a class="item" href="/tax_types">
+                        <img src="images/tax_type.png">
+                        <h2>##word.system_add_tax_menus##</h2>
+                        <p>##word.system_tax_types_out##</p>
+                    </a>
+                    
+                    <a class="item" href="/discount_types">
+                        <img src="images/discount_type.png">
+                        <h2>##word.system_add_discount_menus##</h2>
+                        <p>##word.system_discount_types##</p>
+                    </a>
+     
+                    <a class="item" href="/item_transaction">
+                        <img src="images/item_transaction.png">
+                        <h2>##word.system_item_transaction_menus##</h2>
+                        <p>##word.system_item_details##</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="accountsModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.accounts_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <div class="main-menu">
+
+
+                    <a class="item" href="/safes">
+                        <img src="images/safe.png">
+                        <h2> ##word.system_safe_menus## </h2>
+                        <p> ##word.system_add_amounts_in## </p>
+                    </a>
+
+
+                    <a class="item" href="/employee_discount">
+                        <img src="images/discount.png">
+                        <h2> ##word.system_employees_discount_menus## </h2>
+                        <p> ##word.system_employees_discount_menus## </p>
+                    </a>
+
+                    <a class="item" href="/safes_payments">
+                        <img src="images/safes_payment.png">
+                        <h2> ##word.system_safes_payment_menus## </h2>
+                        <p> ##word.system_safes_payment_menus## </p>
+                    </a>
+
+                    <a class="item" href="/employee_offer">
+                        <img src="images/offer.png">
+                        <h2> ##word.system_employees_offers_menus## </h2>
+                        <p> ##word.system_employees_offers_menus## </p>
+                    </a>
+
+                    <a class="item" href="/amounts_in">
+                        <img src="images/amount_in.png">
+                        <h2>##word.system_amounts_in_menus##</h2>
+                        <p>##word.system_add_amounts_in##</p>
+                    </a>
+
+                    <a class="item" href="/amounts_out">
+                        <img src="images/pic_out.png">
+                        <h2>##word.system_amounts_out_menus##</h2>
+                        <p>##word.system_add_amounts_out##</p>
+                    </a>
+                    
+                    <a class="item" href="/in_out_names">
+                        <img src="images/pic_in_out.png">
+                        <h2>##word.system_in_out_names_menus##</h2>
+                        <p>##word.system_in_out_names##</p>
+                    </a>
+
+                    <a class="item" href="/amounts_report">
+                        <img src="images/pic_report.png">
+                        <h2>##word.system_amounts_report_menus##</h2>
+                        <p> ##word.system_amounts_report## </p>
+                    </a>
+
+                    <a class="item" href="/employees_report">
+                        <img src="images/pic_reportEmployee.png">
+                        <h2>##word.system_employees_report_menus##</h2>
+                        <p> ##word.system_employees_report## </p>
+                    </a>
+
+                    <a class="item" href="/engineers_report">
+                        <img src="images/engineers_report.png">
+                        <h2>##word.system_engineers_report_menus##</h2>
+                        <p> ##word.system_engineers_report## </p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="categoriesModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.system_catagories_menus## </h2>
+            </div>
+            <div class="modal-body">
+                <a class="item" href="/categories">
+                    <img src="images/pic_catagories.png">
+                    <h2>##word.system_catagories_menus##</h2>
+                    <p>##word.system_catagories## </p>
+                </a>
+
+                <a class="item" href="/sub_categories">
+                    <img src="images/pic_subCatagory.png">
+                    <h2>##word.system_sub_catagories_menus## </h2>
+                    <p> ##word.system_sub_catagories##  </p>
+                </a>
+
+                <a class="item" href="/devices_names">
+                    <img src="images/pic_devices.png">
+                    <h2> ##word.system_devices_menus##</h2>
+                    <p> ##word.system_devices## </p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="employeesModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.system_jobs_and_employees_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <a class="item" href="/employees">
+                    <img src="images/employee.png">
+                    <h2>##word.system_employees_menus##</h2>
+                    <p>##word.system_employee## </p>
+                </a>
+
+                <a x-feature="test" class="item" href="/unemployees">
+                    <img src="images/unemployee.png">
+                    <h2> ##word.jobs_and_employees_menu##</h2>
+                    <p> ##word.jobs_and_employees_menu## </p>
+                </a>
+
+                <a class="item" href="/departments">
+                    <img src="images/pic_department.png">
+                    <h2>##word.system_employee_department_menus##</h2>
+                    <p> ##word.system_employee_department## </p>
+                </a>
+                
+                <a class="item" href="/jobs">
+                    <img src="images/pic_jobs.png">
+                    <h2>##word.system_employee_jobs_menus##</h2>
+                    <p> ##word.system_employee_jobs##</p>
+                </a>
+
+                <a class="item" href="/employees_degrees">
+                    <img src="images/degree.png">
+                    <h2>##word.system_employee_degrees_menus## </h2>
+                    <p>##word.system_employee_degrees##  </p>
+                </a>
+
+                <a x-feature="test" class="item" href="/employees_insurances">
+                    <img src="images/employee_insurance.png">
+                    <h2> ##word.jobs_and_employees_menu## </h2>
+                    <p>##word.jobs_and_employees_menu##  </p>
+                </a>
+
+                <a x-feature="test" class="item" href="/unemployees_insurances">
+                    <img src="images/unemployee_insurance.png">
+                    <h2>##word.jobs_and_employees_menu##  </h2>
+                    <p> ##word.jobs_and_employees_menu## </p>
+                </a>
+
+                <a x-feature="test" class="item" href="/employees_mobiles">
+                    <img src="images/employee_mobile.png">
+                    <h2>##word.jobs_and_employees_menu## </h2>
+                    <p> ##word.jobs_and_employees_menu## </p>
+                </a>
+
+                <a x-feature="test" class="item" href="/unemployees_mobiles">
+                    <img src="images/unemployee_mobile.png">
+                    <h2> ##word.jobs_and_employees_menu## </h2>
+                    <p> ##word.jobs_and_employees_menu##  </p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="general_setting_Modal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.system_general_menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <a x-feature="test" class="item" href="/mobiles_slides">
+                    <img src="images/sim.png">
+                    <h2>شرائح المحمول</h2>
+                    <p>اضافة شريحة محمول</p>
+                </a>
+
+                <a x-feature="test" class="item" href="/facilities_codes">
+                    <img src="images/facility.png">
+                    <h2>بيانات المنشاءات</h2>
+                    <p>اضافة منشأة في التامينات</p>
+                </a>
+
+                <a x-feature="test" class="item" href="/insurances_slides">
+                    <img src="images/insurance_slide.png">
+                    <h2>شرائح التامينات</h2>
+                    <p>اضافة شريحة تامينات</p>
+                </a>
+
+                <a class="item" href="/militaries_status">
+                    <img src="images/military.png">
+                    <h2>##word.system_military_menus## </h2>
+                    <p>##word.system_military## </p>
+                </a>
+
+                <a class="item" href="/maritals_status">
+                    <img src="images/marital.png">
+                    <h2>##word.system_social_status_menus## </h2>
+                    <p>##word.system_social_status## </p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="menusModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="center"> ##word.menus## </h2>
+            </div>
+            <div class="modal-body">
+
+                <div class="main-menu">
+                    <a class="item" href="/notifications">
+                        <img src="images/pic_monotoring.png">
+                        <h2>##word.monitoring_menus##</h2>
+                        <p>##word.monitoring##</p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#ticketsModal')">
+                        <img src="images/pic_ticket.png">
+                        <h2>##word.tickets_menus##</h2>
+                        <p>##word.tickets_mgmt## </p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#customersModal')">
+                        <img src="images/customers.png">
+                        <h2>##word.customers_menus##</h2>
+                        <p>##word.customers_mgmt##</p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#storesModal')">
+                        <img src="images/stores.png">
+                        <h2>##word.stores_menus##</h2>
+                        <p>##word.stores_mgmt## </p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#accountsModal')">
+                        <img src="images/pic_account.png">
+                        <h2>##word.accounts_menus##</h2>
+                        <p> ##word.accounts_mgmt##</p>
+                    </a>
+
+                    <a class="item" href="/security">
+                        <img src="images/users.png">
+                        <h2>##word.system_security_menus##</h2>
+                        <p> ##word.system_security##</p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#addressModal')">
+                        <img src="images/pic_address.png">
+                        <h2>##word.system_address_menus##</h2>
+                        <p>##word.system_address##</p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#companiesModal')">
+                        <img src="images/pic_companies.png">
+                        <h2>##word.system_companies_menus##</h2>
+                        <p>##word.system_companies##</p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#categoriesModal')">
+                        <img src="images/pic_catagories.png">
+                        <h2>##word.system_catagories_menus##</h2>
+                        <p>##word.system_catagories_mgmt##</p>
+                    </a>
+
+
+                    <a class="item" href="#" onclick="site.showModal('#employeesModal')">
+                        <img src="images/pic_employees.png">
+                        <h2>##word.system_jobs_and_employees_menus##</h2>
+                        <p>##word.system_jobs_and_employees_mgmt##</p>
+                    </a>
+
+                    <a class="item" href="#" onclick="site.showModal('#general_setting_Modal')">
+                        <img src="images/setting.png">
+                        <h2>##word.system_general_menus##</h2>
+                        <p>##word.system_general_menus##</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

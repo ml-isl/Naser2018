@@ -1,0 +1,12 @@
+[
+    {"name" : "goves_add" , "en" : "Add Gov" , "ar" : "اضافة محافظة"},
+    {"name" : "goves_search" , "en" : "Search Gov" , "ar" : "بحث محافظة"},
+
+    {"name" : "goves_new" , "en" : "New Gov" , "ar" : "محافظة جديدة"},
+    {"name" : "goves_details" , "en" : "Gov Details" , "ar" : "تفاصيل محافظة"},
+    {"name" : "goves_edit" , "en" : "Edit Gov" , "ar" : "تعديل بيانات محافظة"},
+    {"name" : "goves_delete" , "en" : "Delete Gov" , "ar" : "حذف محافظة"},
+    {"name" : "goves_name" , "en" : "Gov Name" , "ar" : "اسم المحافظة"},   
+    {"name" : "goves_logo" , "en" : "Gov Logo" , "ar" : "شعار المحافظة"},
+    {"name" : "goves_img" , "en" : "Gov Images" , "ar" : "ملفات المحافظة"}
+]

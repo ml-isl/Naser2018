@@ -1,0 +1,26 @@
+[
+    {"name" : "damages_calculate_add" , "en" : "Add Damage Calculate" , "ar" : "اضافة حساب عطل"},
+    {"name" : "damages_calculate_new" , "en" : "New Damage Calculate" , "ar" : "حساب عطل جديد"},
+    {"name" : "damages_calculate_details" , "en" : "Damage Details" , "ar" : "تفاصيل حساب عطل"},
+    {"name" : "damages_calculate_edit" , "en" : "Edit Damage Calculate" , "ar" : "تعديل بيانات حسابات عطل"},
+    {"name" : "damages_calculate_delete" , "en" : "Delete Damage Calculate" , "ar" : "حذف حساب عطل عطل"},
+    {"name" : "damages_calculate_category" , "en" : "Category" , "ar" : "الفئة"},
+    {"name" : "damages_calculate_sub_category" , "en" : "Sub Category" , "ar" : "الفئة الفرعية"},
+    {"name" : "damages_calculate_name" , "en" : "name" , "ar" : "العطل"},
+    {"name" : "damages_calculate_logo" , "en" : "Damage Logo" , "ar" : "صورة عطل"},
+    {"name" : "damages_calculate_ticket_count" , "en" : "Tickets Count" , "ar" : "عدد البلاغات"},
+    {"name" : "damages_calculate_company" , "en" : "Company" , "ar" : "حساب الشركة"},
+    {"name" : "damages_calculate_cash" , "en" : "Cash" , "ar" : "نقدي"},
+    {"name" : "damages_calculate_company" , "en" : "Company Calculate" , "ar" : "حساب الشركة"},
+    {"name" : "damages_calculate_center" , "en" : "Center Calculate" , "ar" : "حساب الفني"},
+    {"name" : "damages_calculate_device" , "en" : "Device" , "ar" : "الجهاز"},
+    {"name" : "damages_calculate_item_serial" , "en" : "Item Serial" , "ar" : "سيريال القطعة"},
+
+    {"name" : "damages_calculate_company_insurance_in_move" , "en" : "Company Insurance Move" , "ar" : "الانتقالات داخل الضمان"},
+    {"name" : "damages_calculate_company_insurance_out_move" , "en" : "Company Not Insurance Move" , "ar" : "الانتقالات خارج الضمان"},
+    {"name" : "damages_calculate_company_installation" , "en" : "Installation Move" , "ar" : "انتقالات التركيب"},
+    {"name" : "damages_calculate_company_maintenace" , "en" : "Maintenace Move" , "ar" : "انتقالات الاعطال"},
+    
+    {"name" : "damages_calculate_img" , "en" : "Damage Images" , "ar" : "صورة العطل"}
+
+]

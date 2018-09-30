@@ -1,0 +1,4 @@
+[
+    {"id" : 1 , "name" : "single" , "en" : "Single" , "ar" :"أعزب"},
+    {"id" : 2 , "name" : "married" , "en" : "Married" , "ar" :"متزوج"}
+]

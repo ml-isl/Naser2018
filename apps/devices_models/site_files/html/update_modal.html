@@ -1,0 +1,86 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="updateDevice_ModelModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.devices_models_edit## </h2>
+        </div>
+        <div class="modal-body">
+            <span ng-show="busy">
+                <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </span>
+            <div ng-hide="busy" class="row">
+
+                <div class="col7">
+                    <form class="form">
+
+                        <div class="control">
+                            <label>##word.devices_models_category##</label>
+                            <select ng-model="device_model.category" ng-change="loadSub_Categories(device_model.category)">
+                                <option ng-repeat="ca in categories" value="{{ca}}" ng-selected="device_model.category._id == ca._id">{{ca.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="control">
+                            <label>##word.devices_models_sub_category##</label>
+                            <select ng-model="device_model.sub_category">
+                                <option ng-repeat="s in sub_categories" value="{{s}}" ng-selected="device_model.sub_category._id == s._id">{{s.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="control">
+                            <label>##word.devices_models_device_name##</label>
+                            <input ng-model="device_model.name" type="text">
+                        </div>
+
+                    </form>
+
+
+
+                    </form>
+
+
+                </div>
+
+                <div class="col3 center">
+
+                    <form class="form">
+                        <label>##word.devices_models_img##</label>
+                        <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                        <br>
+                        <img class="img " ng-src="{{device_model.image_url}}" />
+                        <br>
+                        <p>{{uploadStatus}}</p>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-hide="busy" id="update_device_model_btn" ng-click="update(device_model)">
+                <i class="fa fa-save" aria-hidden="true"></i> ##word.update##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#updateDevice_ModelModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

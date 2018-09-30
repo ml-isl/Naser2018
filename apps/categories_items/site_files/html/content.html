@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col9">
+        <form class="form">
+            <div class="row">
+                <i-control class="col4" ng-model="category_item.code" label="##word.categories_items_code##" type="text" v="r"></i-control>      
+                <i-control class="col4" id="category_name" ng-model="category_item.name" label="##word.categories_items_name##" type="text" v="r"></i-control>      
+            </div>
+            <div class="row">
+                <i-list class="col6" ng-model="category_item.company" items="companies" label="##word.categories_items_Company_name##" v="r"></i-list>
+                <i-list class="col6" ng-model="category_item.store" items="stores" label="##word.categories_items_store_name##" ng-search="serach_stores" v="r"></i-list>
+
+            </div>
+
+            <div class="row">
+                <table class="table box-shadow">
+                    <tr>
+                        <th colspan="5" class="pointer" ng-click="sizeEditor = !sizeEditor">##word.categories_items_sizes##
+                            <i class="fa fa-edit"></i>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <form>
+                                <div class="row">
+                                <i-control class="col2" ng-model="item.size"  label="##word.categories_items_sizes##" type="text" ></i-control> 
+                                <i-control class="col2" ng-model="item.cost"  label="##word.categories_items_cost##"  type="number"  ></i-control> 
+                                <i-control class="col2" ng-model="item.price" label="##word.categories_items_price##" type="number"  ></i-control>
+                                <i-control class="col2" ng-model="item.current_count" label="##word.categories_items_balance##" type="number"  ></i-control>
+                                <i-button type="add" label="##word.categories_items_add_size##" ng-click="addSize()"></i-button>
+
+
+                                    <tr>
+                                        <th>##word.categories_items_sizes##</th>
+                                        <th>##word.categories_items_cost##</th>
+                                        <th>##word.categories_items_price##</th>
+                                        <th>##word.categories_items_balance##</th>
+                                        <th>##word.actions##</th>
+                                    </tr>
+                                    <tr ng-repeat="itm in category_item.sizes">
+                                        <td>{{itm.size}}</td>
+                                        <td><i-control ng-model="itm.cost"></i-control>    </td>
+                                        <td><i-control ng-model="itm.price"></i-control>    </td>
+                                        <td><i-control ng-model="itm.current_count"></i-control>    </td>
+
+                                        <td>
+                                            <a class="btn bg-red" ng-click="deleteSize(itm)">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="col3 ">
+            
+            <br>
+            <i-image ng-model="category_item.image_url"></i-image>
+            <br>
+            <i-files ng-model="category_item.files"></i-files>
+
+    </div>
+</div>

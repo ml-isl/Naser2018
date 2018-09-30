@@ -1,0 +1,132 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="addUnEmployee_InsuranceModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.unemployees_insurance_add##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+
+        <div class="modal-body">
+            <div class="col7">
+
+                <form class="form">
+                    <div class="control">
+                        <label>##word.unemployees_insurance_name##</label>
+                        <select ng-model="unemployee_insurance.name">
+                            <option ng-repeat="un in unemployees" value="{{un}}">{{un.name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="row10 ">
+                        <div class="col4">
+                            <div class="control">
+                                <label>##word.unemployees_insurance_number##</label>
+                                <input ng-model="unemployee_insurance.number" type="text">
+                            </div>
+                        </div>
+
+
+                        <div class="col3">
+                            <div class="control">
+                                <label>##word.unemployees_insurance_slide##</label>
+                                <select ng-model="unemployee_insurance.slide">
+                                    <option ng-repeat="in in insurances_slides" value="{{in}}">{{in.name + ' - ' + in.value + ' جنيه '}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col3">
+                            <div class="control">
+                                <label>##word.unemployees_insurance_discount##</label>
+                                <input ng-model="unemployee_insurance.discount" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control">
+                        <label>##word.unemployees_insurance_notes##</label>
+                        <textarea rows="4" ng-model="unemployee_insurance.notes"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col3 center">
+                <form class="form">
+                    <label>##word.unemployees_insurance_img##</label>
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                    <br>
+                    <img class="img " ng-src="{{unemployee_insurance.image_url}}" />
+                    <br>
+                    <p>{{uploadStatus}}</p>
+
+                </form>
+
+                <br>
+                <div class="row10 ">
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="fileEditor = !fileEditor">##word.unemployees_insurance_img##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="fileEditor">
+                            <td colspan="2">
+                                <div>
+                                    <form>
+                                        <div class="control">
+                                            <label> ##word.unemployees_insurance_file_name##</label>
+                                            <input class="margin" ng-model="fileName" />
+                                            <input class="margin" type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                                        </div>
+                                        <label>{{fileStatus}}</label>
+                                    </form>
+
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="file in unemployee_insurance.files">
+                            <td>{{file.name}}</td>
+                            <td ng-show="fileEditor">
+                                <a href="{{file.url}}" class="btn">
+                                    <i class="fa fa-download"></i>
+                                </a>
+                                <a class="btn bg-red" ng-click="deleteFile(file)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- -end-->
+            </div>
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-click="add()" ng-hide="busy" id="add_unemployee_insurance_btn">
+                <i class="fa fa-plus" aria-hidden="true"></i> ##word.add##</a>
+
+            <a class="btn bg-blue" onclick="site.hideModal('#addUnEmployee_InsuranceModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

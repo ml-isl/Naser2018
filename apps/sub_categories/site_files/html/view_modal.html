@@ -1,0 +1,22 @@
+<div id="viewSub_CategoryModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.sub_categories_details## <i class="fa fa-file"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div x-import="sub_categories/view.html"></div>
+
+            <h2>{{error}}</h2>
+            <div class="modal-footer center">
+                <i-button type="close" onclick="site.hideModal('#viewSub_CategoryModal')" label="##word.close##"></i-button>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

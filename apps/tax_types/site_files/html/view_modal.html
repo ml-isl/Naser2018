@@ -1,0 +1,24 @@
+
+
+<div id="viewTaxTypeModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-file"></i> ##word.cities_details## <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i></h2>
+        </div>
+        <div class="modal-body">
+           
+            <div x-import="tax_types/view.html"></div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="close"   label="##word.close##" onclick="site.hideModal('#viewTaxTypeModal')"></i-button>
+           
+        </div>
+    </div>
+
+
+</div>

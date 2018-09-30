@@ -1,0 +1,14 @@
+[
+    {"name" : "categories_add" , "en" : "Add Category" , "ar" : "اضافة فئة"},
+    {"name" : "categories_search" , "en" : "ٍSearch Category" , "ar" : "بحث فئة"},
+    {"name" : "categories_new" , "en" : "New Category" , "ar" : "فئة جديدة"},
+    {"name" : "categories_delete" , "en" : "Delete Category" , "ar" : "حذف فئة"},
+    {"name" : "categories_edit" , "en" : "Edit Category" , "ar" : "تعديل فئة"},
+    {"name" : "categories_details" , "en" : "Category Details" , "ar" : "تفاصيل فئة"},
+    {"name" : "categories_name" , "en" : "Category Name" , "ar" : "اسم الفئة"},
+    {"name" : "categories_img" , "en" : "Category Image" , "ar" : "ملفات الفئة"},   
+    {"name" : "categories_name" , "en" : "Category Name" , "ar" : "اسم الفئة"},       
+    {"name" : "categories_logo" , "en" : "Category Logo" , "ar" : "شعار الفئة"},
+
+    {"name" : "categories_img" , "en" : "Category Image" , "ar" : "ملفات الفئة"}
+]

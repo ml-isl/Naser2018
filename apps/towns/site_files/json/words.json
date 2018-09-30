@@ -1,0 +1,23 @@
+[
+
+    {"name" : "towns_add" , "en" : "Add Town" , "ar" : "اضافة قرية"},
+    {"name" : "towns_search" , "en" : "Search Town" , "ar" : "بحث قرية"},
+
+    {"name" : "towns_new" , "en" : "New Town" , "ar" : "قرية جديدة"},
+    {"name" : "towns_details" , "en" : "Town Details" , "ar" : "تفاصيل قرية"},
+    {"name" : "towns_edit" , "en" : "Edit Town" , "ar" : "تعديل قرية"},
+    {"name" : "towns_delete" , "en" : "Delete Town" , "ar" : "حذف قرية"},
+    {"name" : "towns_gov" , "en" : "Gov" , "ar" : "المحافظة"},
+    {"name" : "towns_city" , "en" : "City" , "ar" : "المدينة"},
+    {"name" : "towns_region" , "en" : "Region" , "ar" : "المنطقة"},
+    {"name" : "towns_name" , "en" : "Town" , "ar" : "القرية"},
+    {"name" : "towns_logo" , "en" : "Town Logo" , "ar" : "شعار القرية"},
+      
+
+    
+    {"name" : "towns_img" , "en" : "Town Image" , "ar" : "ملفات القرية"}
+
+    
+    
+
+]

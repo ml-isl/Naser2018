@@ -1,0 +1,123 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="updateUnEmployee_MobileModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.unemployee_mobiles_edit##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div class="col7">
+
+                <form class="form">
+
+                    <div class="control">
+                        <label>##word.unemployees_insurance_name##</label>
+                        <select ng-model="unemployee_mobile.unemployee">
+                            <option ng-repeat="un in unemployees" value="{{un}}" ng-selected="unemployee_mobile.unemployee._id == un._id">{{un.name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="row10 ">
+                        <div class="col5">
+                            <div class="control">
+                                <label>##word.unemployee_mobiles_number##</label>
+                                <select ng-model="unemployee_mobile.number">
+                                    <option ng-repeat="nu in mobiles_slides" value="{{nu}}" ng-selected="unemployee_mobile.number._id == nu._id">{{nu.number + ' - ' + nu.slide_name + ' - ' + nu.value + ' ج '}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col5">
+                            <div class="control">
+                                <label>##word.unemployee_mobiles_discount##</label>
+                                <input ng-model="unemployee_mobile.discount" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control">
+                        <label>##word.unemployee_mobiles_notes##</label>
+                        <textarea rows="4" ng-model="unemployee_mobile.notes"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col3 center">
+                <form class="form">
+                    <label>##word.unemployees_mobiles_logo##</label>
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                    <br>
+                    <img class="img " ng-src="{{unemployee_mobile.image_url}}" />
+                    <br>
+                    <p>{{uploadStatus}}</p>
+
+                </form>
+
+                <div class="row10 ">
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="fileEditor = !fileEditor">##word.unemployee_mobiles_img##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="fileEditor">
+                            <td colspan="2">
+                                <div>
+                                    <form>
+                                        <div class="control">
+                                            <label> ##word.unemployee_mobiles_file_name##</label>
+                                            <input class="margin" ng-model="fileName" />
+                                            <input class="margin" type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                                        </div>
+                                        <label>{{fileStatus}}</label>
+                                    </form>
+
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="file in unemployee_mobile.files">
+                            <td>{{file.name}}</td>
+                            <td ng-show="fileEditor">
+                                <a href="{{file.url}}" class="btn">
+                                    <i class="fa fa-download"></i>
+                                </a>
+                                <a class="btn bg-red" ng-click="deleteFile(file)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- -end-->
+            </div>
+
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-hide="busy" id="update_unemployee_mobile_btn" ng-click="update(unemployee_mobile)">
+                <i class="fa fa-save" aria-hidden="true"></i> ##word.update##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#updateUnEmployee_MobileModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

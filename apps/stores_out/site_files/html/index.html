@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row ">
+            <div class="row" ng-controller="stores_out">
+                <div x-import="stores_out/add_modal.html"></div>
+                <div x-import="stores_out/update_modal.html"></div>
+                <div x-import="stores_out/delete_modal.html"></div>
+                <div x-import="stores_out/view_modal.html"></div>
+                <div x-import="stores_out/search_all_modal.html"></div>
+                <div class="row">
+                    <h1 class="white bold text-center"> ##word.stores_out## </h1>
+                </div>
+                <div class="top-actions">
+
+                    <i-button type="add" label="##word.stores_out_neew##" x-permission="owner" ng-click="newStore_Out()" > </i-button>
+                    <i-button type="search" label="##word.search_all##" x-permission="owner" onclick="site.showModal('#StoresOutSearchModal')"  > </i-button>
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                    <h3 class="white bold"> ##word.stores_out_result_count## : {{count}}</h3>
+                </div>
+
+                <table class="table loaded center hover" id="t2">
+                    <tr>
+                        <th>##word.stores_out_date##</th>
+                        <th>##word.stores_out_id##</th>
+                     
+                        <th>##word.stores_out_store##</th>
+                        <th>##word.stores_out_safe##</th>
+
+                        <th x-permission="owner" class="not-print">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+
+                        <td>
+                            <br>
+                            <p class="text-center"> {{c.date | date : 'yyyy - MM - dd'}} </p>
+                        </td>
+                        <td>
+                                <br>
+                            <p class="bold brown text-center"> {{c.number}} </p>
+                        </td>
+                      
+                        <td>
+                                <br>
+                            <p class="bold text-center"> {{c.store.name}} </p>
+                        </td>
+                        <td>
+                                <br>
+                            <p class="bold text-center green"> {{c.safe.name}} </p>
+                        </td>
+                        <td x-permission="owner" class="center not-print">
+                            <i-button type="details" label="##word.details##" x-permission="owner" ng-click="details(c)" > </i-button>
+
+
+                            <i-button type="delete" label="##word.delete##" x-permission="developer" ng-click="remove(c)"> </i-button>
+
+                            
+                        </td>
+
+                    </tr>
+
+                </table>
+                <i-button type="print" label="##word.print##" onclick="site.print('#t2')"> </i-button>
+
+            
+                    
+            </div>
+        </div>
+    </div>
+
+    <div x-import="scripts.html"></div>
+    <script x-import="stores_out/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<div class="row ">
+    <div class="col9">
+        <i-list ng-search="companies_devices" v="r" class="col9" items="companies" ng-change="loadCategories(company_device.company)"
+            ng-model="company_device.company" label="##word.companies_devices_company##"></i-list>
+
+        <i-list ng-search="companies_devices_category" v="r" class="col9" items="companies_categories" ng-model="company_device.category"
+            ng-change="loadSub_Categories(company_device.category)" label="##word.companies_devices_category##" ng-value="category" display="category.name"></i-list>
+
+        <i-list ng-search="company_devices_sub_category" class="col9" items="sub_categories" ng-model="company_device.sub_category"
+            ng-change="loadDevices_Names(company_device.sub_category)" label="##word.companies_devices_sub_category##" display="name"></i-list>
+
+        <i-list ng-search="companies_devices_device" v="r" class="col9" items="devices_names" ng-model="company_device.device"
+            label="##word.companies_devices_device##"></i-list>
+
+        <br>
+        <div class="row">
+
+            <div class="col">
+                <table class="table box-shadow">
+                    <tr>
+                        <th colspan="2" class="pointer" ng-click="modelEditorAdd = !modelEditorAdd">##word.companies_devices_model##
+                            <i class="fa fa-edit"></i>
+                        </th>
+
+                    </tr>
+                    <tr ng-show="modelEditorAdd">
+                        <td colspan="2">
+                            <form>
+                                <div class="control">
+                                    <i-control type="text" ng-model="model.name" label="##word.companies_devices_model##"></i-control>
+                                    <i-control type="text" ng-model="model.alt" label="##word.companies_devices_model_equal##"></i-control>
+                                    <a class="btn" ng-click="addModel()">##word.companies_devices_add_model##</a>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="model in company_device.models">
+                        <td>
+                            <b>{{model.name}}</b> -
+                            <span>{{model.alt}}</span>
+                        </td>
+                        <td ng-show="modelEditorAdd">
+                            <a class="btn bg-red" ng-click="deleteModel(model)">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+        </form>
+    </div>
+
+    <div class="col2 center">
+        <i-image category="companies_devices_img" ng-model="company_device.image_url"></i-image>
+        <i-files ng-model="company_device.files"></i-files>
+
+    </div>
+</div>

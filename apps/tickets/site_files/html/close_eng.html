@@ -1,0 +1,184 @@
+<div class="row ">
+
+    <i-control class="col4" type="text" ng-model="ticket.close_eng.device_info.serial" label="##word.ticket_device_serial##"></i-control>
+    <i-control class="col4" type="text" ng-model="ticket.close_eng.device_info.product_date" label="##word.ticket_device_product_date##"></i-control>
+ 
+    <div class="col4">
+        <div class="control">
+            <label> ##word.ticket_device_status##</label>
+            <div class="row">
+                <i-radio class="col6" ng-model="ticket.close_eng.device_info.status" value="0" label="##word.ticket_device_status0##"></i-radio>
+                <i-radio class="col6" ng-model="ticket.close_eng.device_info.status" value="1" label="##word.ticket_device_status1##"></i-radio>                  
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row ">
+    <i-textarea type="text" ng-model="ticket.close_eng.fixes" label="##word.ticket_device_fixes##"> </i-textarea>
+   
+    <i-list class="col6" display="ar" label="##word.ticket_status##"  ng-model="ticket.close_eng.status"  items="tickets_status"> </i-list> 
+   
+</div>
+<div class="row ">
+
+    <div class="col6 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="inputEditorAdd = !inputEditorAdd">##word.ticket_input##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr ng-show="inputEditorAdd">
+                <td colspan="2">
+                    <form>
+                        <i-control type="text" ng-model="input.value" label="##word.ticket_input_value##"></i-control>
+                        <i-control type="text" ng-model="input.name" label="##word.ticket_input_name##"></i-control>
+                        <i-control type="text" ng-model="input.receet" label="##word.ticket_input_receet##"></i-control>
+                        <i-button type= "add" ng-click="addToCloseEngInput()" label="##word.ticket_input_add##"></i-button>
+
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="input in ticket.close_eng.inputs">
+                <td>
+                    <b class="green">{{input.value}} جنية</b>
+                    <span>{{input.name}}</span>
+
+                </td>
+                <td ng-show="inputEditorAdd">
+                    <i-button type="delete" ng-click="deleteCloseEngInput(input)"></i-button>
+                   
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col6 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="outputEditorAdd = !outputEditorAdd">##word.ticket_output##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr ng-show="outputEditorAdd">
+                <td colspan="2">
+                    <form>
+                        <i-control label="##word.ticket_output_value##"  type="text" ng-model="output.value"></i-control>
+                        <i-control label="##word.ticket_output_name##"  type="text" ng-model="output.name"></i-control>
+                        <i-button type= "add" ng-click="addToCloseEngOutput()" label="##word.ticket_output_add##"></i-button>
+
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="output in ticket.close_eng.outputs">
+                <td>
+                    <b class="green">{{output.value}} جنيه</b>
+                    <span>{{output.name}}</span>
+
+                </td>
+                <td ng-show="outputEditorAdd">
+                    <i-button type="delete" ng-click="deleteCloseEngOutput(output)"></i-button>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<br>
+
+<div class="row ">
+
+    <div class="col6 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="itemUsedEditor = !itemUsedEditor">##word.ticket_item_used##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr ng-show="itemUsedEditor">
+                <td colspan="2">
+                   
+                        <i-list ng-search="item_used_search" label="##word.ticket_item_used_name##" ng-model="itemUsed" items="engItemList"></i-list>
+                        <i-button type="add" ng-click="addToCloseEngItemUsed()" label="##word.ticket_item_used_add##"></i-button>
+                  
+                </td>
+            </tr>
+            <tr ng-repeat="item in ticket.close_eng.item_used_list">
+                <td>
+                    <span>{{item.name}}</span>
+                </td>
+                <td ng-show="itemUsedEditor">
+                    <i-button type="delete" ng-click="deleteCloseEngItemUsed(item)"></i-button>    
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col6 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="itemNeedEditor = !itemNeedEditor">##word.ticket_item_need##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr ng-show="itemNeedEditor">
+                <td colspan="2">
+                    <form>
+                        <i-control label="##word.ticket_item_need_name##" type="text" ng-model="itemNeed.name"></i-control>
+                        <i-button class="save" ng-click="addToCloseEngItemNeed()" label="##word.ticket_item_need_add##"> </i-button>
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="item in ticket.close_eng.item_need_list">
+                <td>
+                    <span>{{item.name}}</span>
+                </td>
+                <td ng-show="itemNeedEditor">
+                    <i-button type="delete" ng-click="deleteCloseEngItemNeed(item)"> </i-button>
+                   
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+<br>
+<div class="row ">
+    <div class="col6 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="itemRecivedEditor = !itemRecivedEditor">##word.ticket_item_recived##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr ng-show="itemRecivedEditor">
+                <td colspan="2">
+                    <form>
+                        <div class="control">
+                           
+                            <i-control ng-model="itemRecived.name" label="##word.ticket_item_recived_name##"></i-control>
+                            <i-button type="add" ng-click="addToCloseEngItemRecived()" label="##word.ticket_item_recived_add##"></i-button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="item in ticket.close_eng.item_recived_list">
+                <td>
+                    <span>{{item.name}}</span>
+                </td>
+                <td ng-show="itemRecivedEditor">
+                    <i-button  type ="delete" ng-click="deleteCloseEngItemRecived(item)"></i-button>
+            
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col6" x-import="tickets/files.html"></div>
+</div>

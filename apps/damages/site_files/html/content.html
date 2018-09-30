@@ -1,0 +1,18 @@
+<div class="row">
+        <div class="col9">
+
+            <form class="form">
+
+                <i-list ng-search="catrgory_search" v="r" class="col3" items="categories" ng-model="damage.category" ng-change="loadSub_Categories(damage.category)" label="##word.damages_category##"></i-list>
+                <i-list ng-search="sub_catrgory_search" class="col3" items="sub_categories" ng-model="damage.sub_category" label="##word.damages_sub_category##"></i-list>
+                <i-control  ng-model="damage.name" class="col5" type="text" v="r" label="##word.damages_name##"></i-control>
+              
+            </form>
+        </div>
+
+        <div class="col3 ">
+                <i-image category="damages" ng-model="damage.image_url"></i-image>
+                <i-files ng-model="damage.files"></i-files>
+
+        </div>
+    </div>

@@ -1,0 +1,125 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="updateMobile_SlideModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.mobiles_slides_edit##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div class="col7">
+
+                <form class="form">
+                    <div class="row10 ">
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_name##</label>
+                                <input ng-model="mobile_slide.slide_name" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_number##</label>
+                                <input ng-model="mobile_slide.number" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_value##</label>
+                                <input ng-model="mobile_slide.value" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_tax##</label>
+                                <input ng-model="mobile_slide.tax" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_vat##</label>
+                                <input ng-model="mobile_slide.vat" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row10 ">
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_minutes_in##</label>
+                                <input ng-model="mobile_slide.minutes_in" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_minutes_out##</label>
+                                <input ng-model="mobile_slide.minutes_out" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_sms_in##</label>
+                                <input ng-model="mobile_slide.sms_in" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_sms_out##</label>
+                                <input ng-model="mobile_slide.sms_out" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="control">
+                                <label>##word.mobiles_slides_mobile_data##</label>
+                                <input ng-model="mobile_slide.mobile_data" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col3 center">
+
+                <form class="form">
+                    <label>##word.mobiles_slides_img##</label>
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                    <br>
+                    <img class="img " ng-src="{{mobile_slide.image_url}}" />
+                    <br>
+                    <p>{{uploadStatus}}</p>
+                </form>
+            </div>
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-hide="busy" id="update_mobile_slide_btn" ng-click="update(mobile_slide)">
+                <i class="fa fa-save" aria-hidden="true"></i> ##word.update##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#updateMobile_SlideModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

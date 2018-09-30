@@ -1,0 +1,27 @@
+[
+
+    {"name" : "companies_employees_add" , "en" : "Add Company Employee" , "ar" : "اضافة موظف  شركة"},
+    {"name" : "companies_employees_search" , "en" : "Search Company Employee" , "ar" : "بحث موظف  شركة"},
+
+    {"name" : "companies_employees_new" , "en" : "New Company Employee" , "ar" : "موظف شركة جديد"},
+    {"name" : "companies_employees_edit" , "en" : "Edit Company Employee" , "ar" : "تعديل بيانات موظف شركة"},
+    {"name" : "companies_employees_details" , "en" : "Company Employee Details" , "ar" : "تفاصيل بيانات موظف شركة"},
+    {"name" : "companies_employees_delete" , "en" : "Delete Company Employee" , "ar" : "حذف موظف شركة"},
+    {"name" : "companies_employees_name" , "en" : "Employee Name" , "ar" : "اسم الموظف"},
+    {"name" : "companies_employees_email" , "en" : "Employee Email" , "ar" : "الايميل"},
+    {"name" : "companies_employees_company" , "en" : "Company" , "ar" : "الشركة"},
+    {"name" : "companies_employees_department" , "en" : "Company Department" , "ar" : "القسم"},
+    {"name" : "companies_employees_job" , "en" : "Employee Job" , "ar" : "الوظيفة"},
+    {"name" : "companies_employees_notes" , "en" : "Notes" , "ar" : "ملاحظات"},
+    {"name" : "companies_employees_employee_phones" , "en" : "Employee Phones" , "ar" : "تليفونات الموظف"},
+    {"name" : "companies_employees_phones" , "en" : "Phones" , "ar" : "تليفونات الموظف"},
+    {"name" : "companies_employees_add_phone" , "en" : "Add Phone" , "ar" : "اضافة تليفون"},
+    {"name" : "companies_employees_employee_mobiles" , "en" : "Employee Mobiles" , "ar" : "موبايلات الموظف"},
+    {"name" : "companies_employees_mobiles" , "en" : "Mobiles" , "ar" : "موبايلات الموظف"},
+    {"name" : "companies_employees_add_mobile" , "en" : "Add Mobile" , "ar" : "اضافة محمول"},
+    {"name" : "companies_employees_logo" , "en" : "Employee Logo" , "ar" : "شعار موظفين الشركات"},
+    {"name" : "companies_employees_file_name" , "en" : "File Name" , "ar" : "اسم الملف"},
+
+    {"name" : "companies_employees_img" , "en" : "Company Employee Images" , "ar" : "ملفات موظف في شركة"}
+
+]

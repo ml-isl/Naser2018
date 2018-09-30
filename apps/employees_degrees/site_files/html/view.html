@@ -1,0 +1,27 @@
+<span ng-show="busy">
+    <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</span>
+<div ng-hide="busy" class="row">
+    <div class="col7">
+        <br>
+        <table class="table">
+            <tr>
+                <td class="title">##word.employees_degrees_name##</td>
+                <td class="center bold indigo">{{employee_degree.name}}</td>
+            </tr>
+
+            <tr>
+                <td class="title">##word.employees_degrees_salary##</td>
+                <td class="center bold blue">{{employee_degree.salary}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col3 center">
+
+        <i-image view category="employees_degrees" ng-model="employee_degree.image_url"></i-image>
+        <i-files view ng-model="employee_degree.files"></i-files>
+
+    </div>
+</div>

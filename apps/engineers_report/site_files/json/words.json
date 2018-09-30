@@ -1,0 +1,38 @@
+[
+    { "name": "engineers_report_search","en": "Search", "ar": "بحث"},
+    { "name": "engineers_report_date_from","en": "Date From", "ar": "من تاريخ"},
+    { "name": "engineers_report_date_to","en": "Date To", "ar": "الى تاريخ"},
+    { "name": "engineers_report_Engineer_Name","en": "Engineer Name", "ar": "أسم الفني"},
+
+    { "name": "engineers_report_Engineer_Details","en": "Engineer Details", "ar": "بيانات الفني"},
+    { "name": "engineers_report_Division","en": " Division", "ar": " القسم"},
+    { "name": "engineers_report_job","en": " Job", "ar": "الوظيفة "},
+    { "name": "engineers_report_salary","en": "Engineer Salary", "ar": "المرتب"},
+    { "name": "engineers_report_salary_differance","en": "Salary Differance", "ar": "فرق المرتب"},
+    { "name": "engineers_report_ticket_differance","en": "Ticket Differance", "ar": " فرق البلاغ"},
+    { "name": "engineers_report_total_offer","en": "Total Offers", "ar": " اجمالي المكافئات"},
+    { "name": "engineers_report_total_discount","en": "Total Discount", "ar": "اجمالي الخصومات "},
+
+    { "name": "engineers_report_accounting_system","en": "Accounting System", "ar": "نظام المحاسبة"},
+    { "name": "engineers_report_accounting_period","en": " Accounting Period", "ar": "الفترة المحاسبية "},
+    { "name": "engineers_report_total_tickets","en": "Total Tickets", "ar": "عدد البلاغات "},
+    { "name": "engineers_report_ticket_slide","en": " Ticket Slide", "ar": "الشريحة المحاسبية "},
+
+    { "name": "engineers_report_applied_ticket_silde","en": "Applied Ticket Slide", "ar": "الشريحة المطبقة"},
+    { "name": "engineers_report_salary_cal","en": " Salary Calculate", "ar": " حساب المرتب"},
+    { "name": "engineers_report_total_salary","en": "Total Salary", "ar": " اجمالي المرتب"},
+    { "name": "engineers_report_offers","en": "Offers", "ar": "المكافئات"},
+
+    { "name": "engineers_report_date","en": "Offer Date", "ar": "التاريخ"},
+    { "name": "engineers_report_value","en": "Offer Value", "ar": " القيمة"},
+    { "name": "engineers_report_discount","en": "Discounts", "ar": " الخصومات"},
+    { "name": "engineers_report_applied_tickets","en": "Applied Tickets", "ar": " البلاغات التي تم اعتمادها"},
+
+    { "name": "engineers_report_ticket_code","en": "Ticket Code", "ar": "كود البلاغ"},
+    { "name": "engineers_report_ticket_date","en": " Ticket Date", "ar": " تاريخ البلاغ"},
+    { "name": "engineers_report_close1_date","en": "Close Date", "ar": " تاريخ التقفيل المبدئي"},
+    { "name": "engineers_report_ticket_state","en": "Ticket State", "ar": " حالة البلاغ"},
+
+    { "name": "engineers_report_distributed_tickets","en": " Distributed Tickets", "ar": " البلاغات التي تم توزيعها"}
+
+]

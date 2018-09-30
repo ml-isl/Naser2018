@@ -1,0 +1,33 @@
+<div class="row ">
+    <table class="table box-shadow">
+        <tr>
+            <th colspan="2" class="pointer" ng-click="company_codeEditor =!company_codeEditor" >##word.ticket_company_codes##
+                <i class="fa fa-edit"></i>
+            </th>
+
+        </tr>
+        <tr ng-show="company_codeEditor">
+            <td colspan="2">
+                <div>
+                    <form>
+                        <i-control class="center" ng-model="companyCode"></i-control>
+                        <i-button type="add" ng-click="addToCompanyCodes()" label="##word.ticket_add_to_company_codes##"></i-button>
+                    </form>
+
+
+                </div>
+            </td>
+        </tr>
+        <tr ng-show="company_codeEditor">
+            <th class="bg-black"> ##word.ticket_company_code##</th>
+            <th class="bg-black" > ##word.ticket_actions##</th>
+        </tr>
+        <tr ng-repeat="coc in ticket.company_codes">
+            <td>{{coc}}</td>
+            <td ng-show="company_codeEditor">
+                <i-button type="delete" x-permission="owner"  ng-click="deleteCompanyCode(coc)"></i-button>
+               
+            </td>
+        </tr>
+    </table>
+</div>

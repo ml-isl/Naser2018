@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+    <style x-lang="ar">
+        :root {
+            --direction: rtl;
+        }
+
+        .top-actions {
+            text-align: right !important;
+        }
+    </style>
+    <style x-lang="en">
+        :root {
+            --direction: ltr;
+        }
+
+        .top-actions {
+            text-align: left !important;
+        }
+    </style>
+    <style>
+        #main-layout.container {
+            direction: var(--direction);
+        }
+
+        .side-ad {
+            background-color: var(--body-background-color);
+            padding: 5px;
+            border: 1px solid var(--background-color);
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+        }
+    </style>
+
+<div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row10 center">
+            <div class="col10" ng-controller="trees_accounting">
+                <div x-import="trees_accounting/add_modal.html"></div>
+                <div x-import="trees_accounting/update_modal.html"></div>
+                <div x-import="trees_accounting/delete_modal.html"></div>
+                <div x-import="trees_accounting/view_modal.html"></div>
+                <div class="top-actions">
+                    <a x-permission="owner" ng-click="newTree_Account()" class="btn bg-green">
+                        <i class="fa fa-plus" aria-hidden="true"></i> ##word.trees_accounting_new##</a>
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <table class="table" id="t1">
+                    <tr>
+                        <th>##word.trees_accounting_logo##</th>
+                        <th>##word.trees_accounting_parent##</th>
+                        <th>##word.trees_accounting_code##</th>
+                        <th>##word.trees_accounting_child##</th>
+                        <th>##word.trees_accounting_nature##</th>
+                        <th>##word.trees_accounting_lastnode##</th>
+                        <th>##word.trees_accounting_description##</th>
+                       
+                        <th x-permission="owner">##word.actions##</th>
+                    </tr>
+                    <tr ng-repeat="c in list">
+                        <td>
+                            <img class="logo" ng-src="{{c.image_url}}">
+                        </td>
+                        <td>{{c.parent.child}}</td>
+                        <td>{{c.code}}</td>
+                        <td>{{c.child}}</td>
+                        <td>
+                            <p ng-show="c.nature == 1">##word.trees_accounting_debit_yes##</p>
+                            <p ng-show="c.nature == 2">##word.trees_accounting_credit_yes##</p>
+                        </td>
+
+                        <td>
+                            <p ng-show="c.lastnode == true">##word.trees_accounting_lastnode_yes##</p>
+                            <p ng-show="c.lastnode == false">##word.trees_accounting_lastnode_no##</p>
+                        </td>
+                        <td>{{c.description}}</td>
+                        
+                        <td x-permission="owner" class="center">
+                            <a class="btn " x-permission="owner" ng-click="details(c)">
+                                <i class="fa fa-file" aria-hidden="true"></i> ##word.details##</a>
+                            <a class="btn bg-yellow brown" x-permission="owner" ng-click="edit(c)">
+                                <i class="fa fa-pencil" aria-hidden="true"></i> ##word.edit##</a>
+                            <a ng-click="remove(c)" class="btn bg-red">
+                                <i class="fa fa-trash" aria-hidden="true"></i> ##word.delete##</a>
+                        </td>
+                    </tr>
+
+                </table>
+                <a class="btn" onclick="export_to_xlsx('t1' , 'trees_accounting.xlsx')">
+                    <i class="fa fa-table" aria-hidden="true"></i> ##word.export_to_excel## </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script src="/x-js/jquery.js"></script>
+    <script src="/x-js/angular.js"></script>
+    <script src="/x-js/site.js"></script>
+
+    <script src="/js/export/shim.js"></script>
+    <script src="/js/export/xlsx.full.min.js"></script>
+    <script src="/js/export/Blob.js"></script>
+    <script src="/js/export/FileSaver.min.js"></script>
+    <script src="/js/export/custom.js"></script>
+
+    <script>
+        if (window.module) module = window.module;
+        window.$ = window.jQuery || require('jquery');
+    </script>
+
+    <script x-import="app.js"></script>
+
+    
+    <script x-import="trees_accounting/index.js"></script>
+    <div x-permission="!login" x-import="security/login_modal.html"></div>
+    <div x-permission="!login" x-import="security/register_modal.html"></div>
+    <div x-permission="login" x-import="security/logout_modal.html"></div>
+
+</body>
+
+</html>

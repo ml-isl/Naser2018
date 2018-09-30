@@ -1,0 +1,32 @@
+
+
+<div id="ticketsHistoryModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_customer_history##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+                <h2 class="white">##word.ticket_count## :
+                        <span class="bold ">{{list2.length}}</span>
+                    </h2>
+
+
+            <div id="t_{{t.id}}" ng-repeat="t in list2">
+
+                <div x-import="tickets/ticket_template.html"></div>
+            </div>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="close" label="##word.close##" onclick="site.hideModal('#ticketsHistoryModal')"></i-button>
+            
+        </div>
+    </div>
+</div>

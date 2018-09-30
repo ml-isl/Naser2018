@@ -1,0 +1,127 @@
+<div class="row">
+    <form class="form">
+
+        <div class="row">
+            <i-control class="col3" ng-model="eng_item_list.number" label="##word.stores_out_item_number##"  v="r"></i-control>
+
+            <i-date2 class="col3" ng-model="eng_item_list.date" label="##word.stores_out_date##"></i-date2>
+            <div class="col3"><i-list ng-model="eng_item_list.store" items="stores" label="##word.stores_out_store##" ng-search="serach_stores" v="r"></i-list></div>
+           
+            <div class="col3"><i-list ng-model="eng_item_list.eng" items="Engs" label="##word.stores_out_store_eng##" ng-search="serach_engs" v="r"></i-list></div>
+
+        </div>
+
+        <div class="row padding">
+            <table class="table ">
+                <tr>
+                    <th class="pointer" ng-click="itemEditor = !itemEditor">##word.stores_out_items##
+                        <i class="fa fa-edit"></i>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <div class="row">
+                                <i-control class="col4" ng-model="item.code" label="##word.stores_out_item_code##" type="text" ng-keydown="getItem($event)"></i-control>
+                                <i-control class="col4" ng-model="item.name" label="##word.stores_out_item_name##" type="text" id="item_name" ng-keydown="getItem($event)"></i-control>
+ 
+                            </div>
+
+                            <div class="row">
+                                <div ng-show="item.code" class="row">
+
+                                    <div class="col2">
+
+                                        <p>##word.stores_out_item_size##</p>
+
+                                    </div>
+
+                                    <div class="col2">
+                                        <div class="control">
+                                            <label>##word.stores_out_item_count##</label>
+                                        </div>
+                                    </div>
+                                    <div class="col2">
+                                            <div class="control">
+                                                <label>##word.stores_out_item_store_balance##</label>
+                                            </div>
+                                        </div>
+
+                                    <div  class="col2"></div>
+                                </div>
+                                <div ng-repeat="s in item.sizes">
+                                    <div class="row text-center">
+
+                                        <div class="col2">
+                                            <div class="control">
+
+                                                <p ng-hide="s.$new" class="bold">{{s.size}}</p>
+                                                <p ng-show="s.$new" class="bold">
+                                                    <i-control type="text" ng-model="s.size"></i-control>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                       
+
+                                        <div class="col2">
+                                            <div class="control">
+                                                <i-control id="req" type="text" ng-model="s.count" ng-change="s.total = s.count * s.cost"></i-control>
+                                            </div>
+                                        </div>
+                                        
+                                        <i-control class="col2" disabled  type="text" ng-model="s.current_count"></i-control>
+                                                
+
+                                       
+                                        <div class="col2"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <i-button type="add" label="##word.stores_out_add_to_items##" ng-show="item.sizes.length > 0" ng-click="addToItems()"></i-button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="row border margin padding">
+            <table class="table">
+                <tr>
+                    <th>##word.serial##</th>
+                    <th>##word.stores_out_item_name##</th>
+                    <th>##word.stores_out_item_size##</th>
+                    <th>##word.stores_out_item_count##</th>
+                
+                    <th>##word.actions##</th>
+                </tr>
+                <tr ng-repeat="itm in eng_item_list.items">
+                    <td>{{$index + 1}}</td>
+                    <td>{{itm.name}}</td>
+                    <td>{{itm.size}}</td>
+                    <td>
+                        <i-control ng-model="itm.count" ng-change="itm.total = itm.count * itm.cost"></i-control>
+                    </td> 
+                    
+                    <td>
+                        <i-button type="delete"  ng-click="deleteRow(itm)"> </i-button>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+       
+        <i-textarea ng-model="eng_item_list.notes"  label="##word.stores_out_notes##"></i-textarea>
+        <div class="row">
+
+                <i-files ng-model="eng_item_list.files"></i-files>    
+        </div>
+    </form>
+</div>

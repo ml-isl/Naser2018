@@ -1,0 +1,190 @@
+<div class="row">
+    <i-control class="col4" label="##word.ticket_device_serial##" ng-model="ticket.device_info.serial"></i-control>
+    <i-control class="col3" label="##word.ticket_device_product_date##" ng-model="ticket.device_info.product_date"></i-control>
+
+  
+    
+    <div class="col3">
+        <div class="control">
+            <label> ##word.ticket_device_status##</label>
+            <div class="row">
+                <i-radio class="col5" label="##word.ticket_device_status0##"  ng-model="ticket.device_info.status" value="0"></i-radio>
+                <i-radio class="col5" label="##word.ticket_device_status1##"  ng-model="ticket.device_info.status" value="1"></i-radio>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="row">
+
+    <div class="col10">
+        <i-textarea label="##word.ticket_device_fixes##" ng-model="ticket.fixes"></i-textarea>
+    </div>
+    <i-list class="col5" label="##word.ticket_status##" ng-model="ticket.status" items="tickets_status" display="ar"> </i-list>
+    
+</div>
+<div class="row">
+    <div class="col5 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="inputEditorAdd = !inputEditorAdd">##word.ticket_input##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr ng-show="inputEditorAdd">
+                <td class="hidden" colspan="2">
+                    <form>
+                        <i-control class="col3" label="##word.ticket_input_value##" ng-model="input.value"></i-control>
+                        <i-control class="col3" label="#word.ticket_input_name##" ng-model="input.name"></i-control>
+                        <i-control class="col3" label="##word.ticket_input_receet##" ng-model="input.receet"></i-control>
+                        <i-button  type="add" ng-click="addToInput()" label="##word.ticket_input_add##"></i-button>        
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="input in ticket.inputs">
+                <td>
+                    <b class="green">{{input.value}} جنية</b>
+                    <span>{{input.name}}</span>
+                    <p class="blue">{{input.eng.name}}</p>
+
+                </td>
+                <td ng-show="inputEditorAdd">
+                    <i-button type="delete" ng-click="deleteInput(input)"></i-button>        
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col5 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="outputEditorAdd = !outputEditorAdd">##word.ticket_output##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr ng-show="outputEditorAdd">
+                <td class="hidden"  colspan="2">
+                    <form>
+                        <i-control label="##word.ticket_output_value##" ng-model="output.value"></i-control>
+                        <i-control label="##word.ticket_output_name##" ng-model="output.name"></i-control>
+                        <i-button class="add" ng-click="addToOutput()" label="##word.ticket_output_add##"></i-button>
+                                              
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="output in ticket.outputs">
+                <td>
+                    <b class="green">{{output.value}} جنيه</b>
+                    <span>{{output.name}}</span>
+                    <p class="blue">{{output.eng.name}}</p>
+                </td>
+                <td ng-show="outputEditorAdd">
+                    <i-button class="delete" ng-click="deleteOutput(output)"></i-button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<br>
+
+<div class="row">
+
+    <div class="col5 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="itemUsedEditor = !itemUsedEditor">##word.ticket_item_used##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr class="hidden" ng-show="itemUsedEditor">
+                <td colspan="2">
+                        <i-list ng-search="item_used_search" label="##word.ticket_item_used_name##" ng-model="itemUsed" items="engItemList"></i-list>
+                        <i-button type="add" label="##word.ticket_item_used_add##"  ng-click="addToItemUsed()"></i-button>
+                       
+                </td>
+            </tr>
+            <tr ng-repeat="item in ticket.item_used_list">
+                <td>
+                    <span>{{item.name}}</span>
+                    <p class="blue">{{item.eng.name}}</p>
+                </td>
+                <td ng-show="itemUsedEditor">
+                    <i-button type="delete" ng-click="deleteItemUsed(item)"></i-button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col5 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="itemNeedEditor = !itemNeedEditor">##word.ticket_item_need##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr class="hidden" ng-show="itemNeedEditor">
+                <td colspan="2">
+                    <form>
+                        <div class="control">
+                            <i-control label="##word.ticket_item_need_name##"  ng-model="itemNeed.name"></i-control>
+                            <i-button type="add" label="##word.ticket_item_need_add##" ng-click="addToItemNeed()"></i-button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="item in ticket.item_need_list">
+                <td>
+                    <span>{{item.name}}</span>
+                    <p class="blue">{{item.eng.name}}</p>
+                </td>
+                <td ng-show="itemNeedEditor">
+                    <i-button type="delete" ng-click="deleteItemNeed(item)"></i-button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+<br>
+<div class="row">
+    <div class="col5 padding">
+        <table class="table box-shadow">
+            <tr>
+                <th colspan="2" class="pointer" ng-click="itemRecivedEditor = !itemRecivedEditor">##word.ticket_item_recived##
+                    <i class="fa fa-edit"></i>
+                </th>
+
+            </tr>
+            <tr class="hidden" ng-show="itemRecivedEditor">
+                <td colspan="2">
+                    <form>
+                        <i-control label="##word.ticket_item_recived_name##"  ng-model="itemRecived.name"></i-control>
+
+                        <div class="control">
+                            <label>##word.ticket_item_recived_name##</label>
+                            <i-button label="##word.ticket_item_recived_add##" type="add" ng-click="addToItemRecived()"></i-button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr ng-repeat="item in ticket.item_recived_list">
+                <td>
+                    <span>{{item.name}}</span>
+                    <p class="blue">{{item.eng.name}}</p>
+                </td>
+                <td ng-show="itemRecivedEditor">
+                    <i-button  type="delete" ng-click="deleteItemRecived(item)"></i-button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col5" x-import="tickets/files.html"></div>
+</div>

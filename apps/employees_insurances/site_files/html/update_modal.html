@@ -1,0 +1,168 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="updateEmployee_InsuranceModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.employees_insurances_details##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div class="col7">
+                <form class="form">
+                    <div class="control">
+                        <label>##word.employees_insurances_name##</label>
+                        <select ng-model="employee_insurance.employee_name" ng-selected="employee_insurance.employee_name">
+                            <option ng-repeat="em in employees" value="{{em}}" ng-selected="employee_insurance.employee_name._id == em._id">{{em.name + ' - '+ em.insurance_number}}</option>
+                        </select>
+                    </div>
+
+
+                    <div class="row10 ">
+                        <div class="col5">
+                            <div class="control">
+                                <label>##word.employees_insurances_facility_name##</label>
+                                <select ng-model="employee_insurance.facility_name">
+                                    <option ng-repeat="fc in facilities_codes" value="{{fc}}" ng-selected="employee_insurance.facility_name._id == fc._id">{{fc.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col5">
+                            <div class="control">
+                                <label>##word.employees_insurances_insurance_slide##</label>
+                                <select ng-model="employee_insurance.insurance_slide">
+                                    <option ng-repeat="in in insurances_slides" value="{{in}}" ng-selected="employee_insurance.insurance_slide._id == in._id">{{in.name + ' - ' + in.value + ' ج '}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row10 ">
+                        <div class="col5">
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.employees_insurances_fixed_salary##</label>
+                                    <input ng-model="employee_insurance.fixed_salary" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.employees_insurances_insurance_discount##</label>
+                                    <input ng-model="employee_insurance.insurance_discount" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col5">
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.employees_insurances_variable_salary##</label>
+                                    <input ng-model="employee_insurance.variable_salary" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.employees_insurances_salary_discount##</label>
+                                    <input ng-model="employee_insurance.salary_discount" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row10 ">
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.employees_insurances_salary_total##</label>
+                                    <input ng-model="employee_insurance.total" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.employees_insurances_salary_increase##</label>
+                                    <input ng-model="employee_insurance.increase" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="col3 center">
+                <form class="form">
+                    <label>##word.employees_insurances_logo##</label>
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                    <br>
+                    <img class="img " ng-src="{{employee_insurance.image_url}}" />
+                    <br>
+                    <p>{{uploadStatus}}</p>
+                </form>
+                <br>
+                <div class="row10 ">
+                    <table class="table box-shadow">
+                        <tr>
+                            <th colspan="2" class="pointer" ng-click="fileEditor = !fileEditor">##word.employees_insurances_img##
+                                <i class="fa fa-edit"></i>
+                            </th>
+
+                        </tr>
+                        <tr ng-show="fileEditor">
+                            <td colspan="2">
+                                <div>
+                                    <form>
+                                        <div class="control">
+                                            <label> ##word.employees_insurances_file_name##</label>
+                                            <input class="margin" ng-model="fileName" />
+                                            <input class="margin" type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                                        </div>
+                                        <label>{{fileStatus}}</label>
+                                    </form>
+
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="file in employee_insurance.files">
+                            <td>{{file.name}}</td>
+                            <td ng-show="fileEditor">
+                                <a href="{{file.url}}" class="btn">
+                                    <i class="fa fa-download"></i>
+                                </a>
+                                <a class="btn bg-red" ng-click="deleteFile(file)">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- -end-->
+            </div>
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-hide="busy" id="update_employee_insurance_btn" ng-click="update(employee_insurance)">
+                <i class="fa fa-save" aria-hidden="true"></i> ##word.update##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#updateEmployee_InsuranceModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,13 @@
+[
+    {"name" : "devices_names_add" , "en" : "Add Device" , "ar" : "اضافة جهاز"},
+    {"name" : "devices_names_search" , "en" : "Search Device" , "ar" : "بحث جهاز"},
+    {"name" : "devices_names_new" , "en" : "New Device" , "ar" : "جهاز جديد"},
+    {"name" : "devices_names_details" , "en" : "Device Details" , "ar" : "تفاصيل جهاز"},
+    {"name" : "devices_names_edit" , "en" : "Edit Details" , "ar" : "تعديل بيانات جهاز"},
+    {"name" : "devices_names_delete" , "en" : "Delete Device" , "ar" : "حذف جهاز"},
+    {"name" : "devices_names_category" , "en" : "Category" , "ar" : "الفئة"},
+    {"name" : "devices_names_sub_category" , "en" : "Sub Category" , "ar" : "الفئة الفرعية"},
+    {"name" : "devices_names_device_name" , "en" : "Device Name" , "ar" : "اسم الجهاز"},
+    {"name" : "devices_names_logo" , "en" : "Device Logo" , "ar" : "شعار جهاز"},
+    {"name" : "devices_names_img" , "en" : "Device Images" , "ar" : "ملفات الجهاز"}
+]

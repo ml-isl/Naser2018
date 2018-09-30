@@ -1,0 +1,21 @@
+<div class="row">
+        <div class="col9">
+
+                <form class="form">
+                    <i-control ng-model="tax_type.name" label="##word.tax_types_name##" type="text"></i-control>
+                    
+                    <i-control ng-model="tax_type.value" label="##word.tax_types_value##" type="number" ng-value="0"></i-control>
+
+
+                </form>
+
+            </div>
+            <div class="col3 center">
+
+            
+                    <i-image label="##word.tax_types_img##" ng-model="tax_type.image_url"></i-image>
+                    <br>
+                    <i-files ng-model="tax_type.files"></i-files>
+
+            </div>
+</div>

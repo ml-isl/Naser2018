@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+
+    <div x-import="menu/index.html"></div>
+
+
+
+    <div id="main-layout" class="container">
+        <div class="row center">
+            <div class="row" ng-controller="employees_report">
+                <div x-import="employees_report/search_modal.html"></div>
+                <div class="top-actions">
+                   
+                        <i-button  type="search" label="##word.search_all##" ng-click="showSearch()"></i-button>
+
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+              
+
+                <div id="employeeReport" class="row">
+                    <div class="col6 padding">
+                        <div class="row">
+                                <h2 class="center bold"> ##word.employees_report_Employee_Details## </h2>
+                            <table class="table">
+                                <tr>
+                                    <td class="bold">
+                                    
+                                        ##word.employees_report_Employee_Name##
+                                    </td>
+                                    <td>
+                                        <p class="bold"> {{employee.name}} </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">
+                                        
+                                        ##word.employees_report_Division##
+                                    </td>
+                                    <td>
+                                        <p class="bold"> {{employee.department.name}} </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">
+                                        
+                                        ##word.employees_report_job##
+                                    </td>
+                                    <td>
+                                        <p> {{employee.job.name}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold">
+                                        
+                                        ##word.employees_report_degree##
+                                    </td>
+                                    <td>
+                                        <p> {{employee.degree.name}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold">
+                                        
+                                        ##word.employees_report_salary##
+                                    </td>
+                                    <td>
+                                        <p class="center bold green"> {{employee.degree.salary}} </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">
+                                        
+                                        ##word.employees_report_salary_differance##
+                                    </td>
+                                    <td>
+                                        <p class="center bold blue"> {{employee.extra_salary}} </p>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="bold">
+                                     
+                                        ##word.employees_report_total_offer##
+                                    </td>
+                                    <td>
+                                        <p class="center bold green"> {{total_offers}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold">
+                                  
+                                        ##word.employees_report_total_discount##
+                                    </td>
+                                    <td>
+                                        <p class="center bold red"> {{total_discounts}} </p>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col6 padding">
+                        <div class="row">
+                                <h2 class="center bold">   ##word.employees_report_accounting_system## </h2>
+                            <table class="table">
+                                <tr>
+                                    <td class="bold">    ##word.employees_report_accounting_period##</td>
+                                    <td>
+                                        <p >    ##word.employees_report_date_from## <span class="bold blue" > {{search.date1 | date : 'dd - MM - yyyy'}} </span>     ##word.employees_report_date_to##<span class="bold blue"> {{search.date2 | date : 'dd - MM - yyyy'}} </span>   </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold"> ##word.employees_report_applied_tickets_num##</td>
+                                    
+                                    <td>
+                                        <p class="bold blue">{{ticketList.length}}</p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold">##word.employees_report_distributed_tickets_num##</td>
+                                    
+                                    <td>
+                                        <p class="bold blue">{{assginTicketList.length}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold"> ##word.employees_report_close1_tickets_num##</td>
+                                   
+                                    <td>
+                                        <p class="bold blue">{{close1TicketList.length}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold"> ##word.employees_report_bact_to_eng_tickets_num##</td>
+                                    
+                                    <td>
+                                        <p class="bold blue">{{BackEngTicketList.length}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold">##word.employees_report_close2_tickets_num##</td>
+                                   
+                                    <td>
+                                        <p class="bold blue">{{Close2TicketList.length}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold">##word.employees_report_review_tickets_num##</td>
+                                    
+                                    <td>
+                                        <p class="bold blue">{{ReviewTicketList.length}} </p>
+                                    </td>
+                                </tr>
+
+                                
+                               
+                                <tr>
+                                    <td class="bold">    ##word.employees_report_total_salary##</td>
+                                    <td>
+                                        <p  class="bold bg-green white"> {{total_salary}} جنيه </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <i-button  type="print" label="##word.print##" onclick="site.print('#employeeReport')"></i-button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+             
+
+                <div class="row">
+                    <div class="col6 padding">
+                        <h2 class="center bold green">   ##word.employees_report_offers##<p >  ( {{employeeOfferList.length}} )  </p> </h2>
+                        <table class="table loaded" id="t1">
+                            <tr>
+                                <th class="pointer" ng-click="sortBy('date')">  ##word.employees_report_date##</th>
+                                <th class="pointer" ng-click="sortBy('value')">  ##word.employees_report_value##</th>
+                            </tr>
+                            <tr ng-repeat="e in employeeOfferList | orderBy:propertyName:reverse">
+                               
+                                <td>
+                                    <p class="center"> {{e.date | date : 'dd - MM - yyyy'}} </p>
+                                </td>
+                               
+                                <td>
+                                    <p class="center bold green"> {{e.value}} </p>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+<div class="col6 padding ">
+    <h2 class="center bold red"> ##word.employees_report_discount##<p> ( {{employeeDiscountList.length}} ) </p>
+    </h2>
+    <table class="table loaded" id="t1">
+        <tr>
+            <th class="pointer" ng-click="sortBy('date')"> ##word.employees_report_date##</th>
+            <th class="pointer" ng-click="sortBy('value')"> ##word.employees_report_value##</th>
+        </tr>
+        <tr ng-repeat="e in employeeDiscountList | orderBy:propertyName:reverse">
+
+            <td>
+                <p class="center"> {{e.date | date : 'dd - MM - yyyy'}} </p>
+            </td>
+
+            <td>
+                <p class="center bold red"> {{e.value}} </p>
+            </td>
+        </tr>
+
+    </table>
+</div>
+</div>
+
+<br><br>
+<hr style="border-color : #000000;">
+<br><br>
+<div class="row">
+    <div class="col6 padding">
+        <h2 class="center bold "> ##word.employees_report_delivered_tickets##<p> ( {{ticketList.length}} ) </p>
+        </h2>
+        <table class="table loaded" id="t1">
+            <tr>
+                <th class="pointer" ng-click="sortBy('code')"> ##word.employees_report_ticket_code##</th>
+                <th class="pointer" ng-click="sortBy('date')"> ##word.employees_report_ticket_date##</th>
+                
+                <th class="pointer" ng-click="sortBy('status.name')"> ##word.employees_report_ticket_state##</th>
+            </tr>
+            <tr ng-repeat="t in ticketList | orderBy:propertyName:reverse">
+                <td>
+                    <p class="center bold blue"> {{t.code}} </p>
+                </td>
+                <td>
+                    <p class="center"> {{t.date | date : 'dd - MM - yyyy'}} </p>
+                </td>
+               
+                <td>
+                    <p class="center"> {{t.status.ar}} </p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="col6 padding">
+        <h2 class="center bold"> ##word.employees_report_distributed_tickets##<p> ( {{assginTicketList.length}} ) </p>
+        </h2>
+        <table class="table loaded" id="t1">
+            <tr>
+                <th class="pointer" ng-click="sortBy('code')"> ##word.employees_report_ticket_code##</th>
+                <th class="pointer" ng-click="sortBy('date')"> ##word.employees_report_ticket_date##</th>
+               
+                <th class="pointer" ng-click="sortBy('status.name')"> ##word.employees_report_ticket_state##</th>
+            </tr>
+            <tr ng-repeat="t in assginTicketList | orderBy:propertyName:reverse">
+                <td>
+                    <p class="center bold blue"> {{t.code}} </p>
+                </td>
+                <td>
+                    <p class="center"> {{t.date | date : 'dd - MM - yyyy'}} </p>
+                </td>
+               
+                <td>
+                    <p class="center"> {{t.status.ar}} </p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+
+
+
+</div>
+<br><br>
+
+
+
+
+<br><br>
+<hr style="border-color : #000000;">
+<br><br>
+<div class="row">
+    <div class="col6 padding">
+        <h2 class="center bold"> ##word.employees_report_close1_tickets##<p> ( {{close1TicketList.length}} ) </p>
+        </h2>
+        <table class="table loaded" id="t1">
+            <tr>
+                <th class="pointer" ng-click="sortBy('code')"> ##word.employees_report_ticket_code##</th>
+                <th class="pointer" ng-click="sortBy('date')"> ##word.employees_report_ticket_date##</th>
+
+                <th class="pointer" ng-click="sortBy('status.name')"> ##word.employees_report_ticket_state##</th>
+            </tr>
+            <tr ng-repeat="t in close1TicketList | orderBy:propertyName:reverse">
+                <td>
+                    <p class="center bold blue"> {{t.code}} </p>
+                </td>
+                <td>
+                    <p class="center"> {{t.date | date : 'dd - MM - yyyy'}} </p>
+                </td>
+
+                <td>
+                    <p class="center"> {{t.status.ar}} </p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="col6 padding">
+        <h2 class="center bold">##word.employees_report_bact_to_eng_tickets##<p> ( {{BackEngTicketList.length}} ) </p>
+        </h2>
+        <table class="table loaded" id="t1">
+            <tr>
+                <th class="pointer" ng-click="sortBy('code')"> ##word.employees_report_ticket_code##</th>
+                <th class="pointer" ng-click="sortBy('date')"> ##word.employees_report_ticket_date##</th>
+
+                <th class="pointer" ng-click="sortBy('status.name')"> ##word.employees_report_ticket_state##</th>
+            </tr>
+            <tr ng-repeat="t in BackEngTicketList | orderBy:propertyName:reverse">
+                <td>
+                    <p class="center bold blue"> {{t.code}} </p>
+                </td>
+                <td>
+                    <p class="center"> {{t.date | date : 'dd - MM - yyyy'}} </p>
+                </td>
+
+                <td>
+                    <p class="center"> {{t.status.ar}} </p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+
+
+
+</div>
+
+<br><br>
+<hr style="border-color : #000000;">
+<br><br>
+<div class="row">
+    <div class="col6 padding">
+        <h2 class="center bold">##word.employees_report_close2_tickets##  <p> ( {{Close2TicketList.length}} ) </p>
+        </h2>
+        <table class="table loaded" id="t1">
+            <tr>
+                <th class="pointer" ng-click="sortBy('code')"> ##word.employees_report_ticket_code##</th>
+                <th class="pointer" ng-click="sortBy('date')"> ##word.employees_report_ticket_date##</th>
+                
+                <th class="pointer" ng-click="sortBy('status.name')"> ##word.employees_report_ticket_state##</th>
+            </tr>
+            <tr ng-repeat="t in Close2TicketList | orderBy:propertyName:reverse">
+                <td>
+                    <p class="center bold blue"> {{t.code}} </p>
+                </td>
+                <td>
+                    <p class="center"> {{t.date | date : 'dd - MM - yyyy'}} </p>
+                </td>
+               
+                <td>
+                    <p class="center"> {{t.status.ar}} </p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="col6 padding">
+        <h2 class="center bold">##word.employees_report_review_tickets##<p> ( {{ReviewTicketList.length}} ) </p>
+        </h2>
+        <table class="table loaded" id="t1">
+            <tr>
+                <th class="pointer" ng-click="sortBy('code')"> ##word.employees_report_ticket_code##</th>
+                <th class="pointer" ng-click="sortBy('date')"> ##word.employees_report_ticket_date##</th>
+
+                <th class="pointer" ng-click="sortBy('status.name')"> ##word.employees_report_ticket_state##</th>
+            </tr>
+            <tr ng-repeat="t in ReviewTicketList | orderBy:propertyName:reverse">
+                <td>
+                    <p class="center bold blue"> {{t.code}} </p>
+                </td>
+                <td>
+                    <p class="center"> {{t.date | date : 'dd - MM - yyyy'}} </p>
+                </td>
+
+                <td>
+                    <p class="center"> {{t.status.ar}} </p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div x-import="scripts.html"></div>
+
+    <script x-import="employees_report/index.js"></script>
+
+
+</body>
+
+</html>

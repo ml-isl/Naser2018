@@ -1,0 +1,145 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="addDamage_CalculateModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.damages_calculate_add##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+
+        <div class="modal-body">
+
+            <div class="row ">
+                <div class="col9">
+
+                    <form class="form">
+
+                        <div class="control">
+                            <label>##word.damages_calculate_company##</label>
+                            <select ng-model="damage_calculate.company" ng-change="loadCategories(damage_calculate.company)">
+                                <option ng-repeat="c in companies" ng-value="c">{{c.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="control">
+                            <label>##word.damages_calculate_category##</label>
+                            <select ng-model="damage_calculate.category" ng-change="loadSub_Categories(damage_calculate.category)">
+                                <option ng-repeat="ca in companies_categories" ng-value="ca.category">{{ca.category.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="control">
+                            <label>##word.damages_calculate_sub_category##</label>
+                            <select ng-model="damage_calculate.sub_category" ng-change="loadDevices(damage_calculate.sub_category)">
+                                <option ng-repeat="sc in sub_categories" ng-value="sc">{{sc.name}}</option>
+                            </select>
+                        </div>
+
+
+                        <div class="control">
+                            <label>##word.damages_calculate_device##</label>
+                            <select ng-model="damage_calculate.device">
+                                <option ng-repeat="de in companies_devices" ng-value="de.device">{{de.device.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="control">
+                            <label>##word.damages_calculate_item_serial##</label>
+                            <input ng-model="damage_calculate.item_serial" type="text">
+                        </div>
+
+                        <label>##word.damages_calculate_center##</label>
+                        <div class="row10 border">
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.damages_calculate_ticket_count##</label>
+                                    <input ng-model="damage_calculate.ticket_count" value="1" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col5">
+                                <div class="control">
+                                    <label>##word.damages_calculate_cash##</label>
+                                    <input ng-model="damage_calculate.cash" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <label>##word.damages_calculate_company##</label>
+                        <div class="row10 border">
+                            <div class="col3">
+                                <div class="control">
+                                    <label>##word.damages_calculate_company_insurance_in_move##</label>
+                                    <input ng-model="damage_calculate.insurance_in_move" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col3">
+                                <div class="control">
+                                    <label>##word.damages_calculate_company_insurance_out_move##</label>
+                                    <input ng-model="damage_calculate.insurance_out_move" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col2">
+                                <div class="control">
+                                    <label>##word.damages_calculate_company_installation##</label>
+                                    <input ng-model="damage_calculate.installation" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col2">
+                                <div class="control">
+                                    <label>##word.damages_calculate_company_maintenace##</label>
+                                    <input ng-model="damage_calculate.maintenace" type="text">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col3">
+
+                    <form class="form">
+                        <label>##word.damages_calculate_img##</label>
+                        <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                        <br>
+                        <img class="img " ng-src="{{damage_calculate.image_url}}" />
+                        <br>
+                        <p>{{uploadStatus}}</p>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-click="add()" ng-hide="busy" id="add_damage_calculate.btn">
+                <i class="fa fa-plus" aria-hidden="true"></i> ##word.add##</a>
+
+            <a class="btn bg-blue" onclick="site.hideModal('#addDamage_CalculateModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

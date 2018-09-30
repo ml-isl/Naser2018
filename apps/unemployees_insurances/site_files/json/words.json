@@ -1,0 +1,26 @@
+[
+   {"name" : "unemployees_insurance_add" , "en" : "Add UnEmployee Insurance" , "ar" : "اضافة تامين لغير موظف"},
+   {"name" : "unemployees_insurance_new" , "en" : "New UnEmployee Insurance" , "ar" : "تامينات جديدة لغير موظف"},
+   {"name" : "unemployees_insurance_details" , "en" : "UnEmployee Insurance Details" , "ar" : "تفاصيل تامين غير موظف"},
+   {"name" : "unemployees_insurance_edit" , "en" : "UnEmployee Insurance Edit" , "ar" : "تعديل تامين غير موظف"},
+   {"name" : "unemployees_insurance_delete" , "en" : "UnEmployee Insurance Delete" , "ar" : "حذف تامين غير موظف"},   
+   {"name" : "unemployees_insurance_name" , "en" : "UnEmployee Name" , "ar" : "الاسم"},
+   {"name" : "unemployees_insurance_address" , "en" : "UnEmployee Address" , "ar" : "العنوان"},
+   {"name" : "unemployees_insurance_gov" , "en" : "Gov" , "ar" : "المحافظة"},
+   {"name" : "unemployees_insurance_city" , "en" : "City" , "ar" : "المدينة"},
+   {"name" : "unemployees_insurance_town" , "en" : "Town" , "ar" : "القرية"},
+   {"name" : "unemployees_insurance_phones" , "en" : "Phones" , "ar" : "تليفونات غير موظف"},
+   {"name" : "unemployees_insurance_mobiles" , "en" : "Mobiles" , "ar" : "موبايلات غير موظف"},
+   {"name" : "unemployees_insurance_add_phone" , "en" : "Add Phone" , "ar" : "اضافة تليفون"},
+   {"name" : "unemployees_insurance_add_mobile" , "en" : "Add Mobile" , "ar" : "اضافة محمول"},
+   {"name" : "unemployees_insurance_email" , "en" : "Email" , "ar" : "الايميل"},
+   {"name" : "unemployees_insurance_nid" , "en" : "National ID" , "ar" : "الرقم القومي"},
+   {"name" : "unemployees_insurance_number" , "en" : "Insurance Number" , "ar" : "الرقم التاميني"},
+   {"name" : "unemployees_insurance_slide" , "en" : "Insurance Slide" , "ar" : "الشريحة المؤمن عليها"},
+   {"name" : "unemployees_insurance_discount" , "en" : "Discount" , "ar" : "نسبة تحمل الشركة"},
+   {"name" : "unemployees_insurance_notes" , "en" : "Notes" , "ar" : "ملاحظات"},
+   {"name" : "unemployees_insurance_logo" , "en" : "Logo" , "ar" : "الشعار"},
+   {"name" : "unemployees_insurance_file_name" , "en" : "File Name" , "ar" : "اسم الملف"},
+
+    {"name" : "unemployees_insurance_img" , "en" : "Image" , "ar" : "الملفات"}
+]

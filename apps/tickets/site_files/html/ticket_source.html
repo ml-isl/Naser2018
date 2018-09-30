@@ -1,0 +1,15 @@
+<div class="row padding border">
+        <div class="col6">
+            <i-list display="ar" label="##word.ticket_source##" ng-model="ticket.source" items="tickets_sources"></i-list>
+            <i-control ng-model="ticket.device_view" ng-show="getSourceId() == 3" label="##word.ticket_device_view##" ></i-control>
+        
+        </div>
+
+        <div class="col6">
+                <i-control ng-model="ticket.company_code" ng-show="getSourceId() == 1" label="##word.ticket_company_code##" ></i-control>
+                <i-control ng-model="ticket.receipt_number" ng-show="getSourceId() == 3" label="##word.receipt_number##" ></i-control>
+                <i-control ng-model="ticket.device_options" ng-show="getSourceId() == 3" label="##word.ticket_device_options##" ></i-control>
+
+        </div>
+
+    </div>

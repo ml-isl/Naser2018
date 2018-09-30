@@ -1,0 +1,78 @@
+
+<div id="SearchByAddressModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_search_by_code##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <form>
+
+
+                <div class="col2">
+                    <div class="control">
+                        <label>##word.customers_gov##</label>
+                        <select ng-model="gov" ng-change="loadCities(gov)">
+                            <option></option>
+                            <option ng-selected="gov.id == g.id" ng-repeat="g in goves" value="{{g}}">{{g.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col2">
+                    <div class="control">
+                        <label>##word.customers_city##</label>
+                        <select ng-model="city" ng-change="loadTowns(city)">
+                            <option ng-selected="city.id == c.id" ng-repeat="c in cities" value="{{c}}">{{c.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col2">
+                    <div class="control">
+                        <label>##word.customers_town##</label>
+                        <select ng-model="town" ng-change="loadRegions(town)">
+                            <option ng-selected="town.id == t.id" ng-repeat="t in towns" value="{{t}}">{{t.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col2">
+                    <div class="control">
+                        <label>##word.customers_region##</label>
+                        <select ng-model="region">
+                            <option ng-selected="region.id == r.id" ng-repeat="r in regions" value="{{r}}">{{r.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+
+            <a class="btn bg-green" ng-click="searchByGov()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>  ##word.ticket_search_by_gov##</a>
+
+            <a class="btn bg-green" ng-click="searchByCity()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>   ##word.ticket_search_by_city##</a>
+
+            <a class="btn bg-green" ng-click="searchByTown()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>  ##word.ticket_search_by_town##</a>
+
+            <a class="btn bg-green" ng-click="searchByRegion()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i> ##word.ticket_search_by_region##</a>
+
+
+            <a class="btn bg-blue" onclick="site.hideModal('#SearchByAddressModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+</div>

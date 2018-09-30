@@ -1,0 +1,22 @@
+[
+    {"name" : "subledgers_add" , "en" : "Add" , "ar" : "اضافة"},
+    {"name" : "subledgers_edit" , "en" : "Edit" , "ar" : "تعديل"},
+    {"name" : "subledgers_delete" , "en" : "Delete" , "ar" : "حذف"},
+    {"name" : "subledgers_details" , "en" : "Details" , "ar" : "تفاصيل"},
+    {"name" : "subledgers_code" , "en" : "Code" , "ar" : "الكود"},
+    {"name" : "subledgers_name" , "en" : "Name" , "ar" : "الاسم"},
+    {"name" : "subledgers_source" , "en" : "Source" , "ar" : "المصدر"},
+    {"name" : "subledgers_new" , "en" : "New" , "ar" : "بند جديد"},
+    {"name" : "subledgers_logo" , "en" : "Logo" , "ar" : "صورة البند"},
+    {"name" : "subledgers_collection" , "en" : "Collection" , "ar" : "Collection"},
+    {"name" : "subledgers_display" , "en" : "Display" , "ar" : "Display"},
+    {"name" : "subledgers_value" , "en" : "Value" , "ar" : "Value"},
+    
+    
+    {"name" : "subledgers_source_list" , "en" : "List" , "ar" : "List"},
+    {"name" : "subledgers_source_collection" , "en" : "Collection" , "ar" : "Collection"},
+    {"name" : "subledgers_img" , "en" : "Subledger Image" , "ar" : "ملفات الاساتذة"}
+    
+    
+
+]

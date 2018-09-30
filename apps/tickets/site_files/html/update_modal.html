@@ -1,0 +1,74 @@
+
+
+<div id="updateTicketModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.ticket_details##   <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i> </h2>
+        </div>
+        <div class="modal-body">
+        
+            <div class="row ">
+              <form class="form">
+                   
+                   
+
+                        <div class="row border margin padding">
+
+                                <i-list class="col2" ng-search="company_search" label="##word.ticket_company##" items="company_list" ng-model="ticket.device_info.company" ng-change="loadCategories(ticket.device_info.company)"></i-list>
+                                <i-list class="col2" ng-search="category_search" label="##word.ticket_category##" items="category_list" ng-model="ticket.device_info.category" ng-change="loadSubCategories(ticket.device_info.category)"></i-list>
+                                <i-list class="col2" ng-search="sub_category_search" label="##word.ticket_sub_category##" items="sub_category_list" ng-model="ticket.device_info.sub_category" ng-change="loadDevices(ticket.device_info.sub_category);loadDamages(ticket.device_info.sub_category)"></i-list>
+                                <i-list class="col2" ng-search="device_search" label="##word.ticket_device##" items="device_list" ng-model="ticket.device_info.device" ng-change="loadModels(ticket.device_info.device)"></i-list>
+                                <i-list class="col4" ng-search="model_search" label="##word.ticket_model##" items="models" primary="name" display2="alt" ng-model="ticket.device_info.model" ></i-list>
+
+                            <i-control class="col4" ng-model="ticket.device_info.serial" label="##word.ticket_device_serial##"></i-control>
+                           
+                        </div>
+
+
+                        <div class="row ">
+
+                                <i-list class="col4" ng-search="damage_search" label="##word.damage##" items="damages" ng-model="ticket.device_info.damage" ></i-list>
+                                <i-control class="col8" ng-model="ticket.complain" label="##word.ticket_complain##"></i-control>   
+                          
+                        </div>
+
+                        <div x-import="tickets/company_code.html"></div>
+
+                        <div class="row ">
+
+                                <i-date2 class="col3" ng-model="ticket.date" label="##word.ticket_date##"></i-date2>
+                                <i-date2 class="col3" ng-model="ticket.visit_date" label="##word.ticket_suggest_visit_date##"></i-date2>
+
+                                
+                                <i-list class="col4" label="##word.ticket_priotry##" items="tickets_priorities" ng-model="ticket.priotry" ></i-list>
+
+
+                        </div>
+
+                        <div x-import="tickets/ticket_source.html"></div>
+
+                        <div class="row" x-import="tickets/ticket_status.html"></div>
+
+                        <i-checkbox ng-model="ticket.done" label="##word.ticket_close2_approve##"></i-checkbox>
+                        
+                            
+              </form>
+            </div>
+
+        </div>
+
+        <h2>{{error}}</h2>
+
+        <div class="modal-footer center">
+            <i-button type="save" ng-click="update(ticket)" label="##word.save##" ng-hide="busy"></i-button>
+            <i-button type="close" onclick="site.hideModal('#updateTicketModal')" label="##word.close##" ></i-button>
+           
+           
+        </div>
+    </div>
+
+
+</div>

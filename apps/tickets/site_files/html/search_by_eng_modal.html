@@ -1,0 +1,33 @@
+
+
+<div id="SearchByEngModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                ##word.ticket_search_by_eng##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+
+            <form>
+                <div class="control">
+                    <select ng-model="eng">
+                        <option ng-selected="eng.id == eng1.id" ng-repeat="eng1 in engList" value="{{eng1}}">{{eng1.name}}</option>
+                    </select>
+                </div>
+            </form>
+
+        </div>
+        <h2>{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-click="searchByEng()" ng-hide="busy">
+                <i class="fa fa-search" aria-hidden="true"></i>  ##word.search##</a>
+
+            <a class="btn bg-blue" onclick="site.hideModal('#SearchByEngModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+        </div>
+    </div>
+</div>

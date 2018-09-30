@@ -1,0 +1,70 @@
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid var(--background-color);
+    }
+</style>
+
+
+<div id="updateFacility_CodeModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-plus"></i> ##word.facilities_codes_edit##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div class="col7">
+                <form class="form">
+
+                    <div class="control">
+                        <label>##word.facilities_codes_name##</label>
+                        <input ng-model="facility_code.name" type="text">
+                    </div>
+
+                    <div class="control">
+                        <label>##word.facilities_codes_code##</label>
+                        <input ng-model="facility_code.code" type="text">
+                    </div>
+
+                    <div class="control">
+                        <label>##word.facilities_codes_owner##</label>
+                        <input ng-model="facility_code.owner" type="text">
+                    </div>
+
+                </form>
+
+
+            </div>
+
+            <div class="col3 center">
+
+                <form class="form">
+                    <label>##word.facilities_codes_img##</label>
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadImage(this.files)" />
+                    <br>
+                    <img class="img " ng-src="{{facility_code.image_url}}" />
+                    <br>
+                    <p>{{uploadStatus}}</p>
+                </form>
+            </div>
+        </div>
+        <h2 class="error">{{error}}</h2>
+        <div class="modal-footer center">
+            <a class="btn bg-green" ng-hide="busy" id="update_facility_code_btn" ng-click="update(facility_code)">
+                <i class="fa fa-save" aria-hidden="true"></i> ##word.update##</a>
+            <a class="btn bg-blue" onclick="site.hideModal('#updateFacility_CodeModal')">
+                <i class="fa fa-times" aria-hidden="true"></i> ##word.close##</a>
+
+
+        </div>
+    </div>
+
+
+</div>

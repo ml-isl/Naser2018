@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body>
+
+    <nav x-import="navbar.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+  
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container">
+        <div class="row10 center">
+            <div class="col10" ng-controller="tax_types">
+                <div x-import="tax_types/add_modal.html"></div>
+                <div x-import="tax_types/update_modal.html"></div>
+                <div x-import="tax_types/delete_modal.html"></div>
+                <div x-import="tax_types/view_modal.html"></div>
+                <div class="top-actions">
+                        <i-button type="add" label="##word.tax_types_new##" x-permission="owner" ng-click="newTax_Type()"></i-button>
+                        
+                    
+                    <span ng-show="busy">
+                        <i class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </div>
+
+                <div id="d1">
+                    <table class="table loaded" id="t1">
+                        <tr>
+                            <th class="not-print">##word.tax_types_logo##</th>
+                            <th>##word.tax_types_name##</th>
+                            <th>##word.tax_types_value##</th>
+
+                            <th class="not-print" x-permission="owner">##word.actions##</th>
+                        </tr>
+                        <tr ng-repeat="c in list">
+                            <td class="not-print">
+                                <img class="logo" ng-src="{{c.image_url}}">
+                            </td>
+                            <td>{{c.name}}</td>
+                            <td class="center">{{c.value}} % </td>
+
+                            <td x-permission="owner" class="center not-print">
+                                    <i-button type="details" label="##word.details##" x-permission="owner" ng-click="details(c)"></i-button>
+                                    <i-button type="update" label="##word.update##" x-permission="owner" ng-click="edit(c)"></i-button>
+                                    <i-button type="delete" label="##word.delete##" ng-click="remove(c)"></i-button>
+                               
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="row">
+                        <i-button type="export" label="##word.export_to_excel##" onclick="export_to_xlsx('t1' , 'tax_types.xlsx')"></i-button>
+                        <i-button type="print" label="##word.print##" onclick="site.print('#d1')"> </i-button>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  
+    <div x-import="scripts.html"></div>
+    <script x-import="tax_types/index.js"></script>
+  
+</body>
+
+</html>

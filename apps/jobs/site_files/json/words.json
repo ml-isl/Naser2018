@@ -1,0 +1,15 @@
+[
+    { "name": "jobs_add","en": "Add Job", "ar": "اضافة وظيفة"},
+    { "name": "jobs_search","en": "Search Job", "ar": "بحث وظيفة"},
+
+    { "name": "jobs_name","en": "Job Name", "ar": "اسم الوظيفة"},
+    { "name": "jobs_delete","en": "Delete Job", "ar": "حذف وظيفة"},
+    { "name": "jobs_edit","en": "Edit Job", "ar": "تعديل وظيفة"},
+    { "name": "jobs_details","en": "Job Details", "ar": "تفاصيل وظيفة"},
+    { "name": "jobs_new","en": "New Job", "ar": "وظيفة جديدة"},
+    { "name": "jobs_logo","en": "Job Logo", "ar": "شعار الوظيفة"},
+    
+    { "name": "jobs_img","en": "Job Image", "ar": "شعار الوظيفة"}
+
+
+]
